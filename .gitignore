@@ -10,6 +10,7 @@
 *.gbc
 *.gb
 *.patch
+*.sav
 
 # rgbds extras
 *.map
@@ -29,3 +30,6 @@
 *.sn*
 *.sa*
 *.sg1
+
+#utility
+/rgbds-0.5.2
