@@ -41,3 +41,4 @@
 /.vs/PokeGen1.5/v17/Browse.VC.db-shm
 /.vs/PokeGen1.5/v17/Browse.VC.db-wal
 /.vs/PokeGen1.5/v17/Browse.VC.opendb
+*.bin
