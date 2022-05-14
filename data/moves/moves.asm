@@ -177,5 +177,6 @@ Moves:
 	move ICYWIND,      SPEED_DOWN_SIDE_EFFECT,      60, ICE,          100, 20
 	move POWDERSNOW,   FREEZE_SIDE_EFFECT,          40, ICE,          100, 25
 	move TWISTER,      FLINCH_SIDE_EFFECT1,         40, DRAGON,       95,  20
+	move DRAGONBREATH, PARALYZE_SIDE_EFFECT1,       65, DRAGON,       95,  15
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
