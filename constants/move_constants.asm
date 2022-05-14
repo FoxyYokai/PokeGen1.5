@@ -172,7 +172,8 @@
 	const SUBSTITUTE   ; a4
 	const ICYWIND	   ; a5
 	const POWDERSNOW   ; a6
-	const STRUGGLE     ; a7
+	const TWISTER      ; a7
+	const STRUGGLE     ; a8
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
