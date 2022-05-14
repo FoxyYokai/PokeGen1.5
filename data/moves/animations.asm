@@ -165,6 +165,7 @@ AttackAnimationPointers:
 	dw SlashAnim
 	dw SubstituteAnim
 	dw IcyWindAnim
+	dw PowderSnowAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1143,6 +1144,11 @@ SubstituteAnim:
 
 IcyWindAnim:
 	battle_anim GUST, SUBANIM_10, 1, 6
+	battle_anim NO_MOVE, SUBANIM_2F, 0, 16
+	db -1 ; end
+
+PowderSnowAnim:
+	battle_anim STUN_SPORE, SUBANIM_36, 0, 6
 	battle_anim NO_MOVE, SUBANIM_2F, 0, 16
 	db -1 ; end
 

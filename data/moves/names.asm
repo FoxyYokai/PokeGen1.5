@@ -165,5 +165,6 @@ MoveNames::
 	li "SLASH"
 	li "SUBSTITUTE"
 	li "ICY WIND"
+	li "POWDER SNOW"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

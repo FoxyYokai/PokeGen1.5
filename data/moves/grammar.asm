@@ -68,6 +68,7 @@ ExclamationPointMoveSets:
 	db SLASH
 	db SUBSTITUTE
 	db ICYWIND
+	db POWDERSNOW
 	db 0 ; end set
 
 	db -1 ; end
