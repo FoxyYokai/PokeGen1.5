@@ -71,6 +71,7 @@ ExclamationPointMoveSets:
 	db POWDERSNOW
 	db TWISTER
 	db DRAGONBREATH
+	db DRAGONCLAW
 	db 0 ; end set
 
 	db -1 ; end

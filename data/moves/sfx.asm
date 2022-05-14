@@ -169,6 +169,7 @@ MoveSoundTable:
 	db SFX_BATTLE_1C,          $11, $a0 ; POWDER SNOW
 	db SFX_BATTLE_12,          $10, $a0 ; TWISTER
 	db SFX_BATTLE_29,          $f0, $80 ; DRAGONBREATH
+	db SFX_DAMAGE,             $c0, $80 ; DRAGONCLAW
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

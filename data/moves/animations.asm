@@ -168,6 +168,7 @@ AttackAnimationPointers:
 	dw PowderSnowAnim
 	dw TwisterAnim
 	dw DragonBreathAnim
+	dw DragonClawAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1163,6 +1164,11 @@ TwisterAnim:
 DragonBreathAnim:
 	battle_anim FLAMETHROWER, SUBANIM_1F, 1, 6
 	battle_anim FLAMETHROWER, SUBANIM_1F, 1, 6
+	db -1 ; end
+
+DragonClawAnim:
+	battle_anim SLASH, SUBANIM_0F, 0, 6
+	battle_anim NO_MOVE, SUBANIM_11, 1, 6
 	db -1 ; end
 
 BallTossAnim:

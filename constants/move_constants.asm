@@ -174,7 +174,8 @@
 	const POWDERSNOW   ; a6
 	const TWISTER      ; a7
 	const DRAGONBREATH ; a8
-	const STRUGGLE     ; a9
+	const DRAGONCLAW   ; a9
+	const STRUGGLE     ; aa
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
