@@ -4,4 +4,5 @@ HighCriticalMoves:
 	db CRABHAMMER
 	db SLASH
 	db CROSSCHOP
+	db XSCISSOR
 	db -1 ; end

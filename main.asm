@@ -330,6 +330,7 @@ INCLUDE "engine/menus/save.asm"
 SECTION "Itemfinder 1", ROMX
 
 INCLUDE "engine/movie/credits.asm"
+INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/pokemon/status_ailments.asm"
 INCLUDE "engine/items/itemfinder.asm"
 
@@ -356,4 +357,4 @@ INCLUDE "engine/overworld/dust_smoke.asm"
 INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
-INCLUDE "engine/movie/evolution.asm"
+

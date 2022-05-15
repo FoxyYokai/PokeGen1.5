@@ -183,5 +183,6 @@ Moves:
 	move HEX,          CONFUSION_SIDE_EFFECT,       55, GHOST,        100, 15
 	move CROSSCHOP,    NO_ADDITIONAL_EFFECT,        80, FIGHTING,      90,  5
 	move AERIALACE,    SWIFT_EFFECT,                60, FLYING,       100, 20
+	move XSCISSOR,     NO_ADDITIONAL_EFFECT,        70, BUG,           95, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

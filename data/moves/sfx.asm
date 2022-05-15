@@ -174,6 +174,7 @@ MoveSoundTable:
 	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; HEX
 	db SFX_BATTLE_0B,          $00, $80 ; CROSSCHOP
 	db SFX_BATTLE_0B,          $00, $80 ; AERIALACE
+	db SFX_BATTLE_0B,          $00, $80 ; XSCISSOR
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

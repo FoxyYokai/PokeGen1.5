@@ -179,7 +179,8 @@
 	const HEX          ; ab
 	const CROSSCHOP    ; ac
 	const AERIALACE    ; ad
-	const STRUGGLE     ; ae
+	const XSCISSOR     ; ae
+	const STRUGGLE     ; af
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

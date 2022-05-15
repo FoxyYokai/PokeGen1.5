@@ -125,6 +125,9 @@ FrameBlockPointers:
 	dw FrameBlock7a
 	dw FrameBlock7b
 	dw FrameBlock7c
+	dw FrameBlock7d
+	dw FrameBlock7e
+	dw FrameBlock7f
 	assert_table_length NUM_FRAMEBLOCKS
 
 FrameBlock01:
@@ -1271,6 +1274,71 @@ FrameBlock7c:
 	dbsprite  3,  3,  7,  0, $47, OAM_HFLIP
 	dbsprite  6,  5,  1,  2, $47, OAM_HFLIP
 	dbsprite  5,  4,  3,  4, $47, OAM_HFLIP
+
+FrameBlock7d:
+	db 16 ; #
+	dbsprite  1,  0,  7,  0, $44, OAM_HFLIP
+	dbsprite  0,  0,  7,  0, $44, 0
+	dbsprite  1,  1,  7,  0, $44, OAM_VFLIP | OAM_HFLIP
+	dbsprite  0,  1,  7,  0, $44, OAM_VFLIP
+	dbsprite  6,  4,  5,  6, $44, OAM_HFLIP
+	dbsprite  5,  4,  5,  6, $44, 0
+	dbsprite  6,  5,  5,  6, $44, OAM_VFLIP | OAM_HFLIP
+	dbsprite  5,  5,  5,  6, $44, OAM_VFLIP
+	dbsprite  6,  0,  0,  0, $44, 0
+	dbsprite  7,  0,  0,  0, $44, OAM_HFLIP
+	dbsprite  6,  1,  0,  0, $44, OAM_VFLIP
+	dbsprite  7,  1,  0,  0, $44, OAM_HFLIP | OAM_VFLIP
+	dbsprite  1,  4,  2,  6, $44, 0
+	dbsprite  2,  4,  2,  6, $44, OAM_HFLIP
+	dbsprite  1,  5,  2,  6, $44, OAM_VFLIP
+	dbsprite  2,  5,  2,  6, $44, OAM_HFLIP | OAM_VFLIP
+
+FrameBlock7e:
+	db 24 ; #
+	dbsprite  3,  1,  5,  6, $44, OAM_HFLIP
+	dbsprite  2,  1,  5,  6, $44, 0
+	dbsprite  3,  2,  5,  6, $44, OAM_VFLIP | OAM_HFLIP
+	dbsprite  2,  2,  5,  6, $44, OAM_VFLIP
+	dbsprite  1,  0,  5,  6, $47, OAM_HFLIP
+	dbsprite  0,  0,  7,  0, $47, OAM_HFLIP
+	dbsprite  5,  3,  1,  2, $44, OAM_HFLIP
+	dbsprite  4,  3,  1,  2, $44, 0
+	dbsprite  5,  4,  1,  2, $44, OAM_VFLIP | OAM_HFLIP
+	dbsprite  4,  4,  1,  2, $44, OAM_VFLIP
+	dbsprite  6,  6,  7,  0, $47, OAM_HFLIP
+	dbsprite  6,  5,  1,  2, $47, OAM_HFLIP
+	dbsprite  4,  1,  2,  6, $44, 0
+	dbsprite  5,  1,  2,  6, $44, OAM_HFLIP
+	dbsprite  4,  2,  2,  6, $44, OAM_VFLIP
+	dbsprite  5,  2,  2,  6, $44, OAM_HFLIP | OAM_VFLIP
+	dbsprite  6,  0,  2,  6, $47, 0
+	dbsprite  7,  0,  0,  0, $47, 0
+	dbsprite  2,  3,  6,  2, $44, 0
+	dbsprite  3,  3,  6,  2, $44, OAM_HFLIP
+	dbsprite  2,  4,  6,  2, $44, OAM_VFLIP
+	dbsprite  3,  4,  6,  2, $44, OAM_HFLIP | OAM_VFLIP
+	dbsprite  1,  6,  0,  0, $47, 0
+	dbsprite  1,  5,  6,  2, $47, 0
+
+FrameBlock7f:
+	db 16 ; #
+	dbsprite  1,  0,  5,  6, $47, OAM_HFLIP
+	dbsprite  0,  0,  7,  0, $47, OAM_HFLIP
+	dbsprite  3,  2,  1,  2, $47, OAM_HFLIP
+	dbsprite  2,  1,  3,  4, $47, OAM_HFLIP
+	dbsprite  4,  3,  5,  6, $47, OAM_HFLIP
+	dbsprite  3,  3,  7,  0, $47, OAM_HFLIP
+	dbsprite  6,  5,  1,  2, $47, OAM_HFLIP
+	dbsprite  5,  4,  3,  4, $47, OAM_HFLIP
+	dbsprite  6,  0,  2,  6, $47, 0
+	dbsprite  7,  0,  0,  0, $47, 0
+	dbsprite  4,  2,  6,  2, $47, 0
+	dbsprite  5,  1,  4,  4, $47, 0
+	dbsprite  3,  3,  2,  6, $47, 0
+	dbsprite  4,  3,  0,  0, $47, 0
+	dbsprite  1,  5,  6,  2, $47, 0
+	dbsprite  2,  4,  4,  4, $47, 0
 
 INCLUDE "data/battle_anims/base_coords.asm"
 

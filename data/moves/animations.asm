@@ -173,6 +173,7 @@ AttackAnimationPointers:
 	dw HexAnim
 	dw CrossChopAnim
 	dw AerialAceAnim
+	dw XScissorAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1200,6 +1201,11 @@ AerialAceAnim:
 	battle_anim CUT, SE_DARK_SCREEN_FLASH
 	battle_anim NO_MOVE, SUBANIM_16, 0, 4
 	battle_anim NO_MOVE, SE_SHOW_MON_PIC
+	db -1 ; end
+
+XScissorAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim SLASH,   SUBANIM_57, 0, 4
 	db -1 ; end
 
 BallTossAnim:

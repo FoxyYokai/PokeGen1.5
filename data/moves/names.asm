@@ -173,5 +173,6 @@ MoveNames::
 	li "HEX"
 	li "CROSS CHOP"
 	li "AERIAL ACE"
+	li "X-SCISSOR"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
