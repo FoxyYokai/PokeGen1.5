@@ -177,7 +177,8 @@
 	const DRAGONCLAW   ; a9
 	const SHADOWBALL   ; aa
 	const HEX          ; ab
-	const STRUGGLE     ; ac
+	const CROSSCHOP    ; ac
+	const STRUGGLE     ; ad
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
