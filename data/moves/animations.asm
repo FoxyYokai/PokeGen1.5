@@ -169,6 +169,7 @@ AttackAnimationPointers:
 	dw TwisterAnim
 	dw DragonBreathAnim
 	dw DragonClawAnim
+	dw ShadowBallAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1169,6 +1170,13 @@ DragonBreathAnim:
 DragonClawAnim:
 	battle_anim SLASH, SUBANIM_0F, 0, 6
 	battle_anim NO_MOVE, SUBANIM_11, 1, 6
+	db -1 ; end
+
+ShadowBallAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim BARRAGE, SUBANIM_41, 1, 3
+	battle_anim SHADOWBALL, SE_WAVY_SCREEN
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
 BallTossAnim:

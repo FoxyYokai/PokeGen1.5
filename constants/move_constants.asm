@@ -175,7 +175,8 @@
 	const TWISTER      ; a7
 	const DRAGONBREATH ; a8
 	const DRAGONCLAW   ; a9
-	const STRUGGLE     ; aa
+	const SHADOWBALL   ; aa
+	const STRUGGLE     ; ab
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
