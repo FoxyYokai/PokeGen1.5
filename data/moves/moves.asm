@@ -176,11 +176,12 @@ Moves:
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move ICYWIND,      SPEED_DOWN_SIDE_EFFECT,      60, ICE,          100, 20
 	move POWDERSNOW,   FREEZE_SIDE_EFFECT,          40, ICE,          100, 25
-	move TWISTER,      FLINCH_SIDE_EFFECT1,         40, DRAGON,       95,  20
-	move DRAGONBREATH, PARALYZE_SIDE_EFFECT1,       65, DRAGON,       95,  15
+	move TWISTER,      FLINCH_SIDE_EFFECT1,         40, DRAGON,        95, 20
+	move DRAGONBREATH, PARALYZE_SIDE_EFFECT1,       65, DRAGON,        95, 15
 	move DRAGONCLAW,   NO_ADDITIONAL_EFFECT,        90, DRAGON,       100, 10
 	move SHADOWBALL,   SPECIAL_DOWN_SIDE_EFFECT,    90, GHOST,        100, 10
 	move HEX,          CONFUSION_SIDE_EFFECT,       55, GHOST,        100, 15
-	move CROSSCHOP,    NO_ADDITIONAL_EFFECT,        80, FIGHTING,     90,   5
+	move CROSSCHOP,    NO_ADDITIONAL_EFFECT,        80, FIGHTING,      90,  5
+	move AERIALACE,    SWIFT_EFFECT,                60, FLYING,       100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

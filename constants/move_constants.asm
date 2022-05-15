@@ -178,7 +178,8 @@
 	const SHADOWBALL   ; aa
 	const HEX          ; ab
 	const CROSSCHOP    ; ac
-	const STRUGGLE     ; ad
+	const AERIALACE    ; ad
+	const STRUGGLE     ; ae
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

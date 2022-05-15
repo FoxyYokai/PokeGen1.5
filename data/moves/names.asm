@@ -172,5 +172,6 @@ MoveNames::
 	li "SHADOW BALL"
 	li "HEX"
 	li "CROSS CHOP"
+	li "AERIAL ACE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
