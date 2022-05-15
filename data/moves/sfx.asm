@@ -171,6 +171,7 @@ MoveSoundTable:
 	db SFX_BATTLE_29,          $f0, $80 ; DRAGONBREATH
 	db SFX_DAMAGE,             $c0, $80 ; DRAGONCLAW
 	db SFX_PSYCHIC_M,		   $a6, $f0 ; PSYCHIC_M
+	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; HEX
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

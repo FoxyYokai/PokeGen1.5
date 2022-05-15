@@ -170,5 +170,6 @@ MoveNames::
 	li "DRAGONBREATH"
 	li "DRAGON CLAW"
 	li "SHADOW BALL"
+	li "HEX"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

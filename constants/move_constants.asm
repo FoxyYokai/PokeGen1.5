@@ -176,7 +176,8 @@
 	const DRAGONBREATH ; a8
 	const DRAGONCLAW   ; a9
 	const SHADOWBALL   ; aa
-	const STRUGGLE     ; ab
+	const HEX          ; ab
+	const STRUGGLE     ; ac
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

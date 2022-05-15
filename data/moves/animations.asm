@@ -170,6 +170,7 @@ AttackAnimationPointers:
 	dw DragonBreathAnim
 	dw DragonClawAnim
 	dw ShadowBallAnim
+	dw HexAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1176,6 +1177,12 @@ ShadowBallAnim:
 	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
 	battle_anim BARRAGE, SUBANIM_41, 1, 3
 	battle_anim SHADOWBALL, SE_WAVY_SCREEN
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	db -1 ; end
+
+HexAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim SUPERSONIC, SE_FLASH_SCREEN_LONG
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
