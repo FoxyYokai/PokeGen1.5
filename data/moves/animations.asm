@@ -1191,7 +1191,7 @@ HexAnim:
 CrossChopAnim:
 	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
 	battle_anim VICEGRIP, SUBANIM_2A, 0, 8
-	battle_anim VICEGRIP, SUBANIM_2A, 0, 8
+	battle_anim VICEGRIP, SUBANIM_56, 0, 8
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
