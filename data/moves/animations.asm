@@ -183,6 +183,8 @@ AttackAnimationPointers:
 	dw SludgeBombAnim
 	dw RockBlastAnim
 	dw TombStonerAnim
+	dw MudSlapAnim
+	dw BulldozeAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1277,6 +1279,17 @@ TombStonerAnim:
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
 	battle_anim ROCK_THROW, SUBANIM_30, 0, 4
 	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
+	db -1 ; end
+
+MudSlapAnim:
+	battle_anim SAND_ATTACK, SUBANIM_28, 1, 6
+	battle_anim NO_MOVE, SUBANIM_02, 0, 6
+	db -1 ; end
+
+BulldozeAnim:
+	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
+	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
 	db -1 ; end
 
 BallTossAnim:

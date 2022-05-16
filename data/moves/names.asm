@@ -183,5 +183,7 @@ MoveNames::
 	li "SLUDGE BOMB"
 	li "ROCK BLAST"
 	li "TOMBSTONER"
+	li "MUD SLAP"
+	li "BULLDOZE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

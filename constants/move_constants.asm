@@ -189,7 +189,9 @@
 	const SLUDGEBOMB   ; b5
 	const ROCKBLAST    ; b6
 	const TOMBSTONER   ; b7
-	const STRUGGLE     ; b8
+	const MUDSLAP      ; b8
+	const BULLDOZE     ; b9
+	const STRUGGLE     ; ba
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
