@@ -184,7 +184,8 @@
 	const BUGBITE      ; b0
 	const FLARE        ; b1
 	const HURRICANE    ; b2
-	const STRUGGLE     ; b3
+	const SPARK        ; b3
+	const STRUGGLE     ; b4
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

@@ -178,6 +178,7 @@ AttackAnimationPointers:
 	dw BugBiteAnim
 	dw FlareAnim
 	dw HurricaneAnim
+	dw SparkAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1239,6 +1240,13 @@ HurricaneAnim:
 	battle_anim NO_MOVE, SE_SHOW_ENEMY_MON_PIC
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	battle_anim NO_MOVE, SE_SHAKE_SCREEN
+	db -1 ; end
+
+SparkAnim:
+	battle_anim THUNDERSHOCK, SUBANIM_24, 0, 4
+	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
+	battle_anim THUNDERSHOCK, SE_RESET_MON_POSITION
+	battle_anim THUNDERSHOCK, SUBANIM_29, 1, 2
 	db -1 ; end
 
 BallTossAnim:
