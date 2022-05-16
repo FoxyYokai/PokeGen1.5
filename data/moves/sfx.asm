@@ -180,6 +180,8 @@ MoveSoundTable:
 	db SFX_BATTLE_0B,          $00, $80 ; FLARE
 	db SFX_BATTLE_12,          $e4, $50 ; HURRICANE
 	db SFX_BATTLE_0B,          $00, $80 ; SPARK
+	db SFX_BATTLE_0B,          $00, $80 ; POISONFANG
+	db SFX_BATTLE_0B,          $00, $80 ; SLUDGEBOMB
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

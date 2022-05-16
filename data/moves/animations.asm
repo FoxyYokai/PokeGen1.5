@@ -179,6 +179,8 @@ AttackAnimationPointers:
 	dw FlareAnim
 	dw HurricaneAnim
 	dw SparkAnim
+	dw PoisonFangAnim
+	dw SludgeBombAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1247,6 +1249,18 @@ SparkAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
 	battle_anim THUNDERSHOCK, SE_RESET_MON_POSITION
 	battle_anim THUNDERSHOCK, SUBANIM_29, 1, 2
+	db -1 ; end
+
+PoisonFangAnim:
+	battle_anim BITE, SUBANIM_02, 0, 8
+	battle_anim SLUDGE, SUBANIM_14, 1, 6
+	db -1 ; end
+
+SludgeBombAnim:
+	battle_anim BARRAGE, SUBANIM_41, 1, 3
+	battle_anim EGG_BOMB, SUBANIM_42, 1, 4
+	battle_anim TOXIC, SUBANIM_14, 1, 6
+	battle_anim TOXIC, SUBANIM_14, 1, 6
 	db -1 ; end
 
 BallTossAnim:

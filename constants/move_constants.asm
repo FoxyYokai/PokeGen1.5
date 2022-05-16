@@ -185,7 +185,9 @@
 	const FLARE        ; b1
 	const HURRICANE    ; b2
 	const SPARK        ; b3
-	const STRUGGLE     ; b4
+	const POISONFANG   ; b4
+	const SLUDGEBOMB   ; b5
+	const STRUGGLE     ; b6
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

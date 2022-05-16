@@ -179,5 +179,7 @@ MoveNames::
 	li "FLARE"
 	li "HURRICANE"
 	li "SPARK"
+	li "POISON FANG"
+	li "SLUDGE BOMB"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

@@ -189,5 +189,7 @@ Moves:
 	move FLARE,	       BURN_SIDE_EFFECT1,           60, FIRE,         100, 20
 	move HURRICANE,	   SPEED_DOWN_SIDE_EFFECT,     120, FLYING,        75,  5
 	move SPARK,	       PARALYZE_SIDE_EFFECT1,       65, ELECTRIC,      95, 15
+	move POISONFANG,   PARALYZE_SIDE_EFFECT1,       60, POISON,       100, 15
+	move SLUDGEBOMB,   POISON_SIDE_EFFECT1,         90, POISON,       100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
