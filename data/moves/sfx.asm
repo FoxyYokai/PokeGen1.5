@@ -182,6 +182,8 @@ MoveSoundTable:
 	db SFX_BATTLE_0B,          $00, $80 ; SPARK
 	db SFX_BATTLE_0B,          $00, $80 ; POISONFANG
 	db SFX_BATTLE_0B,          $00, $80 ; SLUDGEBOMB
+	db SFX_BATTLE_0B,          $00, $80 ; ROCKBLAST
+	db SFX_BATTLE_0B,          $00, $80 ; TOMBSTONER
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

@@ -181,5 +181,7 @@ MoveNames::
 	li "SPARK"
 	li "POISON FANG"
 	li "SLUDGE BOMB"
+	li "ROCK BLAST"
+	li "TOMBSTONER"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

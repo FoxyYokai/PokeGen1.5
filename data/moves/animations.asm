@@ -181,6 +181,8 @@ AttackAnimationPointers:
 	dw SparkAnim
 	dw PoisonFangAnim
 	dw SludgeBombAnim
+	dw RockBlastAnim
+	dw TombStonerAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1261,6 +1263,20 @@ SludgeBombAnim:
 	battle_anim EGG_BOMB, SUBANIM_42, 1, 4
 	battle_anim TOXIC, SUBANIM_14, 1, 6
 	battle_anim TOXIC, SUBANIM_14, 1, 6
+	db -1 ; end
+
+RockBlastAnim:
+	battle_anim ROCK_THROW, SUBANIM_1E, 0, 3
+	battle_anim NO_MOVE, SUBANIM_05, 1, 6
+	db -1 ; end
+
+TombStonerAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim ROCK_THROW, SUBANIM_30, 0, 4
+	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim ROCK_THROW, SUBANIM_30, 0, 4
+	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
 	db -1 ; end
 
 BallTossAnim:
