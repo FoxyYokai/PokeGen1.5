@@ -177,6 +177,7 @@ AttackAnimationPointers:
 	dw BugBuzzAnim
 	dw BugBiteAnim
 	dw FlareAnim
+	dw HurricaneAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1226,6 +1227,18 @@ BugBiteAnim:
 FlareAnim:
 	battle_anim EMBER, SUBANIM_0C, 1, 4
 	battle_anim EMBER, SUBANIM_0D, 1, 4
+	db -1 ; end
+
+HurricaneAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim HURRICANE,  SUBANIM_58, 1, 2
+	battle_anim HURRICANE,  SUBANIM_58, 1, 2
+	battle_anim HURRICANE,  SUBANIM_58, 1, 2
+	battle_anim HURRICANE,  SUBANIM_58, 1, 2
+	battle_anim HURRICANE, SE_SLIDE_ENEMY_MON_OFF
+	battle_anim NO_MOVE, SE_SHOW_ENEMY_MON_PIC
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	battle_anim NO_MOVE, SE_SHAKE_SCREEN
 	db -1 ; end
 
 BallTossAnim:

@@ -177,5 +177,6 @@ MoveNames::
 	li "BUG BUZZ"
 	li "BUG BITE"
 	li "FLARE"
+	li "HURRICANE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

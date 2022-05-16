@@ -183,7 +183,8 @@
 	const BUGBUZZ      ; af
 	const BUGBITE      ; b0
 	const FLARE        ; b1
-	const STRUGGLE     ; b2
+	const HURRICANE    ; b2
+	const STRUGGLE     ; b3
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
