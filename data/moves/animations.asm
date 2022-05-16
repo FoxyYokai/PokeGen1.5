@@ -176,6 +176,7 @@ AttackAnimationPointers:
 	dw XScissorAnim
 	dw BugBuzzAnim
 	dw BugBiteAnim
+	dw FlareAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1220,6 +1221,11 @@ BugBiteAnim:
 	battle_anim BITE, SUBANIM_02, 0, 4
 	battle_anim NO_MOVE, SUBANIM_21, 0, 6
 	battle_anim NO_MOVE, SUBANIM_22, 0, 6
+	db -1 ; end
+
+FlareAnim:
+	battle_anim EMBER, SUBANIM_0C, 1, 4
+	battle_anim EMBER, SUBANIM_0D, 1, 4
 	db -1 ; end
 
 BallTossAnim:

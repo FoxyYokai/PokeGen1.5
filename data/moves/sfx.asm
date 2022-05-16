@@ -177,6 +177,7 @@ MoveSoundTable:
 	db SFX_BATTLE_0B,          $00, $80 ; XSCISSOR
 	db SFX_BATTLE_27,          $f0, $60 ; BUGBUZZ
 	db SFX_BATTLE_0B,          $00, $80 ; BUGBITE
+	db SFX_BATTLE_0B,          $00, $80 ; FLARE
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80

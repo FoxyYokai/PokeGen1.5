@@ -182,7 +182,8 @@
 	const XSCISSOR     ; ae
 	const BUGBUZZ      ; af
 	const BUGBITE      ; b0
-	const STRUGGLE     ; b1
+	const FLARE        ; b1
+	const STRUGGLE     ; b2
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

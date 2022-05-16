@@ -176,5 +176,6 @@ MoveNames::
 	li "X-SCISSOR"
 	li "BUG BUZZ"
 	li "BUG BITE"
+	li "FLARE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

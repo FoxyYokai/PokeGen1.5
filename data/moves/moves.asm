@@ -186,5 +186,6 @@ Moves:
 	move XSCISSOR,     NO_ADDITIONAL_EFFECT,        70, BUG,           95, 10
 	move BUGBUZZ,	   CONFUSION_SIDE_EFFECT,       65, BUG,          100, 20
 	move BUGBITE,	   DRAIN_HP_EFFECT,             60, BUG,          100, 20
+	move FLARE,	       BURN_SIDE_EFFECT1,           60, FIRE,         100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS
