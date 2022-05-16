@@ -184,5 +184,7 @@ Moves:
 	move CROSSCHOP,    NO_ADDITIONAL_EFFECT,        80, FIGHTING,      90,  5
 	move AERIALACE,    SWIFT_EFFECT,                60, FLYING,       100, 20
 	move XSCISSOR,     NO_ADDITIONAL_EFFECT,        70, BUG,           95, 10
+	move BUGBUZZ,	   CONFUSION_SIDE_EFFECT,       65, BUG,          100, 20
+	move BUGBITE,	   DRAIN_HP_EFFECT,             60, BUG,          100, 20
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
 	assert_table_length NUM_ATTACKS

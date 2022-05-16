@@ -174,6 +174,8 @@ AttackAnimationPointers:
 	dw CrossChopAnim
 	dw AerialAceAnim
 	dw XScissorAnim
+	dw BugBuzzAnim
+	dw BugBiteAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1206,6 +1208,18 @@ AerialAceAnim:
 XScissorAnim:
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
 	battle_anim SLASH,   SUBANIM_57, 0, 4
+	db -1 ; end
+
+BugBuzzAnim:
+	battle_anim BUGBUZZ, SUBANIM_31, 0, 2
+	battle_anim BUGBUZZ, SUBANIM_31, 0, 2
+	db -1 ; end
+
+BugBiteAnim:
+	battle_anim BITE, SUBANIM_02, 0, 4
+	battle_anim BITE, SUBANIM_02, 0, 4
+	battle_anim NO_MOVE, SUBANIM_21, 0, 6
+	battle_anim NO_MOVE, SUBANIM_22, 0, 6
 	db -1 ; end
 
 BallTossAnim:

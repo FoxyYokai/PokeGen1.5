@@ -174,5 +174,7 @@ MoveNames::
 	li "CROSS CHOP"
 	li "AERIAL ACE"
 	li "X-SCISSOR"
+	li "BUG BUZZ"
+	li "BUG BITE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
