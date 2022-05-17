@@ -1,5 +1,6 @@
 HighCriticalMoves:
 	db KARATE_CHOP
+	db DRILL_PECK
 	db RAZOR_LEAF
 	db CRABHAMMER
 	db SLASH
