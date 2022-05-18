@@ -14,9 +14,9 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         MEGA_DRAIN,   \
+	tmhm TOXIC,        SLUDGEBOMB,    DOUBLE_EDGE,  DRAGONBREATH,         MEGA_DRAIN,   \
 	     SOLARBEAM,    PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
-	     BIDE,         REST,         PSYWAVE,      SUBSTITUTE
+	     BIDE,         REST,         LIGHT_SCREEN,      SUBSTITUTE
 	; end
 
 	db 0 ; padding

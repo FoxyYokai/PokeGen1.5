@@ -10,12 +10,12 @@
 	INCBIN "gfx/pokemon/front/omanyte.pic", 0, 1 ; sprite dimensions
 	dw OmanytePicFront, OmanytePicBack
 
-	db WATER_GUN, WITHDRAW, NO_MOVE, NO_MOVE ; level 1 learnset
+	db ICYWIND, WITHDRAW, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
-	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         MIMIC,        \
+	tmhm TOXIC,        BODY_SLAM,    SLUDGEBOMB,    DOUBLE_EDGE,  BUBBLEBEAM,   \
+	     ICYWIND,    ICE_BEAM,     BLIZZARD,     DRAGONBREATH,         MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         REST,         SUBSTITUTE,   \
 	     SURF
 	; end

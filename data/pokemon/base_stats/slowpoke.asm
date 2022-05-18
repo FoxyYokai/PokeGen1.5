@@ -14,11 +14,11 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
-	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     PAY_DAY,      RAGE,         \
-	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    TELEPORT,     \
+	tmhm TOXIC,        BODY_SLAM,    SLUDGEBOMB,    DOUBLE_EDGE,  BUBBLEBEAM,   \
+	     ICYWIND,    ICE_BEAM,     BLIZZARD,     PAY_DAY,      DRAGONBREATH,         \
+	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    SHADOWBALL,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
-	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
+	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, LIGHT_SCREEN,      \
 	     TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     FLASH
 	; end
 
