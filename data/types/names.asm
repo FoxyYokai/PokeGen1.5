@@ -10,8 +10,9 @@ TypeNames:
 	dw .Bird
 	dw .Bug
 	dw .Ghost
+	dw .Unknown
 
-REPT FIRE - GHOST - 1
+REPT FIRE - UNKNOWN - 1
 	dw .Normal
 ENDR
 
@@ -40,4 +41,5 @@ ENDR
 .Bird:     db "BIRD@"
 .Bug:      db "BUG@"
 .Ghost:    db "GHOST@"
+.Unknown:   db "???@"
 .Dragon:   db "DRAGON@"
