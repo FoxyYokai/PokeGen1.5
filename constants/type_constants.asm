@@ -11,8 +11,8 @@ PHYSICAL EQU const_value
 	const BIRD         ; $06
 	const BUG          ; $07
 	const GHOST        ; $08
-
-	const_next 20
+	const UNKNOWN      ; $09
+	const_next 19
 
 SPECIAL EQU const_value
 	const FIRE         ; $14

@@ -138,7 +138,7 @@ Moves:
 	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          120, FIRE,          75,  5
 	move WATERFALL,    FLINCH_SIDE_EFFECT1,         95, WATER,        100, 15
 	move CLAMP,        TRAPPING_EFFECT,             25, WATER,         80, 10
-	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20
+	move SWIFT,        SWIFT_EFFECT,                60, UNKNOWN,      100, 20
 	move SKULL_BASH,   CHARGE_EFFECT,              140, NORMAL,       100, 15
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
 	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      30, GRASS,        100, 35
@@ -195,5 +195,5 @@ Moves:
 	move TOMBSTONER,   FLINCH_SIDE_EFFECT2,        120, ROCK,          70,  5
 	move MUDSLAP,	   ACCURACY_DOWN_SIDE_EFFECT,   35, GROUND,       100, 25
 	move BULLDOZE,     SPEED_DOWN_SIDE_EFFECT,      65, GROUND,        95, 20
-	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
+	move STRUGGLE,     RECOIL_EFFECT,               50, UNKNOWN,      100, 10
 	assert_table_length NUM_ATTACKS
