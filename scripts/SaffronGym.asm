@@ -42,7 +42,7 @@ SaffronGymSabrinaPostBattle:
 	ld a, $f0
 	ld [wJoyIgnore], a
 
-SaffronGymReceiveTM46:
+SaffronGymReceiveTM29:
 	ld a, $a
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
@@ -53,7 +53,7 @@ SaffronGymReceiveTM46:
 	ld a, $b
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM46
+	SetEvent EVENT_GOT_TM29
 	jr .gymVictory
 .BagFull
 	ld a, $c
@@ -81,8 +81,8 @@ SaffronGym_TextPointers:
 	dw SaffronGymTrainerText7
 	dw SaffronGymGuideText
 	dw KogaMarshBadgeInfoText
-	dw ReceivedTM46Text
-	dw TM46NoRoomText
+	dw ReceivedTM29Text
+	dw TM29NoRoomText
 
 SaffronGymTrainerHeaders:
 	def_trainers 2
@@ -106,9 +106,9 @@ SabrinaText:
 	text_asm
 	CheckEvent EVENT_BEAT_SABRINA
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM46
+	CheckEventReuseA EVENT_GOT_TM29
 	jr nz, .afterBeat
-	call z, SaffronGymReceiveTM46
+	call z, SaffronGymReceiveTM29
 	call DisableWaitingAfterTextDisplay
 	jr .done
 .afterBeat
@@ -153,14 +153,14 @@ KogaMarshBadgeInfoText:
 	text_far _KogaMarshBadgeInfoText
 	text_end
 
-ReceivedTM46Text:
-	text_far _ReceivedTM46Text
+ReceivedTM29Text:
+	text_far _ReceivedTM29Text
 	sound_get_item_1
-	text_far _TM46ExplanationText
+	text_far _TM29ExplanationText
 	text_end
 
-TM46NoRoomText:
-	text_far _TM46NoRoomText
+TM29NoRoomText:
+	text_far _TM29NoRoomText
 	text_end
 
 SaffronGymTrainerText1:

@@ -18,9 +18,9 @@ _TM39ExplanationText::
 	line "called SWIFT."
 
 	para "It's very accurate,"
-	line "so use it during"
-	cont "battles you can't"
-	cont "afford to lose."
+	line "and it's effective"
+	cont "on all types of"
+	cont "#MON."
 	done
 
 _TM39NoRoomText::

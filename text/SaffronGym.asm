@@ -55,21 +55,21 @@ _KogaMarshBadgeInfoText::
 	line "this TM with you!"
 	done
 
-_ReceivedTM46Text::
+_ReceivedTM29Text::
 	text "<PLAYER> received"
-	line "TM46!@"
+	line "TM29!@"
 	text_end
 
-_TM46ExplanationText::
+_TM29ExplanationText::
 	text_start
 
-	para "TM46 is PSYWAVE!"
+	para "TM29 is PSYCHIC!"
 	line "It uses powerful"
 	cont "psychic waves to"
 	cont "inflict damage!"
 	done
 
-_TM46NoRoomText::
+_TM29NoRoomText::
 	text "Your pack is full"
 	line "of other items!"
 	done

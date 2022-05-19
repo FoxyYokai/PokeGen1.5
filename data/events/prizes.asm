@@ -1,7 +1,7 @@
 PrizeDifferentMenuPtrs:
 	dw PrizeMenuMon1Entries, PrizeMenuMon1Cost
 	dw PrizeMenuMon2Entries, PrizeMenuMon2Cost
-	dw PrizeMenuTMsEntries,  PrizeMenuTMsCost
+	dw PrizeMenuMon3Entries,  PrizeMenuMon3Cost
 
 NoThanksText:
 	db "NO THANKS@"
@@ -54,14 +54,14 @@ IF DEF(_BLUE)
 ENDC
 	db "@"
 
-PrizeMenuTMsEntries:
-	db TM_DRAGON_RAGE
-	db TM_HYPER_BEAM
-	db TM_SUBSTITUTE
+PrizeMenuMon3Entries:
+	db DOME_FOSSIL
+	db HELIX_FOSSIL
+	db OLD_AMBER
 	db "@"
 
-PrizeMenuTMsCost:
-	bcd2 3300
+PrizeMenuMon3Cost:
+	bcd2 5500
 	bcd2 5500
 	bcd2 7700
 	db "@"

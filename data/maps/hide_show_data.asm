@@ -3,89 +3,89 @@
 MapHSPointers:
 ; entries correspond to map ids
 	table_width 2, MapHSPointers
-	dw PalletTownHS
-	dw ViridianCityHS
-	dw PewterCityHS
-	dw CeruleanCityHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw SaffronCityHS
-	dw NoHS
-	dw NoHS
-	dw Route2HS
-	dw NoHS
-	dw Route4HS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw Route9HS
-	dw NoHS
-	dw NoHS
-	dw Route12HS
-	dw NoHS
-	dw NoHS
-	dw Route15HS
-	dw Route16HS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw Route22HS
-	dw NoHS
-	dw Route24HS
-	dw Route25HS
-	dw NoHS
-	dw NoHS
-	dw BluesHouseHS
-	dw OaksLabHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw ViridianGymHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw ViridianForestHS
-	dw Museum1FHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw MtMoon1FHS
-	dw NoHS
-	dw MtMoonB2FHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
-	dw NoHS
+	dw PalletTownHS           ;$00
+	dw ViridianCityHS         ;$01
+	dw PewterCityHS			  ;$02
+	dw CeruleanCityHS         ;$03
+	dw NoHS                   ;$04
+	dw NoHS                   ;$05
+	dw NoHS                   ;$06
+	dw NoHS                   ;$07
+	dw NoHS                   ;$08
+	dw NoHS                   ;$09
+	dw SaffronCityHS          ;$0a
+	dw NoHS                   ;$0b
+	dw NoHS                   ;$0c
+	dw Route2HS               ;$0d
+	dw NoHS                   ;$0e
+	dw Route4HS               ;$0f
+	dw NoHS                   ;$10
+	dw NoHS                   ;$11
+	dw NoHS                   ;$12
+	dw NoHS                   ;$13
+	dw Route9HS               ;$14
+	dw NoHS                   ;$15
+	dw NoHS                   ;$16
+	dw Route12HS              ;$17
+	dw NoHS                   ;$18
+	dw NoHS                   ;$19
+	dw Route15HS              ;$1a
+	dw Route16HS              ;$1b
+	dw NoHS                   ;$1c
+	dw NoHS					  ;$1d
+	dw NoHS				      ;$1e
+	dw NoHS                   ;$1f
+	dw NoHS                   ;$20
+	dw Route22HS              ;$21
+	dw NoHS                   ;$22
+	dw Route24HS              ;$23
+	dw Route25HS              ;$24
+	dw NoHS                   ;$25
+	dw NoHS                   ;$26
+	dw BluesHouseHS           ;$27
+	dw OaksLabHS              ;$28
+	dw NoHS                   ;$29
+	dw NoHS                   ;$2a
+	dw NoHS                   ;$2b
+	dw NoHS                   ;$2c
+	dw ViridianGymHS          ;$2d
+	dw NoHS                   ;$2e
+	dw NoHS                   ;$2f
+	dw NoHS                   ;$30
+	dw NoHS                   ;$31
+	dw NoHS                   ;$32
+	dw ViridianForestHS       ;$33
+	dw Museum1FHS             ;$34
+	dw NoHS                   ;$35
+	dw NoHS                   ;$36
+	dw NoHS                   ;$37
+	dw NoHS                   ;$38
+	dw NoHS                   ;$39
+	dw NoHS                   ;$3a
+	dw MtMoon1FHS             ;$3b
+	dw NoHS                   ;$3c
+	dw MtMoonB2FHS            ;$3d
+	dw NoHS                   ;$3e
+	dw NoHS                   ;$3f
+	dw NoHS                   ;$40
+	dw NoHS                   ;$41
+	dw NoHS                   ;$42
+	dw NoHS                   ;$43
+	dw NoHS                   ;$44
+	dw NoHS                   ;$45
+	dw NoHS                   ;$46
+	dw NoHS                   ;$47
+	dw NoHS                   ;$48
+	dw NoHS                   ;$49
+	dw NoHS                   ;$4a
+	dw NoHS                   ;$4b
+	dw NoHS                   ;$4c
+	dw NoHS                   ;$4d
+	dw NoHS                   ;$4e
+	dw NoHS                   ;$4f
+	dw NoHS                   ;$50
+	dw NoHS                   ;$51
+	dw RockTunnel1FHS         ;$52
 	dw PowerPlantHS
 	dw NoHS
 	dw NoHS
@@ -564,5 +564,8 @@ SeafoamIslandsB4FHS:
 	db SEAFOAM_ISLANDS_B4F, $01, HIDE
 	db SEAFOAM_ISLANDS_B4F, $02, HIDE
 	db SEAFOAM_ISLANDS_B4F, $03, SHOW
+	db SEAFOAM_ISLANDS_B4F, $04, SHOW
+RockTunnel1FHS:
+	db ROCK_TUNNEL_1F, $08, SHOW
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_HS_OBJECTS + 1
