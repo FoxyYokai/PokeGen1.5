@@ -204,7 +204,7 @@
 	const EVENT_GOT_HITMONLEE
 	const EVENT_GOT_HITMONCHAN
 	const_skip 8
-	const EVENT_GOT_TM46
+	const EVENT_GOT_TM29
 	const EVENT_BEAT_SABRINA
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_0
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_1
@@ -215,8 +215,7 @@
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_6
 	const_skip 46
 	const EVENT_SILPH_CO_RECEPTIONIST_AT_DESK
-	const_skip 24
-	const EVENT_GOT_TM29
+	const_skip 25
 
 ; Route 1 events
 	const_next $3C0

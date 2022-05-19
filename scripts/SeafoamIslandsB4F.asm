@@ -136,6 +136,7 @@ SeafoamIslandsB4F_TextPointers:
 	dw ArticunoText
 	dw SeafoamIslands5Text4
 	dw SeafoamIslands5Text5
+	dw PickUpItemText
 
 ; Articuno is object 3, but its event flag is bit 2.
 ; This is not a problem because its sight range is 0, and

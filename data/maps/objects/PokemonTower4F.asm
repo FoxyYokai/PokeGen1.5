@@ -13,6 +13,6 @@ PokemonTower4F_Object:
 	object_event 14, 12, SPRITE_CHANNELER, STAY, LEFT, 3, OPP_CHANNELER, 12
 	object_event 12, 10, SPRITE_POKE_BALL, STAY, NONE, 4, ELIXER
 	object_event  9, 10, SPRITE_POKE_BALL, STAY, NONE, 5, AWAKENING
-	object_event 12, 16, SPRITE_POKE_BALL, STAY, NONE, 6, HP_UP
+	object_event 12, 16, SPRITE_POKE_BALL, STAY, NONE, 6, TM_SUBSTITUTE
 
 	def_warps_to POKEMON_TOWER_4F
