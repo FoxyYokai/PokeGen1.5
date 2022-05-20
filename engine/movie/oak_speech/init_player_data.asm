@@ -18,6 +18,8 @@ InitPlayerData2:
 	call InitializeEmptyList
 	ld hl, wNumBagItems
 	call InitializeEmptyList
+	ld hl, wNumTMCaseItems
+	call InitializeEmptyList
 	ld hl, wNumBoxItems
 	call InitializeEmptyList
 

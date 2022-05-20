@@ -2238,8 +2238,8 @@ ItemUseTMHM:
 	and a
 	ret z
 	ld a, [wcf91]
-	call IsItemHM
-	ret c
+	cp HM01 ; is this a TM/HM?
+	ret nc
 	jp RemoveUsedItem
 
 BootedUpTMText:

@@ -450,6 +450,101 @@ INCLUDE "data/items/use_party.asm"
 
 INCLUDE "data/items/use_overworld.asm"
 
+TMCaseMenuLoop:
+	call LoadScreenTilesFromBuffer2DisableBGTransfer ; restore saved screen
+	call RunDefaultPaletteCommand
+
+StartMenu_TM_Case::
+	ld a, [wLinkState]
+	dec a ; is the player in the Colosseum or Trade Centre?
+	jr nz, .notInCableClubRoom
+	ld hl, CannotUseItemsHereText
+	call PrintText
+	jr .exitMenu
+.notInCableClubRoom
+	ld bc, wNumTMCaseItems
+	ld hl, wListPointer
+	ld a, c
+	ld [hli], a
+	ld [hl], b ; store item bag pointer in wListPointer (for DisplayListMenuID)
+	xor a
+	ld [wListScrollOffset], a
+	ld [wPrintItemPrices], a
+    ld [wCurrentMenuItem], a
+	ld a, ITEMLISTMENU
+	ld [wListMenuID], a
+	call DisplayListMenuID
+	jr nc, .choseItem
+.exitMenu
+	call LoadScreenTilesFromBuffer2 ; restore saved screen
+	call LoadTextBoxTilePatterns
+	call UpdateSprites
+	jp RedisplayStartMenu
+.choseItem
+; erase menu cursor (blank each tile in front of an item name)
+	ld a, " "
+	ldcoord_a 5, 4
+	ldcoord_a 5, 6
+	ldcoord_a 5, 8
+	ldcoord_a 5, 10
+	call PlaceUnfilledArrowMenuCursor
+	xor a
+	ld [wMenuItemToSwap], a
+	ld a, USE_CANCEL_MENU_TEMPLATE
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	ld hl, wTopMenuItemY
+	ld a, 11
+	ld [hli], a ; top menu item Y
+	ld a, 12
+	ld [hli], a ; top menu item X
+	xor a
+	ld [hli], a ; current menu item ID
+	inc hl
+	inc a ; a = 1
+	ld [hli], a ; max menu item ID
+	ld a, A_BUTTON | B_BUTTON
+	ld [hli], a ; menu watched keys
+	xor a
+	ld [hl], a ; old menu item id
+	call HandleMenuInput
+	call PlaceUnfilledArrowMenuCursor
+	bit BIT_B_BUTTON, a
+	jr z, .useOrCancel
+	jp TMCaseMenuLoop
+.useOrCancel ; if the player made the choice to use or toss the item
+	ld a, [wcf91]
+	ld [wd11e], a
+	call GetItemName
+	call CopyToStringBuffer
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .choseUse
+	jp TMCaseMenuLoop ;chose cancel, return
+; use item
+.choseUse
+	ld [wPseudoItemID], a ; a must be 0 due to above conditional jump
+	ld a, [wcf91]
+	cp HM01
+	jr nc, .useItem_partyMenu
+	jp TMCaseMenuLoop
+.useItem_partyMenu
+	ld a, [wUpdateSpritesEnabled]
+	push af
+	call UseItem
+	ld a, [wActionResultOrTookBattleTurn]
+	cp $02
+	jp z, .partyMenuNotDisplayed
+	call GBPalWhiteOutWithDelay3
+	call RestoreScreenTilesAndReloadTilePatterns
+	pop af
+	ld [wUpdateSpritesEnabled], a
+	jp TMCaseMenuLoop
+.partyMenuNotDisplayed
+	pop af
+	ld [wUpdateSpritesEnabled], a
+	jp TMCaseMenuLoop
+
 StartMenu_TrainerInfo::
 	call GBPalWhiteOut
 	call ClearScreen
