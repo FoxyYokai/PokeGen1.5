@@ -9,6 +9,9 @@ PewterMart_TextPointers:
 	dw PewterMartText2
 	dw PewterMartText3
 
+PewterCashierText:
+	script_mart POKE_BALL, POTION, ESCAPE_ROPE, ANTIDOTE, BURN_HEAL, AWAKENING, PARLYZ_HEAL
+
 PewterMartText2:
 	text_asm
 	ld hl, .Text

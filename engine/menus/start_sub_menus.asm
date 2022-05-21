@@ -316,11 +316,23 @@ StartMenu_Item::
 	ld [wPrintItemPrices], a
 	ld a, ITEMLISTMENU
 	ld [wListMenuID], a
+	
+	; Load the offsets and last position
 	ld a, [wBagSavedMenuItem]
-	ld [wCurrentMenuItem], a
+	ld [wCurrentMenuItem], a	
+	; Load the saved item bag scroll offset location
+	ld a, [wBagItemSavedMenuScrollOffset]
+	ld [wListScrollOffset], a
+	
+	; make the list menu show
 	call DisplayListMenuID
+	
+	; Save the offsets and last position
+	ld a, [wListScrollOffset]
+	ld [wBagItemSavedMenuScrollOffset], a
 	ld a, [wCurrentMenuItem]
 	ld [wBagSavedMenuItem], a
+	
 	jr nc, .choseItem
 .exitMenu
 	call LoadScreenTilesFromBuffer2 ; restore saved screen
@@ -468,12 +480,25 @@ StartMenu_TM_Case::
 	ld [hli], a
 	ld [hl], b ; store item bag pointer in wListPointer (for DisplayListMenuID)
 	xor a
-	ld [wListScrollOffset], a
 	ld [wPrintItemPrices], a
-    ld [wCurrentMenuItem], a
 	ld a, ITEMLISTMENU
 	ld [wListMenuID], a
+
+	; Load the offsets and last position
+	ld a, [wTMCaseSavedMenuItem]
+	ld [wCurrentMenuItem], a	
+	ld a, [wTMCaseSavedMenuScrollOffset]
+	ld [wListScrollOffset], a
+	
+	; make the list menu show
 	call DisplayListMenuID
+	
+	; Save the offsets and last position
+	ld a, [wListScrollOffset]
+	ld [wTMCaseSavedMenuScrollOffset], a
+	ld a, [wCurrentMenuItem]
+	ld [wTMCaseSavedMenuItem], a
+
 	jr nc, .choseItem
 .exitMenu
 	call LoadScreenTilesFromBuffer2 ; restore saved screen

@@ -1843,6 +1843,10 @@ wDestinationWarpID:: db
 UNION
 	ds 128
 	NEXTU
+	; need to save the scroll offset of both bag items and tm case items so they don't step over each other with wListScrollOffset
+	wBagItemSavedMenuScrollOffset:: db ;save the bag item scroll position
+	wTMCaseSavedMenuScrollOffset:: db ;save the tm case scroll position
+	wTMCaseSavedMenuItem:: db ; save the tm case cursor position
 	wNumTMCaseItems:: db
 	wTMCaseInventory:: ds NUM_TMS * 2 + 1
 ENDU

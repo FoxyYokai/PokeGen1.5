@@ -473,6 +473,10 @@ PrintListMenuEntries::
 	ld a, [wIsKeyItem]
 	and a ; is the item unsellable?
 	jr nz, .skipPrintingItemQuantity ; if so, don't print the quantity
+	ld a, [wd11e]
+	ld [wcf91], a 
+	cp TM01 ; TMs shouldn't show a quantity either.
+	jr nc, .skipPrintingItemQuantity
 	push hl
 	ld bc, SCREEN_WIDTH + 8 ; 1 row down and 8 columns right
 	add hl, bc

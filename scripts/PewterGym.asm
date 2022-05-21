@@ -54,6 +54,7 @@ PewterGymScriptReceiveTM34:
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM34
+	SetEvent EVENT_GOT_TM_CASE ; Brock will give the player access to the TM inventory with their first TM
 	jr .gymVictory
 .BagFull
 	ld a, $6

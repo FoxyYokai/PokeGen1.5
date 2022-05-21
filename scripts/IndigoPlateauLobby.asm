@@ -21,6 +21,9 @@ IndigoPlateauLobby_TextPointers:
 	dw IndigoCashierText
 	dw IndigoTradeNurseText
 
+IndigoCashierText:
+	script_mart ULTRA_BALL, GREAT_BALL, FULL_RESTORE, MAX_POTION, FULL_HEAL, REVIVE, MAX_REPEL
+
 IndigoHealNurseText:
 	script_pokecenter_nurse
 

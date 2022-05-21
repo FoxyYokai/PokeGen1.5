@@ -6,6 +6,9 @@ VermilionMart_TextPointers:
 	dw VermilionMartText2
 	dw VermilionMartText3
 
+VermilionCashierText:
+	script_mart POKE_BALL, SUPER_POTION, ICE_HEAL, AWAKENING, PARLYZ_HEAL, REPEL
+
 VermilionMartText2:
 	text_far _VermilionMartText2
 	text_end

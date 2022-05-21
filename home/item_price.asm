@@ -16,8 +16,6 @@ GetItemPrice::
 	ld h, [hl]
 	ld l, a
 	ld a, [wcf91] ; a contains item id
-	cp HM01
-	jr nc, .getTMPrice
 	ld bc, $3
 .loop
 	add hl, bc
@@ -31,11 +29,6 @@ GetItemPrice::
 	ld a, [hl]
 	ldh [hItemPrice], a
 	jr .done
-.getTMPrice
-	ld a, BANK(GetMachinePrice)
-	ldh [hLoadedROMBank], a
-	ld [MBC1RomBank], a
-	call GetMachinePrice
 .done
 	ld de, hItemPrice
 	pop af
