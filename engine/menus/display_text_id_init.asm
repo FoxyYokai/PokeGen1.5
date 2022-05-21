@@ -11,15 +11,21 @@ DisplayTextIDInit::
 ; if text ID is 0 (i.e. the start menu)
 ; Note that the start menu text border is also drawn in the function directly
 ; below this, so this seems unnecessary.
-	CheckEvent EVENT_GOT_POKEDEX
-; start menu with pokedex
+	CheckEvent EVENT_GOT_TM_CASE
+;menu with both TM Case and Pokedex. TM Case event should always be after pokedex event
 	hlcoord 10, 0
 	ld b, $10
 	ld c, $08
 	jr nz, .drawTextBoxBorder
-; start menu without pokedex
+	CheckEvent EVENT_GOT_POKEDEX
+; menu with pokedex, but not TM Case
 	hlcoord 10, 0
 	ld b, $0e
+	ld c, $08
+	jr nz, .drawTextBoxBorder
+; shorter menu if the player doesn't have the pokedex or TM Case
+	hlcoord 10, 0
+	ld b, $0c
 	ld c, $08
 	jr .drawTextBoxBorder
 ; if text ID is not 0 (i.e. not the start menu) then do a standard dialogue text box

@@ -35,10 +35,8 @@ _TM34ExplanationText::
 	cont "you want! So use"
 	cont "them to build a"
 	cont "powerful team!"
-	cont "I also have gave"
-	cont "you a TM Case to"
-	cont "store them."
-	cont "Search for more!"
+	cont "I also gave you"
+	cont "a TM Case!"
 
 	para "TM34 contains"
 	line "BIDE!"
