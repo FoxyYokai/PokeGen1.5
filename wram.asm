@@ -1839,7 +1839,17 @@ wWarpEntries:: ds 32 * 4 ; Y, X, warp ID, map ID
 ; if $ff, the player's coordinates are not updated when entering the map
 wDestinationWarpID:: db
 
+;TM_Case storage location 128 bytes
+UNION
 	ds 128
+	NEXTU
+	; need to save the scroll offset of both bag items and tm case items so they don't step over each other with wListScrollOffset
+	wBagItemSavedMenuScrollOffset:: db ;save the bag item scroll position
+	wTMCaseSavedMenuScrollOffset:: db ;save the tm case scroll position
+	wTMCaseSavedMenuItem:: db ; save the tm case cursor position
+	wNumTMCaseItems:: db
+	wTMCaseInventory:: ds NUM_TMS * 2 + 1
+ENDU
 
 ; number of signs in the current map (up to 16)
 wNumSigns:: db

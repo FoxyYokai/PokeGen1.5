@@ -8,6 +8,13 @@ GiveItem::
 	ld a, c
 	ld [wItemQuantity], a
 	ld hl, wNumBagItems
+	ld a, b
+	cp TM01 ;check if a TM
+	jr nc, .machine
+	jp .done
+.machine
+	ld hl, wNumTMCaseItems
+.done
 	call AddItemToInventory
 	ret nc
 	call GetItemName

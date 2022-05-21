@@ -73,6 +73,9 @@ ViridianMart_TextPointers2:
 	dw ViridianMartText2
 	dw ViridianMartText3
 
+ViridianCashierText:
+	script_mart POKE_BALL, ANTIDOTE, PARLYZ_HEAL, BURN_HEAL
+
 ViridianMartText1:
 	text_far _ViridianMartText1
 	text_end

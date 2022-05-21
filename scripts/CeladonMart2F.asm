@@ -8,6 +8,12 @@ CeladonMart2F_TextPointers:
 	dw CeladonMart2Text4
 	dw CeladonMart2Text5
 
+CeladonMart2Clerk1Text:
+	script_mart GREAT_BALL, SUPER_POTION, REVIVE, SUPER_REPEL, ANTIDOTE, BURN_HEAL, ICE_HEAL, AWAKENING, PARLYZ_HEAL
+
+CeladonMart2Clerk2Text:
+	script_mart POKE_BALL
+
 CeladonMart2Text3:
 	text_far _CeladonMart2Text3
 	text_end

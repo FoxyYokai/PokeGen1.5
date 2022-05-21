@@ -1,12 +1,18 @@
 ; function that displays the start menu
 DrawStartMenu::
+	CheckEvent EVENT_GOT_TM_CASE
+;menu with both TM Case and Pokedex. TM Case event should always be after pokedex event
+	hlcoord 10, 0
+	ld b, $10
+	ld c, $08
+	jr nz, .drawTextBoxBorder
 	CheckEvent EVENT_GOT_POKEDEX
-; menu with pokedex
+; menu with pokedex, but not TM Case
 	hlcoord 10, 0
 	ld b, $0e
 	ld c, $08
 	jr nz, .drawTextBoxBorder
-; shorter menu if the player doesn't have the pokedex
+; shorter menu if the player doesn't have the pokedex or TM Case
 	hlcoord 10, 0
 	ld b, $0c
 	ld c, $08
@@ -25,21 +31,34 @@ DrawStartMenu::
 	ld [wMenuWatchMovingOutOfBounds], a
 	ld hl, wd730
 	set 6, [hl] ; no pauses between printing each letter
-	hlcoord 12, 2
+	hlcoord 12, 2	
+
+	; determine Max Number of Menu Items	
+	ld b, $08	; case for having pokedex + TM Case
+	CheckEvent EVENT_GOT_TM_CASE
+	jr nz, .storeMenuItemCount
+	ld b, $07 ; case for having pokedex but not TM Case
 	CheckEvent EVENT_GOT_POKEDEX
-; case for not having pokedex
-	ld a, $06
-	jr z, .storeMenuItemCount
-; case for having pokedex
+	jr nz, .storeMenuItemCount
+	ld b, $06 ; case for not having pokedex or TM Case
+
+.storeMenuItemCount
+	ld a, b
+	ld [wMaxMenuItem], a ; number of menu items
+	CheckEvent EVENT_GOT_POKEDEX
+	jr z, .skipPokedex
 	ld de, StartMenuPokedexText
 	call PrintStartMenuItem
-	ld a, $07
-.storeMenuItemCount
-	ld [wMaxMenuItem], a ; number of menu items
+.skipPokedex
 	ld de, StartMenuPokemonText
 	call PrintStartMenuItem
 	ld de, StartMenuItemText
 	call PrintStartMenuItem
+	CheckEvent EVENT_GOT_TM_CASE
+	jr z, .skipTMCase
+	ld de, StartMenuTMCaseText ;TM CASE
+	call PrintStartMenuItem
+.skipTMCase
 	ld de, wPlayerName ; player's name
 	call PrintStartMenuItem
 	ld a, [wd72e]
@@ -67,6 +86,9 @@ StartMenuPokemonText:
 
 StartMenuItemText:
 	db "ITEM@"
+
+StartMenuTMCaseText:
+	db "TM CASE@"
 
 StartMenuSaveText:
 	db "SAVE@"

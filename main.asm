@@ -348,8 +348,6 @@ INCLUDE "engine/menus/league_pc.asm"
 INCLUDE "engine/events/hidden_items.asm"
 INCLUDE "gfx/fishing.asm"
 INCLUDE "engine/overworld/elevator.asm"
-INCLUDE "engine/items/tm_prices.asm"
-
 
 SECTION "bank1E", ROMX
 
