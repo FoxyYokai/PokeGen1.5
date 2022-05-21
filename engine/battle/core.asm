@@ -4623,15 +4623,13 @@ CriticalHitTest:
 	dec hl
 	ld c, [hl]                   ; read move id
 	ld a, [de]
-	bit GETTING_PUMPED, a        ; test for focus energy
-	jr nz, .focusEnergyUsed      ; bug: using focus energy causes a shift to the right instead of left,
-	                             ; resulting in 1/4 the usual crit chance
-	sla b                        ; (effective (base speed/2)*2)
-	jr nc, .noFocusEnergyUsed
-	ld b, $ff                    ; cap at 255/256
-	jr .noFocusEnergyUsed
-.focusEnergyUsed
-	srl b
+	bit GETTING_PUMPED, a        ; test for focus energy -- fix from github.com/jojobear13/shinpokered
+	jr z, .noFocusEnergyUsed      
+	;else focus energy used -- shift left twice for x4 crit chance, checking for capped chance
+	sla b
+	jr c, .capcritical
+	sla b
+	jr c, .capcritical
 .noFocusEnergyUsed
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
@@ -4640,17 +4638,17 @@ CriticalHitTest:
 	jr z, .HighCritical          ; if so, the move about to be used is a high critical hit ratio move
 	inc a                        ; move on to the next move, FF terminates loop
 	jr nz, .Loop                 ; check the next move in HighCriticalMoves
-	srl b                        ; /2 for regular move (effective (base speed / 2))
-	jr .SkipHighCritical         ; continue as a normal move
+	jr .finishcalc         		 ; continue as a normal move
 .HighCritical
-	sla b                        ; *2 for high critical hit moves
-	jr nc, .noCarry
-	ld b, $ff                    ; cap at 255/256
-.noCarry
-	sla b                        ; *4 for high critical move (effective (base speed/2)*8))
-	jr nc, .SkipHighCritical
-	ld b, $ff
-.SkipHighCritical
+	sla b                        ; *2 for high critical hit moves (effective +2x crit rate)
+	jr c, .capcritical
+	sla b                        ; *2 again for high critical hit moves (effective +4x crit rate)
+	jr c, .capcritical
+	sla b                        ; *2 again for high critical hit moves (effective +8x crit rate)
+	jr nc, .finishcalc
+.capcritical
+	ld b, $ff					 ; cap at 255/256
+.finishcalc
 	call BattleRandom            ; generates a random value, in "a"
 	rlc a
 	rlc a
@@ -4661,7 +4659,15 @@ CriticalHitTest:
 	ld [wCriticalHitOrOHKO], a   ; set critical hit flag
 	ret
 
-INCLUDE "data/battle/critical_hit_moves.asm"
+HighCriticalMoves:
+	db KARATE_CHOP
+	db DRILL_PECK
+	db RAZOR_LEAF
+	db CRABHAMMER
+	db SLASH
+	db CROSSCHOP
+	db XSCISSOR
+	db -1 ; end
 
 ; function to determine if Counter hits and if so, how much damage it does
 HandleCounterMove:
