@@ -27,10 +27,11 @@ _CeladonMartRoofText_484fe::
 	para "@"
 	text_ram wStringBuffer
 	text " contains"
-	line "ICE BEAM!"
+	line "ICE PUNCH!"
 
-	para "It can freeze the"
-	line "target sometimes!@"
+	para "It's one of three"
+	line "elemental punch"
+	cont "attacks!@"
 	text_end
 
 _CeladonMartRoofText_48504::
@@ -57,10 +58,11 @@ _CeladonMartRoofText_4850f::
 	para "@"
 	text_ram wStringBuffer
 	text " contains"
-	line "ROCK SLIDE!"
+	line "FIRE PUNCH!"
 
-	para "It can spook the"
-	line "target sometimes!@"
+	para "It's one of three"
+	line "elemental punch"
+	cont "attacks!@"
 	text_end
 
 _CeladonMartRoofText_48515::
@@ -74,16 +76,19 @@ _CeladonMartRoofText_48515::
 	line "from me!@"
 	text_end
 
-_ReceivedTM49Text::
+_ReceivedTM02Text::
 	text "<PLAYER> received"
-	line "TM49!@"
+	line "TM02!@"
 	text_end
 
 _CeladonMartRoofText_48520::
 	text_start
 
-	para "TM49 contains"
-	line "TRI ATTACK!@"
+	para "TM02 contains"
+	line "THUNDERPUNCH!@"
+	para "It's one of three"
+	line "elemental punch"
+	cont "attacks!@"
 	text_end
 
 _CeladonMartRoofText_48526::

@@ -14,10 +14,27 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_KICK,   AERIALACE,    TOXIC,        SLUDGEBOMB,    DOUBLE_EDGE,  \
-	     HYPER_BEAM,   DRAGONBREATH,         MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    \
-	     SHADOWBALL,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SWIFT,        REST,         LIGHT_SCREEN,      SUBSTITUTE
+	tmhm				\
+		 AERIALACE,		\
+		 DOUBLE_EDGE,	\
+		 HYPER_BEAM,	\
+	     MEGA_DRAIN,	\
+		 SOLARBEAM,		\
+		 PSYCHIC_M,		\
+		 CONFUSE_RAY,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 REFLECT,		\
+		 BIDE,			\
+		 METRONOME,		\
+		 SWIFT,			\
+		 HYPNOSIS,		\
+		 SKY_ATTACK,	\
+		 REST,			\
+		 THUNDER_WAVE,	\
+	     LIGHT_SCREEN,	\
+		 SUBSTITUTE,	\
+		 FLASH
 	; end
 
 	db 0 ; padding

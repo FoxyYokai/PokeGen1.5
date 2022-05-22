@@ -14,7 +14,13 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm
+	tmhm				\
+		 DOUBLE_EDGE,	\
+		 DOUBLE_TEAM,	\
+		 BIDE,			\
+		 METRONOME,		\
+		 SWIFT,			\
+		 SUBSTITUTE
 	; end
 
 	db 0 ; padding

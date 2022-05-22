@@ -14,18 +14,62 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_PUNCH,   MEGA_KICK,   SWORDS_DANCE, AERIALACE,    TOMBSTONER,    \
-	     TOXIC,        BULLDOZE,   BODY_SLAM,    SLUDGEBOMB,    DOUBLE_EDGE,  \
-	     BUBBLEBEAM,   ICYWIND,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
-	     PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, DRAGONBREATH,         \
-	     MEGA_DRAIN,   SOLARBEAM,    DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      \
-	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    SHADOWBALL,     \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
-	     TOMBSTONER, XSCISSOR,     FIRE_BLAST,   SWIFT,        SKULL_BASH,   \
-	     SOFTBOILED,   DREAM_EATER,  SKY_ATTACK,   REST,         THUNDER_WAVE, \
-	     LIGHT_SCREEN,      EXPLOSION,    ROCK_SLIDE,   TRI_ATTACK,   SUBSTITUTE,   \
-	     CUT,          FLY,          SURF,         STRENGTH,     FLASH,        \
-	     UNUSED
+	tmhm				\
+		 FIRE_PUNCH,	\
+		 THUNDERPUNCH,  \
+		 ICE_PUNCH,	    \
+		 AERIALACE,		\
+		 XSCISSOR,		\
+	     TOXIC,			\
+		 BULLDOZE,		\
+		 BODY_SLAM,		\
+		 SLUDGEBOMB,	\
+		 DOUBLE_EDGE,	\
+	     BUBBLEBEAM,	\
+		 DOUBLE_KICK,	\
+		 ICE_BEAM,		\
+		 BLIZZARD,		\
+		 HYPER_BEAM,	\
+	     PAY_DAY,		\
+		 SUBMISSION,	\
+		 COUNTER,		\
+		 SEISMIC_TOSS,	\
+		 DRAGONBREATH,	\
+	     MEGA_DRAIN,	\
+		 SOLARBEAM,		\
+		 DRAGON_RAGE,	\
+		 THUNDERBOLT,	\
+		 THUNDER,		\
+	     EARTHQUAKE,	\
+		 MUDSLAP,		\
+		 DIG,			\
+		 PSYCHIC_M,		\
+		 CONFUSE_RAY,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 REFLECT,		\
+		 BIDE,			\
+		 METRONOME,		\
+	     TOMBSTONER,	\
+		 FLAMETHROWER,	\
+		 FIRE_BLAST,	\
+		 SWIFT,			\
+		 FOCUS_ENERGY,	\
+	     SOFTBOILED,	\
+		 HYPNOSIS,		\
+		 SKY_ATTACK,	\
+		 REST,			\
+		 THUNDER_WAVE,	\
+	     LIGHT_SCREEN,	\
+		 EXPLOSION,		\
+		 ROCK_SLIDE,	\
+		 SWORDS_DANCE,	\
+		 SUBSTITUTE,	\
+	     CUT,			\
+		 FLY,			\
+		 SURF,			\
+		 STRENGTH,		\
+		 FLASH
 	; end
 
 	db %11111111 ; padding

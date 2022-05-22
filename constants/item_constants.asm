@@ -157,9 +157,9 @@ TM{02d:__tmhm_value__}_MOVE EQU \1
 ENDM
 
 TM01 EQU const_value
-	add_tm MEGA_PUNCH   ; $C9
-	add_tm MEGA_KICK    ; $CA
-	add_tm SWORDS_DANCE ; $CB
+	add_tm FIRE_PUNCH   ; $C9
+	add_tm THUNDERPUNCH ; $CA
+	add_tm ICE_PUNCH    ; $CB
 	add_tm AERIALACE    ; $CC
 	add_tm XSCISSOR     ; $CD
 	add_tm TOXIC        ; $CE
@@ -168,7 +168,7 @@ TM01 EQU const_value
 	add_tm SLUDGEBOMB   ; $D1
 	add_tm DOUBLE_EDGE  ; $D2
 	add_tm BUBBLEBEAM   ; $D3
-	add_tm ICYWIND      ; $D4
+	add_tm DOUBLE_KICK  ; $D4
 	add_tm ICE_BEAM     ; $D5
 	add_tm BLIZZARD     ; $D6
 	add_tm HYPER_BEAM   ; $D7
@@ -183,10 +183,10 @@ TM01 EQU const_value
 	add_tm THUNDERBOLT  ; $E0
 	add_tm THUNDER      ; $E1
 	add_tm EARTHQUAKE   ; $E2
-	add_tm FISSURE      ; $E3
+	add_tm MUDSLAP      ; $E3
 	add_tm DIG          ; $E4
 	add_tm PSYCHIC_M    ; $E5
-	add_tm SHADOWBALL   ; $E6
+	add_tm CONFUSE_RAY  ; $E6
 	add_tm MIMIC        ; $E7
 	add_tm DOUBLE_TEAM  ; $E8
 	add_tm REFLECT      ; $E9
@@ -196,16 +196,16 @@ TM01 EQU const_value
 	add_tm FLAMETHROWER ; $ED
 	add_tm FIRE_BLAST   ; $EE
 	add_tm SWIFT        ; $EF
-	add_tm SKULL_BASH   ; $F0
+	add_tm FOCUS_ENERGY ; $F0
 	add_tm SOFTBOILED   ; $F1
-	add_tm DREAM_EATER  ; $F2
+	add_tm HYPNOSIS     ; $F2
 	add_tm SKY_ATTACK   ; $F3
 	add_tm REST         ; $F4
 	add_tm THUNDER_WAVE ; $F5
 	add_tm LIGHT_SCREEN ; $F6
 	add_tm EXPLOSION    ; $F7
 	add_tm ROCK_SLIDE   ; $F8
-	add_tm TRI_ATTACK   ; $F9
+	add_tm SWORDS_DANCE ; $F9
 	add_tm SUBSTITUTE   ; $FA
 ASSERT NUM_TMS == const_value - TM01, "NUM_TMS ({d:NUM_TMS}) does not match the number of add_tm definitions"
 
