@@ -16,7 +16,6 @@
 	; tm/hm learnset
 	tmhm				\
 	     TOXIC,			\
-		 BULLDOZE,		\
 		 BODY_SLAM,		\
 		 SLUDGEBOMB,	\
 		 DOUBLE_EDGE,	\

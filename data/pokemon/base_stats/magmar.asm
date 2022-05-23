@@ -14,11 +14,33 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_PUNCH,   TOMBSTONER,    TOXIC,        BODY_SLAM,    SLUDGEBOMB,    \
-	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
-	     DRAGONBREATH,         PSYCHIC_M,    SHADOWBALL,     MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         METRONOME,    FIRE_BLAST,   SKULL_BASH,   REST,         \
-	     LIGHT_SCREEN,      SUBSTITUTE,   STRENGTH
+	tmhm				\
+		 FIRE_PUNCH,	\
+		 THUNDERPUNCH,  \
+		 BODY_SLAM,		\
+		 DOUBLE_EDGE,	\
+		 DOUBLE_KICK,	\
+		 HYPER_BEAM,	\
+		 SUBMISSION,	\
+		 SEISMIC_TOSS,	\
+		 DRAGONBREATH,	\
+		 SOLARBEAM,		\
+		 DIG,			\
+		 PSYCHIC_M,		\
+		 CONFUSE_RAY,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 REFLECT,		\
+		 BIDE,			\
+		 METRONOME,		\
+		 FLAMETHROWER,	\
+		 FIRE_BLAST,	\
+		 SWIFT,			\
+		 FOCUS_ENERGY,	\
+		 REST,			\
+	     LIGHT_SCREEN,	\
+		 SUBSTITUTE,	\
+		 STRENGTH
 	; end
 
 	db 0 ; padding

@@ -14,14 +14,38 @@
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_PUNCH,   TOMBSTONER,    TOXIC,        BODY_SLAM,    SLUDGEBOMB,    \
-	     DOUBLE_EDGE,  BUBBLEBEAM,   ICYWIND,    ICE_BEAM,     BLIZZARD,     \
-	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, DRAGONBREATH,         \
-	     SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    SHADOWBALL,     \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
-	     XSCISSOR,     FIRE_BLAST,   SKULL_BASH,   SOFTBOILED,   REST,         \
-	     THUNDER_WAVE, LIGHT_SCREEN,      TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     \
-	     FLASH
+	tmhm				\
+		 FIRE_PUNCH,	\
+		 THUNDERPUNCH,  \
+		 ICE_PUNCH,	    \
+		 BODY_SLAM,		\
+		 DOUBLE_EDGE,	\
+	     BUBBLEBEAM,	\
+		 ICE_BEAM,		\
+		 BLIZZARD,		\
+		 HYPER_BEAM,	\
+		 SUBMISSION,	\
+		 SEISMIC_TOSS,	\
+		 THUNDERBOLT,	\
+		 THUNDER,		\
+		 MUDSLAP,		\
+		 DIG,			\
+		 PSYCHIC_M,		\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 REFLECT,		\
+		 BIDE,			\
+		 METRONOME,		\
+		 FLAMETHROWER,	\
+		 FIRE_BLAST,	\
+		 SWIFT,			\
+	     SOFTBOILED,	\
+		 HYPNOSIS,		\
+		 REST,			\
+		 THUNDER_WAVE,	\
+	     LIGHT_SCREEN,	\
+		 SUBSTITUTE,	\
+		 STRENGTH
 	; end
 
 	db 0 ; padding

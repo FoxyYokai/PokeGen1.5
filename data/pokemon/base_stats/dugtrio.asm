@@ -18,7 +18,7 @@
 		 BULLDOZE,		\
 		 BODY_SLAM,		\
 		 DOUBLE_EDGE,	\
-		 HYPER_BEAM,		\
+		 HYPER_BEAM,	\
 	     EARTHQUAKE,	\
 		 MUDSLAP,		\
 		 DIG,			\

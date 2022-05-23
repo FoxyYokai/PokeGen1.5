@@ -85,7 +85,7 @@ _CeladonMartRoofText_48520::
 	text_start
 
 	para "TM02 contains"
-	line "THUNDERPUNCH!@"
+	line "THUNDERPUNCH!"
 	para "It's one of three"
 	line "elemental punch"
 	cont "attacks!@"

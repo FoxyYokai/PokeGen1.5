@@ -21,7 +21,6 @@
 		 HYPER_BEAM,	\
 		 DRAGONBREATH,	\
 		 MEGA_DRAIN,	\
-		 EARTHQUAKE,	\
 		 DIG,			\
 		 CONFUSE_RAY,	\
 	     MIMIC,			\

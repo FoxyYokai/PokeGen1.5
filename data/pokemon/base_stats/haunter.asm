@@ -14,9 +14,25 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        DRAGONBREATH,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
-	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  BIDE,         TOMBSTONER, \
-	     DREAM_EATER,  REST,         LIGHT_SCREEN,      EXPLOSION,    SUBSTITUTE
+	tmhm				\
+	     TOXIC,			\
+		 SLUDGEBOMB,	\
+	     MEGA_DRAIN,	\
+		 THUNDERBOLT,	\
+		 THUNDER,		\
+		 PSYCHIC_M,		\
+		 CONFUSE_RAY,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 BIDE,			\
+		 METRONOME,		\
+		 SWIFT,			\
+		 HYPNOSIS,		\
+		 REST,			\
+		 THUNDER_WAVE,	\
+	     LIGHT_SCREEN,	\
+		 EXPLOSION,		\
+		 SUBSTITUTE
 	; end
 
 	db 0 ; padding

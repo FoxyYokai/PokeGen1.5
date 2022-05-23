@@ -85,7 +85,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	cp SODA_POP
 	jr z, .gaveSodaPop
 ; gave Lemonade
-	CheckEvent EVENT_GOT_TM49
+	CheckEvent EVENT_GOT_TM02
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofText_48515
 	call PrintText
@@ -93,9 +93,9 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	lb bc, TM_THUNDERPUNCH, 1
 	call GiveItem
 	jr nc, .bagFull
-	ld hl, ReceivedTM49Text
+	ld hl, ReceivedTM02Text
 	call PrintText
-	SetEvent EVENT_GOT_TM49
+	SetEvent EVENT_GOT_TM02
 	ret
 .gaveSodaPop
 	CheckEvent EVENT_GOT_TM01
@@ -166,7 +166,7 @@ CeladonMartRoofText_48515:
 	text_waitbutton
 	text_end
 
-ReceivedTM49Text:
+ReceivedTM02Text:
 	text_far _ReceivedTM02Text
 	sound_get_item_1
 	text_far _CeladonMartRoofText_48520

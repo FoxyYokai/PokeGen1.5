@@ -14,10 +14,28 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_KICK,   AERIALACE,    TOXIC,        SLUDGEBOMB,    DOUBLE_EDGE,  \
-	     BUBBLEBEAM,   ICYWIND,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
-	     DRAGONBREATH,         MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
+	tmhm				\
+		 AERIALACE,		\
+		 DOUBLE_EDGE,	\
+	     BUBBLEBEAM,	\
+		 ICE_BEAM,		\
+		 BLIZZARD,		\
+		 HYPER_BEAM,	\
+		 MUDSLAP,		\
+		 PSYCHIC_M,		\
+		 CONFUSE_RAY,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 REFLECT,		\
+		 BIDE,			\
+		 METRONOME,		\
+		 SWIFT,			\
+		 HYPNOSIS,		\
+		 SKY_ATTACK,	\
+		 REST,			\
+	     LIGHT_SCREEN,	\
+		 SUBSTITUTE,	\
+		 FLY
 	; end
 
 	db 0 ; padding

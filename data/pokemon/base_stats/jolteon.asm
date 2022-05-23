@@ -14,10 +14,26 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        BODY_SLAM,    SLUDGEBOMB,    DOUBLE_EDGE,  HYPER_BEAM,   \
-	     DRAGONBREATH,         THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
-	     REFLECT,      BIDE,         SWIFT,        SKULL_BASH,   REST,         \
-	     THUNDER_WAVE, SUBSTITUTE,   FLASH
+	tmhm				\
+		 BODY_SLAM,		\
+		 DOUBLE_EDGE,	\
+		 DOUBLE_KICK,	\
+		 HYPER_BEAM,	\
+	     PAY_DAY,		\
+		 THUNDERBOLT,	\
+		 THUNDER,		\
+		 MUDSLAP,		\
+		 DIG,			\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 BIDE,			\
+		 METRONOME,		\
+		 SWIFT,			\
+		 FOCUS_ENERGY,	\
+		 REST,			\
+		 THUNDER_WAVE,	\
+		 SUBSTITUTE,	\
+		 FLASH
 	; end
 
 	db 0 ; padding
