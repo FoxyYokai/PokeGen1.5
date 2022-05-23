@@ -14,10 +14,27 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_KICK,   AERIALACE,    TOXIC,        SLUDGEBOMB,    DOUBLE_EDGE,  \
-	     HYPER_BEAM,   DRAGONBREATH,         DRAGON_RAGE,  MIMIC,        DOUBLE_TEAM,  \
-	     REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,        SKY_ATTACK,   \
-	     REST,         SUBSTITUTE,   FLY
+	tmhm				\
+		 AERIALACE,		\
+		 BODY_SLAM,		\
+		 DOUBLE_EDGE,	\
+		 HYPER_BEAM,	\
+		 DRAGONBREATH,	\
+		 DRAGON_RAGE,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 BIDE,			\
+		 METRONOME,		\
+	     TOMBSTONER,	\
+		 FLAMETHROWER,	\
+		 FIRE_BLAST,	\
+		 SWIFT,			\
+		 FOCUS_ENERGY,	\
+		 SKY_ATTACK,	\
+		 REST,			\
+		 ROCK_SLIDE,	\
+		 SUBSTITUTE,	\
+		 FLY
 	; end
 
 	db 0 ; padding

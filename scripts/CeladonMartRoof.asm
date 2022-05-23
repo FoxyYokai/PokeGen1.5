@@ -85,43 +85,43 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	cp SODA_POP
 	jr z, .gaveSodaPop
 ; gave Lemonade
-	CheckEvent EVENT_GOT_TM49
+	CheckEvent EVENT_GOT_TM02
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofText_48515
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_TRI_ATTACK, 1
+	lb bc, TM_THUNDERPUNCH, 1
 	call GiveItem
 	jr nc, .bagFull
-	ld hl, ReceivedTM49Text
+	ld hl, ReceivedTM02Text
 	call PrintText
-	SetEvent EVENT_GOT_TM49
+	SetEvent EVENT_GOT_TM02
 	ret
 .gaveSodaPop
-	CheckEvent EVENT_GOT_TM48
+	CheckEvent EVENT_GOT_TM01
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofText_48504
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_ROCK_SLIDE, 1
+	lb bc, TM_FIRE_PUNCH, 1
 	call GiveItem
 	jr nc, .bagFull
 	ld hl, CeladonMartRoofText_4850a
 	call PrintText
-	SetEvent EVENT_GOT_TM48
+	SetEvent EVENT_GOT_TM01
 	ret
 .gaveFreshWater
-	CheckEvent EVENT_GOT_TM13
+	CheckEvent EVENT_GOT_TM03
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofText_484f3
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_ICE_BEAM, 1
+	lb bc, TM_ICE_PUNCH, 1
 	call GiveItem
 	jr nc, .bagFull
 	ld hl, CeladonMartRoofText_484f9
 	call PrintText
-	SetEvent EVENT_GOT_TM13
+	SetEvent EVENT_GOT_TM03
 	ret
 .bagFull
 	ld hl, CeladonMartRoofText_48526
@@ -166,8 +166,8 @@ CeladonMartRoofText_48515:
 	text_waitbutton
 	text_end
 
-ReceivedTM49Text:
-	text_far _ReceivedTM49Text
+ReceivedTM02Text:
+	text_far _ReceivedTM02Text
 	sound_get_item_1
 	text_far _CeladonMartRoofText_48520
 	text_waitbutton

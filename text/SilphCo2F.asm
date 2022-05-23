@@ -18,12 +18,11 @@ _ReceivedTM36Text::
 
 _TM36ExplanationText::
 	text "TM36 is"
-	line "SELFDESTRUCT!"
+	line "TOMBSTONER!"
 
-	para "It's powerful, but"
-	line "the #MON that"
-	cont "uses it faints!"
-	cont "Be careful."
+	para "It's the most"
+	line "powerful rock"
+	cont "move there is!"
 	done
 
 _TM36NoRoomText::

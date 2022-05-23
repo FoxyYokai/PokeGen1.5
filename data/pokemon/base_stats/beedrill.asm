@@ -14,9 +14,22 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm SWORDS_DANCE, TOXIC,        SLUDGEBOMB,    DOUBLE_EDGE,  HYPER_BEAM,   \
-	     DRAGONBREATH,         MEGA_DRAIN,   MIMIC,        DOUBLE_TEAM,  REFLECT,      \
-	     BIDE,         SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
+	tmhm				\
+		 AERIALACE,		\
+		 XSCISSOR,		\
+	     TOXIC,			\
+		 SLUDGEBOMB,	\
+		 DOUBLE_EDGE,	\
+		 HYPER_BEAM,	\
+	     MIMIC,			\
+		 DOUBLE_TEAM,	\
+		 BIDE,			\
+		 METRONOME,		\
+		 SWIFT,			\
+		 FOCUS_ENERGY,	\
+		 REST,			\
+		 SWORDS_DANCE,	\
+		 SUBSTITUTE,	\
 	     CUT
 	; end
 
