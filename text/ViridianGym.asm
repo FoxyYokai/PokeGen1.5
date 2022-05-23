@@ -69,10 +69,11 @@ _ReceivedTM26Text::
 _TM26ExplanationText::
 	text_start
 
-	para "TM26 is EARTHQUAKE!"
-	line "It's a powerful"
-	cont "move that shakes"
-	cont "the earth itself."
+	para "TM26 is "
+	line "EARTHQUAKE!"
+	cont "It's a powerful"
+	cont "move that rocks"
+	cont "the Earth itself."
 
 	para "It was my favorite"
 	line "TM when I ran the"
