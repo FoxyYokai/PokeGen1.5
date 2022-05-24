@@ -1379,6 +1379,7 @@ WeedleEvosMoves:
 	db EV_LEVEL, 7, KAKUNA
 	db 0
 ; Learnset
+	db 15, BUGBITE
 	db 0
 
 KakunaEvosMoves:
@@ -1392,12 +1393,12 @@ BeedrillEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, FURY_ATTACK
-	db 16, FOCUS_ENERGY
-	db 20, TWINEEDLE
-	db 25, RAGE
-	db 30, PIN_MISSILE
-	db 35, AGILITY
+	db 10, FURY_ATTACK
+	db 14, FOCUS_ENERGY
+	db 19, PIN_MISSLE
+	db 24, TWINEEDLE
+	db 29, AGILITY
+	db 33, SWORDS_DANCE
 	db 0
 
 MissingNo73EvosMoves:
