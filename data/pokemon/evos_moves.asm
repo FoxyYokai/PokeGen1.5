@@ -511,12 +511,17 @@ BlastoiseEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 24, BITE
-	db 31, WITHDRAW
-	db 42, SKULL_BASH
-	db 52, HYDRO_PUMP
+	db 6, BUBBLE
+	db 11, BITE
+	db 14, WITHDRAW
+	db 20, WATER_GUN
+	db 24, HEADBUTT
+	db 29, BUBBLEBEAM
+	db 35, TAKE_DOWN
+	db 42, WHIRLPOOL
+	db 47, SKULL_BASH
+	db 49, HARDEN
+	db 53, HYDRO_PUMP
 	db 0
 
 PinsirEvosMoves:
@@ -2006,12 +2011,17 @@ SquirtleEvosMoves:
 	db EV_LEVEL, 16, WARTORTLE
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 22, BITE
-	db 28, WITHDRAW
-	db 35, SKULL_BASH
-	db 42, HYDRO_PUMP
+	db 6, BUBBLE
+	db 11, BITE
+	db 14, WITHDRAW
+	db 18, WATER_GUN
+	db 22, HEADBUTT
+	db 27, BUBBLEBEAM
+	db 33, TAKE_DOWN
+	db 37, WHIRLPOOL
+	db 42, SKULL_BASH
+	db 44, HARDEN
+	db 48, HYDRO_PUMP
 	db 0
 
 CharmeleonEvosMoves:
@@ -2037,12 +2047,17 @@ WartortleEvosMoves:
 	db EV_LEVEL, 36, BLASTOISE
 	db 0
 ; Learnset
-	db 8, BUBBLE
-	db 15, WATER_GUN
-	db 24, BITE
-	db 31, WITHDRAW
-	db 39, SKULL_BASH
-	db 47, HYDRO_PUMP
+	db 6, BUBBLE
+	db 11, BITE
+	db 14, WITHDRAW
+	db 20, WATER_GUN
+	db 24, HEADBUTT
+	db 29, BUBBLEBEAM
+	db 35, TAKE_DOWN
+	db 39, WHIRLPOOL
+	db 44, SKULL_BASH
+	db 46, HARDEN
+	db 50, HYDRO_PUMP
 	db 0
 
 CharizardEvosMoves:
