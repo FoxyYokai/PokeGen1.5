@@ -600,11 +600,15 @@ PidgeyEvosMoves:
 	db 0
 ; Learnset
 	db 5, SAND_ATTACK
-	db 12, QUICK_ATTACK
-	db 19, WHIRLWIND
-	db 28, WING_ATTACK
-	db 36, AGILITY
-	db 44, MIRROR_MOVE
+	db 9, GUST
+	db 11, QUICK_ATTACK
+	db 19, WING_ATTACK
+	db 22, WHIRLWIND
+	db 26, TAKE_DOWN
+	db 30, MIRROR_MOVE
+	db 35, AERIALACE
+	db 39, AGILITY
+	db 44, HURRICANE
 	db 0
 
 SlowpokeEvosMoves:
@@ -1728,11 +1732,15 @@ PidgeottoEvosMoves:
 	db 0
 ; Learnset
 	db 5, SAND_ATTACK
-	db 12, QUICK_ATTACK
-	db 21, WHIRLWIND
-	db 31, WING_ATTACK
-	db 40, AGILITY
-	db 49, MIRROR_MOVE
+	db 9, GUST
+	db 11, QUICK_ATTACK
+	db 21, WING_ATTACK
+	db 24, WHIRLWIND
+	db 28, TAKE_DOWN
+	db 32, MIRROR_MOVE
+	db 37, AERIALACE
+	db 41, AGILITY
+	db 46, HURRICANE
 	db 0
 
 PidgeotEvosMoves:
@@ -1740,11 +1748,15 @@ PidgeotEvosMoves:
 	db 0
 ; Learnset
 	db 5, SAND_ATTACK
-	db 12, QUICK_ATTACK
-	db 21, WHIRLWIND
-	db 31, WING_ATTACK
+	db 9, GUST
+	db 11, QUICK_ATTACK
+	db 21, WING_ATTACK
+	db 24, WHIRLWIND
+	db 28, TAKE_DOWN
+	db 32, MIRROR_MOVE
+	db 40, AERIALACE
 	db 44, AGILITY
-	db 54, MIRROR_MOVE
+	db 49, HURRICANE
 	db 0
 
 StarmieEvosMoves:
