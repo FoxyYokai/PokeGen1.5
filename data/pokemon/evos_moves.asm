@@ -1480,6 +1480,7 @@ CaterpieEvosMoves:
 	db EV_LEVEL, 7, METAPOD
 	db 0
 ; Learnset
+	db 15, BUGBITE
 	db 0
 
 MetapodEvosMoves:
@@ -1493,12 +1494,12 @@ ButterfreeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, CONFUSION
+	db 10, CONFUSION
 	db 15, POISONPOWDER
 	db 16, STUN_SPORE
 	db 17, SLEEP_POWDER
-	db 21, SUPERSONIC
-	db 26, WHIRLWIND
+	db 21, GUST
+	db 26, BUGBUZZ
 	db 32, PSYBEAM
 	db 0
 
