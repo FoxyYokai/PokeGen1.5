@@ -295,13 +295,16 @@ IvysaurEvosMoves:
 	db EV_LEVEL, 32, VENUSAUR
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
-	db 22, POISONPOWDER
-	db 30, RAZOR_LEAF
-	db 38, GROWTH
-	db 46, SLEEP_POWDER
-	db 54, SOLARBEAM
+	db 6, VINE_WHIP
+	db 11, LEECH_SEED
+	db 14, POISONPOWDER
+	db 19, ACID
+	db 22, SLEEP_POWDER
+	db 26, TAKE_DOWN
+	db 31, RAZOR_LEAF
+	db 35, GROWTH
+	db 39, BODY_SLAM
+	db 44, SOLARBEAM
 	db 0
 
 ExeggutorEvosMoves:
@@ -1748,26 +1751,32 @@ BulbasaurEvosMoves:
 	db EV_LEVEL, 16, IVYSAUR
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
-	db 20, POISONPOWDER
-	db 27, RAZOR_LEAF
-	db 34, GROWTH
-	db 41, SLEEP_POWDER
-	db 48, SOLARBEAM
+	db 6, VINE_WHIP
+	db 11, LEECH_SEED
+	db 14, POISONPOWDER
+	db 17, ACID
+	db 20, SLEEP_POWDER
+	db 24, TAKE_DOWN
+	db 29, RAZOR_LEAF
+	db 33, GROWTH
+	db 37, BODY_SLAM
+	db 42, SOLARBEAM
 	db 0
 
 VenusaurEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
-	db 22, POISONPOWDER
-	db 30, RAZOR_LEAF
-	db 43, GROWTH
-	db 55, SLEEP_POWDER
-	db 65, SOLARBEAM
+	db 6, VINE_WHIP
+	db 11, LEECH_SEED
+	db 14, POISONPOWDER
+	db 19, ACID
+	db 22, SLEEP_POWDER
+	db 26, TAKE_DOWN
+	db 31, RAZOR_LEAF
+	db 38, GROWTH
+	db 42, BODY_SLAM
+	db 47, SOLARBEAM
 	db 0
 
 TentacruelEvosMoves:
