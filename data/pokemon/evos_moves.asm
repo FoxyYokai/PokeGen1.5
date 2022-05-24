@@ -1989,11 +1989,15 @@ CharmanderEvosMoves:
 	db EV_LEVEL, 16, CHARMELEON
 	db 0
 ; Learnset
-	db 9, EMBER
-	db 15, LEER
-	db 22, RAGE
-	db 30, SLASH
-	db 38, FLAMETHROWER
+	db 6, EMBER
+	db 11, SMOKESCREEN
+	db 15, BITE
+	db 20, FLARE
+	db 24, LEER
+	db 27, DRAGONBREATH
+	db 33, FLAMETHROWER
+	db 38, SLASH
+	db 42, FOCUS_ENERGY
 	db 46, FIRE_SPIN
 	db 0
 
@@ -2015,12 +2019,17 @@ CharmeleonEvosMoves:
 	db EV_LEVEL, 36, CHARIZARD
 	db 0
 ; Learnset
-	db 9, EMBER
-	db 15, LEER
-	db 24, RAGE
-	db 33, SLASH
-	db 42, FLAMETHROWER
-	db 56, FIRE_SPIN
+	db 6, EMBER
+	db 11, SMOKESCREEN
+	db 15, BITE
+	db 22, FLARE
+	db 26, LEER
+	db 29, DRAGONBREATH
+	db 35, FLAMETHROWER
+	db 36, WING_ATTACK
+	db 43, SLASH
+	db 47, FOCUS_ENERGY
+	db 53, FIRE_SPIN
 	db 0
 
 WartortleEvosMoves:
