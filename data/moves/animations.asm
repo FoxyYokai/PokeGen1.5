@@ -185,6 +185,7 @@ AttackAnimationPointers:
 	dw TombStonerAnim
 	dw MudSlapAnim
 	dw BulldozeAnim
+	dw WhirlpoolAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1290,6 +1291,12 @@ BulldozeAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
 	battle_anim EARTHQUAKE, SE_SHAKE_SCREEN
 	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	db -1 ; end
+
+WhirlpoolAnim:
+	battle_anim SURF, SE_WATER_DROPLETS_EVERYWHERE
+	battle_anim HYDRO_PUMP, SUBANIM_23, 0, 4
+	battle_anim NO_MOVE, SUBANIM_23, 0, 4
 	db -1 ; end
 
 BallTossAnim:

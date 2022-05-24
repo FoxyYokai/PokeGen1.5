@@ -186,6 +186,7 @@ MoveSoundTable:
 	db SFX_BATTLE_0B,          $00, $80 ; TOMBSTONER
 	db SFX_BATTLE_0B,          $00, $80 ; MUDSLAP
 	db SFX_BATTLE_0B,          $00, $80 ; BULLDOZE
+	db SFX_BATTLE_0B,          $00, $80 ; WHIRLPOOL
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	assert_table_length NUM_ATTACKS
 	db SFX_BATTLE_0B,          $00, $80
