@@ -1211,22 +1211,32 @@ SandshrewEvosMoves:
 	db EV_LEVEL, 22, SANDSLASH
 	db 0
 ; Learnset
-	db 10, SAND_ATTACK
-	db 17, SLASH
-	db 24, POISON_STING
-	db 31, SWIFT
-	db 38, FURY_SWIPES
+	db 7, SAND_ATTACK
+	db 11, MUDSLAP
+	db 14, POISON_STING
+	db 19, SWIFT
+	db 24, DIG
+	db 29, FURY_SWIPES
+	db 33, BULLDOZE
+	db 37, SLASH
+	db 42, HARDEN
+	db 46, EARTHQUAKE
 	db 0
 
 SandslashEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 10, SAND_ATTACK
-	db 17, SLASH
-	db 27, POISON_STING
-	db 36, SWIFT
-	db 47, FURY_SWIPES
+	db 7, SAND_ATTACK
+	db 11, MUDSLAP
+	db 14, POISON_STING
+	db 19, SWIFT
+	db 26, DIG
+	db 31, FURY_SWIPES
+	db 35, BULLDOZE
+	db 39, SLASH
+	db 44, HARDEN
+	db 48, EARTHQUAKE
 	db 0
 
 OmanyteEvosMoves:
