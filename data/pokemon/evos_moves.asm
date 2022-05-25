@@ -239,12 +239,14 @@ ClefairyEvosMoves:
 	db EV_ITEM, MOON_STONE, 1, CLEFABLE
 	db 0
 ; Learnset
-	db 13, SING
-	db 18, DOUBLESLAP
-	db 24, MINIMIZE
-	db 31, METRONOME
-	db 39, DEFENSE_CURL
-	db 48, LIGHT_SCREEN
+	db 9, SING
+	db 13, COMET_PUNCH
+	db 18, MINIMIZE
+	db 22, METRONOME
+	db 26, BODY_SLAM
+	db 33, RECOVER
+	db 37, LIGHT_SCREEN
+	db 42, DOUBLE_EDGE
 	db 0
 
 SpearowEvosMoves:
