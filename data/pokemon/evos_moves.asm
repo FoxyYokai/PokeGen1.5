@@ -223,12 +223,15 @@ NidoranMEvosMoves:
 	db EV_LEVEL, 16, NIDORINO
 	db 0
 ; Learnset
-	db 8, HORN_ATTACK
-	db 14, POISON_STING
-	db 21, FOCUS_ENERGY
-	db 29, FURY_ATTACK
-	db 36, HORN_DRILL
-	db 43, DOUBLE_KICK
+	db 7, HORN_ATTACK
+	db 12, POISON_STING
+	db 15, FOCUS_ENERGY
+	db 19, DOUBLE_KICK
+	db 23, FURY_ATTACK
+	db 28, LEER
+	db 33, POISONFANG
+	db 37, TAKE_DOWN
+	db 43, HORN_DRILL
 	db 0
 
 ClefairyEvosMoves:
@@ -276,9 +279,10 @@ NidokingEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, HORN_ATTACK
-	db 14, POISON_STING
-	db 23, THRASH
+	db 7, HORN_ATTACK
+	db 12, POISON_STING
+	db 15, FOCUS_ENERGY
+	db 25, THRASH
 	db 0
 
 SlowbroEvosMoves:
@@ -722,7 +726,7 @@ ArbokEvosMoves:
 	db 8, POISON_STING
 	db 13, BITE
 	db 17, SCREECH
-	db 25, POISON_FANG
+	db 25, POISONFANG
 	db 31, GLARE
 	db 35, ACID
 	db 39, THRASH
@@ -1367,7 +1371,7 @@ EkansEvosMoves:
 	db 8, POISON_STING
 	db 13, BITE
 	db 17, SCREECH
-	db 23, POISON_FANG
+	db 23, POISONFANG
 	db 29, GLARE
 	db 33, ACID
 	db 37, THRASH
@@ -1955,12 +1959,15 @@ NidorinoEvosMoves:
 	db EV_ITEM, MOON_STONE, 1, NIDOKING
 	db 0
 ; Learnset
-	db 8, HORN_ATTACK
-	db 14, POISON_STING
-	db 23, FOCUS_ENERGY
-	db 32, FURY_ATTACK
-	db 41, HORN_DRILL
-	db 50, DOUBLE_KICK
+	db 7, HORN_ATTACK
+	db 12, POISON_STING
+	db 15, FOCUS_ENERGY
+	db 19, DOUBLE_KICK
+	db 25, FURY_ATTACK
+	db 30, LEER
+	db 35, POISONFANG
+	db 39, TAKE_DOWN
+	db 45, HORN_DRILL
 	db 0
 
 NidorinaEvosMoves:
