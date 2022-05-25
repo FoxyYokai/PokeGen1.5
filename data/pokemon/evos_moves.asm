@@ -372,21 +372,25 @@ NidoranFEvosMoves:
 	db EV_LEVEL, 16, NIDORINA
 	db 0
 ; Learnset
-	db 8, SCRATCH
-	db 14, POISON_STING
-	db 21, TAIL_WHIP
-	db 29, BITE
-	db 36, FURY_SWIPES
-	db 43, DOUBLE_KICK
+	db 7, BITE
+	db 12, POISON_STING
+	db 15, FOCUS_ENERGY
+	db 19, DOUBLE_KICK
+	db 23, FURY_SWIPES
+	db 28, SCREECH
+	db 33, POISONFANG
+	db 37, TAKE_DOWN
+	db 43, HORN_DRILL
 	db 0
 
 NidoqueenEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 8, SCRATCH
-	db 14, POISON_STING
-	db 23, BODY_SLAM
+	db 7, BITE
+	db 12, POISON_STING
+	db 15, FOCUS_ENERGY
+	db 25, BODY_SLAM
 	db 0
 
 CuboneEvosMoves:
@@ -1975,12 +1979,15 @@ NidorinaEvosMoves:
 	db EV_ITEM, MOON_STONE, 1, NIDOQUEEN
 	db 0
 ; Learnset
-	db 8, SCRATCH
-	db 14, POISON_STING
-	db 23, TAIL_WHIP
-	db 32, BITE
-	db 41, FURY_SWIPES
-	db 50, DOUBLE_KICK
+	db 7, BITE
+	db 12, POISON_STING
+	db 15, FOCUS_ENERGY
+	db 19, DOUBLE_KICK
+	db 23, FURY_SWIPES
+	db 28, SCREECH
+	db 33, POISONFANG
+	db 37, TAKE_DOWN
+	db 43, HORN_DRILL
 	db 0
 
 GeodudeEvosMoves:
