@@ -743,11 +743,17 @@ ParasectEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 13, STUN_SPORE
-	db 20, LEECH_LIFE
-	db 30, SPORE
-	db 39, SLASH
-	db 48, GROWTH
+	db 5, ABSORB
+	db 9, STUN_SPORE
+	db 12, LEECH_LIFE
+	db 16, POISONPOWDER
+	db 19, FURY_SWIPES
+	db 23, BUGBITE
+	db 30, DIG
+	db 34, SLASH
+	db 38, GROWTH
+	db 42, SPORE
+	db 47, XSCISSOR
 	db 0
 
 PsyduckEvosMoves:
@@ -1414,11 +1420,17 @@ ParasEvosMoves:
 	db EV_LEVEL, 24, PARASECT
 	db 0
 ; Learnset
-	db 13, STUN_SPORE
-	db 20, LEECH_LIFE
-	db 27, SPORE
-	db 34, SLASH
-	db 41, GROWTH
+	db 5, ABSORB
+	db 9, STUN_SPORE
+	db 12, LEECH_LIFE
+	db 16, POISONPOWDER
+	db 19, FURY_SWIPES
+	db 23, BUGBITE
+	db 28, DIG
+	db 32, SLASH
+	db 36, GROWTH
+	db 40, SPORE
+	db 45, XSCISSOR
 	db 0
 
 PoliwhirlEvosMoves:
