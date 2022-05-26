@@ -1286,19 +1286,30 @@ JigglypuffEvosMoves:
 	db EV_ITEM, MOON_STONE, 1, WIGGLYTUFF
 	db 0
 ; Learnset
-	db 9, POUND
-	db 14, DISABLE
-	db 19, DEFENSE_CURL
-	db 24, DOUBLESLAP
-	db 29, REST
-	db 34, BODY_SLAM
-	db 39, DOUBLE_EDGE
+	db 6, DEFENSE_CURL
+	db 11, SING
+	db 15, DOUBLESLAP
+	db 19, DISABLE
+	db 24, SCREECH
+	db 27, BODY_SLAM
+	db 32, REST
+	db 37, DOUBLE_EDGE
+	db 42, SELFDESTRUCT
 	db 0
 
 WigglytuffEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 11, DEFENSE_CURL
+	db 16, SING
+	db 20, DOUBLESLAP
+	db 24, DISABLE
+	db 29, SCREECH
+	db 32, BODY_SLAM
+	db 37, REST
+	db 42, DOUBLE_EDGE
+	db 47, SELFDESTRUCT
 	db 0
 
 EeveeEvosMoves:
