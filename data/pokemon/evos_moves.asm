@@ -868,11 +868,15 @@ MankeyEvosMoves:
 	db EV_LEVEL, 28, PRIMEAPE
 	db 0
 ; Learnset
-	db 15, KARATE_CHOP
-	db 21, FURY_SWIPES
-	db 27, FOCUS_ENERGY
-	db 33, SEISMIC_TOSS
-	db 39, THRASH
+	db 9, KARATE_CHOP
+	db 14, FOCUS_ENERGY
+	db 20, SEISMIC_TOSS
+	db 24, LEER
+	db 28, FURY_SWIPES
+	db 33, JUMP_KICK
+	db 37, SCREECH
+	db 41, THRASH
+	db 46, CROSSCHOP
 	db 0
 
 SeelEvosMoves:
@@ -1519,11 +1523,15 @@ PrimeapeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 15, KARATE_CHOP
-	db 21, FURY_SWIPES
-	db 27, FOCUS_ENERGY
-	db 37, SEISMIC_TOSS
-	db 46, THRASH
+	db 9, KARATE_CHOP
+	db 14, FOCUS_ENERGY
+	db 20, SEISMIC_TOSS
+	db 24, LEER
+	db 28, FURY_SWIPES
+	db 35, JUMP_KICK
+	db 39, SCREECH
+	db 43, THRASH
+	db 48, CROSSCHOP
 	db 0
 
 DugtrioEvosMoves:
