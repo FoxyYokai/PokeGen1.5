@@ -186,5 +186,6 @@ MoveNames::
 	li "MUD SLAP"
 	li "BULLDOZE"
 	li "WHIRLPOOL"
+	li "CRUNCH"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

@@ -186,6 +186,7 @@ AttackAnimationPointers:
 	dw MudSlapAnim
 	dw BulldozeAnim
 	dw WhirlpoolAnim
+	dw CrunchAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1297,6 +1298,13 @@ WhirlpoolAnim:
 	battle_anim SURF, SE_WATER_DROPLETS_EVERYWHERE
 	battle_anim HYDRO_PUMP, SUBANIM_23, 0, 4
 	battle_anim NO_MOVE, SUBANIM_23, 0, 4
+	db -1 ; end
+
+CrunchAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim BITE, SUBANIM_02, 0, 12
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim BITE, SUBANIM_02, 0, 12
 	db -1 ; end
 
 BallTossAnim:

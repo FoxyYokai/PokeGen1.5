@@ -192,7 +192,8 @@
 	const MUDSLAP      ; b8
 	const BULLDOZE     ; b9
 	const WHIRLPOOL    ; ba
-	const STRUGGLE     ; bb
+	const CRUNCH       ; bb
+	const STRUGGLE     ; bc
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

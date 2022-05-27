@@ -436,6 +436,16 @@ ArcanineEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 13, EMBER
+	db 18, SMOKESCREEN
+	db 22, ROAR
+	db 27, TAKE_DOWN
+	db 39, LEER
+	db 34, FLARE
+	db 39, AGILITY
+	db 44, FLAMETHROWER
+	db 49, CRUNCH
+	db 53, FIRE_SPIN
 	db 0
 
 MewEvosMoves:
@@ -579,11 +589,16 @@ GrowlitheEvosMoves:
 	db EV_ITEM, FIRE_STONE, 1, ARCANINE
 	db 0
 ; Learnset
-	db 18, EMBER
-	db 23, LEER
-	db 30, TAKE_DOWN
-	db 39, AGILITY
-	db 50, FLAMETHROWER
+	db 8, EMBER
+	db 13, SMOKESCREEN
+	db 17, ROAR
+	db 22, TAKE_DOWN
+	db 25, LEER
+	db 29, FLARE
+	db 34, AGILITY
+	db 39, FLAMETHROWER
+	db 44, CRUNCH
+	db 49, FIRE_SPIN
 	db 0
 
 OnixEvosMoves:
@@ -735,7 +750,7 @@ ArbokEvosMoves:
 	db 25, POISONFANG
 	db 31, GLARE
 	db 35, ACID
-	db 39, THRASH
+	db 39, CRUNCH
 	db 44, AGILITY
 	db 0
 
@@ -1431,7 +1446,7 @@ EkansEvosMoves:
 	db 23, POISONFANG
 	db 29, GLARE
 	db 33, ACID
-	db 37, THRASH
+	db 37, CRUNCH
 	db 42, AGILITY
 	db 0
 
@@ -1495,7 +1510,7 @@ BeedrillEvosMoves:
 ; Learnset
 	db 10, FURY_ATTACK
 	db 14, FOCUS_ENERGY
-	db 19, PIN_MISSLE
+	db 19, PIN_MISSILE
 	db 24, TWINEEDLE
 	db 29, AGILITY
 	db 33, SWORDS_DANCE
@@ -2024,7 +2039,7 @@ RattataEvosMoves:
 	db 27, SHARPEN
 	db 34, SUPER_FANG
 	db 38, AGILITY
-	db 42, DOUBLE_EDGE
+	db 42, CRUNCH
 	db 0
 
 RaticateEvosMoves:
@@ -2038,7 +2053,7 @@ RaticateEvosMoves:
 	db 29, SHARPEN
 	db 36, SUPER_FANG
 	db 40, AGILITY
-	db 44, DOUBLE_EDGE
+	db 44, CRUNCH
 	db 0
 
 NidorinoEvosMoves:
