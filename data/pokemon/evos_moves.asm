@@ -669,7 +669,7 @@ KadabraEvosMoves:
 	db 30, PSYBEAM
 	db 34, RECOVER
 	db 38, NIGHT_SHADE
-	db 42, PSYCHIC
+	db 42, PSYCHIC_M
 	db 47, REFLECT
 	db 0
 
@@ -1891,7 +1891,7 @@ AlakazamEvosMoves:
 	db 33, PSYBEAM
 	db 37, RECOVER
 	db 41, NIGHT_SHADE
-	db 45, PSYCHIC
+	db 45, PSYCHIC_M
 	db 50, REFLECT
 	db 0
 
