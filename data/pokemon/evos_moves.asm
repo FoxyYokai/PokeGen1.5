@@ -1059,11 +1059,14 @@ MeowthEvosMoves:
 	db EV_LEVEL, 28, PERSIAN
 	db 0
 ; Learnset
-	db 12, BITE
-	db 17, PAY_DAY
-	db 24, SCREECH
-	db 33, FURY_SWIPES
-	db 44, SLASH
+	db 10, BITE
+	db 15, PAY_DAY
+	db 21, SING
+	db 26, FURY_SWIPES
+	db 33, FOCUS_ENERGY
+	db 37, SCREECH
+	db 40, SLASH
+	db 45, HYPER_FANG
 	db 0
 
 KrabbyEvosMoves:
@@ -1405,6 +1408,7 @@ ZubatEvosMoves:
 	db 34, NIGHT_SHADE
 	db 38, BUGBITE
 	db 42, HAZE
+	db 46, HYPER_FANG
 	db 0
 
 EkansEvosMoves:
@@ -1651,6 +1655,7 @@ GolbatEvosMoves:
 	db 36, NIGHT_SHADE
 	db 40, BUGBITE
 	db 44, HAZE
+	db 48, HYPER_FANG
 	db 0
 
 MewtwoEvosMoves:
@@ -1768,11 +1773,14 @@ PersianEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, BITE
-	db 17, PAY_DAY
-	db 24, SCREECH
-	db 37, FURY_SWIPES
-	db 51, SLASH
+	db 10, BITE
+	db 15, PAY_DAY
+	db 21, SING
+	db 26, FURY_SWIPES
+	db 35, FOCUS_ENERGY
+	db 39, SCREECH
+	db 42, SLASH
+	db 47, HYPER_FANG
 	db 0
 
 MarowakEvosMoves:
