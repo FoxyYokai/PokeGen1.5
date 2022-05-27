@@ -663,11 +663,13 @@ KadabraEvosMoves:
 	db 0
 ; Learnset
 	db 16, CONFUSION
-	db 20, DISABLE
-	db 27, PSYBEAM
-	db 31, RECOVER
-	db 38, PSYCHIC_M
-	db 42, REFLECT
+	db 20, KINESIS
+	db 25, DISABLE
+	db 30, PSYBEAM
+	db 34, RECOVER
+	db 38, NIGHT_SHADE
+	db 42, PSYCHIC
+	db 47, REFLECT
 	db 0
 
 GravelerEvosMoves:
@@ -1871,11 +1873,13 @@ AlakazamEvosMoves:
 	db 0
 ; Learnset
 	db 16, CONFUSION
-	db 20, DISABLE
-	db 27, PSYBEAM
-	db 31, RECOVER
-	db 38, PSYCHIC_M
-	db 42, REFLECT
+	db 23, KINESIS
+	db 28, DISABLE
+	db 33, PSYBEAM
+	db 37, RECOVER
+	db 41, NIGHT_SHADE
+	db 45, PSYCHIC
+	db 50, REFLECT
 	db 0
 
 PidgeottoEvosMoves:
