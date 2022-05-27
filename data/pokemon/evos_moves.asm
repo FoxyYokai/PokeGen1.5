@@ -887,11 +887,15 @@ DiglettEvosMoves:
 	db EV_LEVEL, 26, DUGTRIO
 	db 0
 ; Learnset
-	db 15, GROWL
-	db 19, DIG
-	db 24, SAND_ATTACK
-	db 31, SLASH
-	db 40, EARTHQUAKE
+	db 10, SAND_ATTACK
+	db 14, MUDSLAP
+	db 19, MINIMIZE
+	db 24, DIG
+	db 29, FURY_SWIPES
+	db 31, BULLDOZE
+	db 36, SLASH
+	db 40, SCREECH
+	db 45, EARTHQUAKE
 	db 0
 
 TaurosEvosMoves:
@@ -1517,10 +1521,14 @@ DugtrioEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 15, GROWL
-	db 19, DIG
-	db 24, SAND_ATTACK
-	db 35, SLASH
+	db 10, SAND_ATTACK
+	db 14, MUDSLAP
+	db 19, MINIMIZE
+	db 24, DIG
+	db 31, FURY_SWIPES
+	db 33, BULLDOZE
+	db 38, SLASH
+	db 42, SCREECH
 	db 47, EARTHQUAKE
 	db 0
 
