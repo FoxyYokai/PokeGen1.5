@@ -1,6 +1,6 @@
 	db DEX_POLIWHIRL ; pokedex id
 
-	db  65,  65,  65,  90,  50
+	db  65,  75,  65,  90,  50
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/poliwhirl.pic", 0, 1 ; sprite dimensions
 	dw PoliwhirlPicFront, PoliwhirlPicBack
 
-	db BUBBLE, HYPNOSIS, WATER_GUN, NO_MOVE ; level 1 learnset
+	db WATER_GUN, DOUBLE_SLAP, HYPNOSIS, BUBBLEBEAM ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

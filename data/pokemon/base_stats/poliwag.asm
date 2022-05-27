@@ -1,6 +1,6 @@
 	db DEX_POLIWAG ; pokedex id
 
-	db  40,  50,  40,  90,  40
+	db  40,  55,  40,  90,  40
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/poliwag.pic", 0, 1 ; sprite dimensions
 	dw PoliwagPicFront, PoliwagPicBack
 
-	db BUBBLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
+	db POUND, BUBBLE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
