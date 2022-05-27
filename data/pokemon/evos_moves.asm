@@ -487,13 +487,14 @@ TentacoolEvosMoves:
 	db 0
 ; Learnset
 	db 7, SUPERSONIC
-	db 13, WRAP
-	db 18, POISON_STING
+	db 13, ACID
+	db 18, WRAP
 	db 22, WATER_GUN
 	db 27, CONSTRICT
-	db 33, BARRIER
-	db 40, SCREECH
-	db 48, HYDRO_PUMP
+	db 33, BUBBLEBEAM
+	db 37, BARRIER
+	db 40, PSYBEAM
+	db 46, HYDRO_PUMP
 	db 0
 
 GastlyEvosMoves:
@@ -1971,13 +1972,14 @@ TentacruelEvosMoves:
 	db 0
 ; Learnset
 	db 7, SUPERSONIC
-	db 13, WRAP
-	db 18, POISON_STING
+	db 13, ACID
+	db 18, WRAP
 	db 22, WATER_GUN
 	db 27, CONSTRICT
-	db 35, BARRIER
-	db 43, SCREECH
-	db 50, HYDRO_PUMP
+	db 35, BUBBLEBEAM
+	db 39, BARRIER
+	db 42, PSYBEAM
+	db 48, HYDRO_PUMP
 	db 0
 
 MissingNo9CEvosMoves:
