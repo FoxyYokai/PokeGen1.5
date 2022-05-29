@@ -2011,27 +2011,35 @@ MissingNoA2EvosMoves:
 
 PonytaEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 40, RAPIDASH
+	db EV_LEVEL, 38, RAPIDASH
 	db 0
 ; Learnset
-	db 30, TAIL_WHIP
-	db 32, STOMP
-	db 35, GROWL
-	db 39, FIRE_SPIN
-	db 43, TAKE_DOWN
-	db 48, AGILITY
+	db 11, EMBER
+	db 14, GROWL
+	db 17, QUICK_ATTACK
+	db 22, STOMP
+	db 27, FLARE
+	db 33, AGILITY
+	db 36, TAKE_DOWN
+	db 41, FIRE_SPIN
+	db 46, JUMP_KICK
 	db 0
 
 RapidashEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 30, TAIL_WHIP
-	db 32, STOMP
-	db 35, GROWL
-	db 39, FIRE_SPIN
-	db 47, TAKE_DOWN
-	db 55, AGILITY
+	db 11, EMBER
+	db 14, GROWL
+	db 17, QUICK_ATTACK
+	db 22, STOMP
+	db 27, FLARE
+	db 33, AGILITY
+	db 36, TAKE_DOWN
+	db 38, FURY_ATTACK
+	db 43, FIRE_SPIN
+	db 48, JUMP_KICK
+	db 52, HORN_DRILL
 	db 0
 
 RattataEvosMoves:
