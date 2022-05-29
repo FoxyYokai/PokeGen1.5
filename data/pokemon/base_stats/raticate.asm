@@ -37,4 +37,4 @@
 	     CUT
 	; end
 
-	db 0 ; padding
+	db BANK(RaticatePicFront)
