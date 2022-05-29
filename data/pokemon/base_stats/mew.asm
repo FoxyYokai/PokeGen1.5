@@ -72,4 +72,4 @@
 		 FLASH
 	; end
 
-	db %11111111 ; padding
+	db BANK(MewPicFront)
