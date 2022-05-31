@@ -1,6 +1,6 @@
 	db DEX_SLOWPOKE ; pokedex id
 
-	db  90,  65,  65,  15,  40
+	db  90,  60,  65,  15,  50
 	;   hp  atk  def  spd  spc
 
 	db WATER, PSYCHIC_TYPE ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/slowpoke.pic", 0, 1 ; sprite dimensions
 	dw SlowpokePicFront, SlowpokePicBack
 
-	db CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

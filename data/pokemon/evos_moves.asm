@@ -255,13 +255,16 @@ SlowbroEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 18, DISABLE
-	db 22, HEADBUTT
-	db 27, GROWL
-	db 33, WATER_GUN
-	db 37, WITHDRAW
-	db 44, AMNESIA
-	db 55, PSYCHIC_M
+	db 12, CONFUSION
+	db 17, WATER_GUN
+	db 20, DISABLE
+	db 24, HEADBUTT
+	db 28, RECOVER
+	db 32, AMNESIA
+	db 33, WITHDRAW
+	db 39, WHIRLPOOL
+	db 45, PSYCHIC_M
+	db 51, HYDRO_PUMP
 	db 0
 
 IvysaurEvosMoves:
@@ -611,15 +614,18 @@ PidgeyEvosMoves:
 
 SlowpokeEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 37, SLOWBRO
+	db EV_LEVEL, 33, SLOWBRO
 	db 0
 ; Learnset
-	db 18, DISABLE
-	db 22, HEADBUTT
-	db 27, GROWL
-	db 33, WATER_GUN
-	db 40, AMNESIA
-	db 48, PSYCHIC_M
+	db 12, CONFUSION
+	db 17, WATER_GUN
+	db 20, DISABLE
+	db 24, HEADBUTT
+	db 28, RECOVER
+	db 32, AMNESIA
+	db 37, WHIRLPOOL
+	db 43, PSYCHIC_M
+	db 49, HYDRO_PUMP
 	db 0
 
 KadabraEvosMoves:
