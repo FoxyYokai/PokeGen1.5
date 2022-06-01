@@ -1007,12 +1007,16 @@ DoduoEvosMoves:
 	db EV_LEVEL, 31, DODRIO
 	db 0
 ; Learnset
-	db 20, GROWL
-	db 24, FURY_ATTACK
-	db 30, DRILL_PECK
-	db 36, RAGE
-	db 40, TRI_ATTACK
-	db 44, AGILITY
+	db 6, GROWL
+	db 10, QUICK_ATTACK
+	db 15, FURY_ATTACK
+	db 19, LEER
+	db 23, DOUBLE_KICK
+	db 28, DRILL_PECK
+	db 33, TRI_ATTACK
+	db 37, AGILITY
+	db 42, JUMP_KICK
+	db 46, THRASH
 	db 0
 
 PoliwagEvosMoves:
@@ -1542,12 +1546,16 @@ DodrioEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 20, GROWL
-	db 24, FURY_ATTACK
-	db 30, DRILL_PECK
-	db 39, RAGE
-	db 45, TRI_ATTACK
-	db 51, AGILITY
+	db 6, GROWL
+	db 10, QUICK_ATTACK
+	db 15, FURY_ATTACK
+	db 19, LEER
+	db 23, DOUBLE_KICK
+	db 28, DRILL_PECK
+	db 35, TRI_ATTACK
+	db 39, AGILITY
+	db 44, JUMP_KICK
+	db 48, THRASH
 	db 0
 
 PrimeapeEvosMoves:
