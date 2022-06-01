@@ -889,11 +889,16 @@ SeelEvosMoves:
 	db EV_LEVEL, 34, DEWGONG
 	db 0
 ; Learnset
-	db 30, GROWL
-	db 35, AURORA_BEAM
-	db 40, REST
-	db 45, TAKE_DOWN
-	db 50, ICE_BEAM
+	db 12, WATER_GUN
+	db 17, POWDERSNOW
+	db 21, HEADBUTT
+	db 25, REST
+	db 30, AURORA_BEAM
+	db 33, BODY_SLAM
+	db 37, MIST
+	db 41, ICE_BEAM
+	db 45, WHIRLPOOL
+	db 50, BLIZZARD
 	db 0
 
 DiglettEvosMoves:
@@ -1608,11 +1613,16 @@ DewgongEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 30, GROWL
-	db 35, AURORA_BEAM
-	db 44, REST
-	db 50, TAKE_DOWN
-	db 56, ICE_BEAM
+	db 12, WATER_GUN
+	db 17, POWDERSNOW
+	db 21, HEADBUTT
+	db 25, REST
+	db 30, AURORA_BEAM
+	db 33, BODY_SLAM
+	db 39, MIST
+	db 43, ICE_BEAM
+	db 47, WHIRLPOOL
+	db 52, BLIZZARD
 	db 0
 
 MissingNo79EvosMoves:
