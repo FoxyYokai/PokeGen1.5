@@ -320,12 +320,16 @@ GrimerEvosMoves:
 	db EV_LEVEL, 38, MUK
 	db 0
 ; Learnset
-	db 30, POISON_GAS
-	db 33, MINIMIZE
-	db 37, SLUDGE
-	db 42, HARDEN
-	db 48, SCREECH
-	db 55, ACID_ARMOR
+	db 9, MUDSLAP
+	db 13, SMOG
+	db 17, DISABLE
+	db 22, LICK
+	db 26, SLUDGE
+	db 30, MINIMIZE
+	db 34, ACID_ARMOR
+	db 38, BODY_SLAM
+	db 42, SCREECH
+	db 46, SLUDGEBOMB
 	db 0
 
 GengarEvosMoves:
@@ -1774,12 +1778,16 @@ MukEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 30, POISON_GAS
-	db 33, MINIMIZE
-	db 37, SLUDGE
-	db 45, HARDEN
-	db 53, SCREECH
-	db 60, ACID_ARMOR
+	db 9, MUDSLAP
+	db 13, SMOG
+	db 17, DISABLE
+	db 22, LICK
+	db 26, SLUDGE
+	db 30, MINIMIZE
+	db 34, ACID_ARMOR
+	db 40, BODY_SLAM
+	db 44, SCREECH
+	db 48, SLUDGEBOMB
 	db 0
 
 MissingNo8AEvosMoves:
