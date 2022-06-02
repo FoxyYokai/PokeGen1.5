@@ -445,11 +445,16 @@ ShellderEvosMoves:
 	db EV_ITEM, WATER_STONE, 1, CLOYSTER
 	db 0
 ; Learnset
-	db 18, SUPERSONIC
+	db 10, POWDERSNOW
+	db 14, LICK
+	db 17, SUPERSONIC
 	db 23, CLAMP
-	db 30, AURORA_BEAM
-	db 39, LEER
-	db 50, ICE_BEAM
+	db 27, BITE
+	db 32, AURORA_BEAM
+	db 35, BUBBLEBEAM
+	db 40, HARDEN
+	db 44, ICE_BEAM
+	db 48, MIST
 	db 0
 
 TentacoolEvosMoves:
@@ -1811,7 +1816,17 @@ CloysterEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 50, SPIKE_CANNON
+	db 15, POWDERSNOW
+	db 19, LICK
+	db 22, SUPERSONIC
+	db 28, CLAMP
+	db 32, BITE
+	db 37, AURORA_BEAM
+	db 40, BUBBLEBEAM
+	db 41, SPIKE_CANNON
+	db 45, HARDEN
+	db 49, ICE_BEAM
+	db 53, MIST
 	db 0
 
 MissingNo8CEvosMoves:
