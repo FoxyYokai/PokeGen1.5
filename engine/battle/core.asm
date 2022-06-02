@@ -4667,6 +4667,8 @@ HighCriticalMoves:
 	db SLASH
 	db CROSSCHOP
 	db XSCISSOR
+	db RAZOR_WIND
+	db SKY_ATTACK
 	db -1 ; end
 
 ; function to determine if Counter hits and if so, how much damage it does
