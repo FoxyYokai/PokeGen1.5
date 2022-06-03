@@ -2239,6 +2239,8 @@ IsCryMove:
 	jr z, .CryMove
 	cp ROAR
 	jr z, .CryMove
+	cp FAKE_TEARS
+	jr z, .CryMove
 	and a ; clear carry
 	ret
 .CryMove

@@ -193,7 +193,10 @@
 	const BULLDOZE     ; b9
 	const WHIRLPOOL    ; ba
 	const CRUNCH       ; bb
-	const STRUGGLE     ; bc
+	const CHARGE       ; bc
+	const FAKE_TEARS   ; bd
+	const EERIE_NOISE  ; be
+	const STRUGGLE     ; bf
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

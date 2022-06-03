@@ -187,5 +187,8 @@ MoveNames::
 	li "BULLDOZE"
 	li "WHIRLPOOL"
 	li "CRUNCH"
+	li "CHARGE"
+	li "FAKE TEARS"
+	li "EERIE NOISE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS
