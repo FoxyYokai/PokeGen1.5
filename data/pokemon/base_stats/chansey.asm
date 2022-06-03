@@ -1,6 +1,6 @@
 	db DEX_CHANSEY ; pokedex id
 
-	db 250,   5,   5,  50, 105
+	db 250,   5,   5,  50, 95
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/chansey.pic", 0, 1 ; sprite dimensions
 	dw ChanseyPicFront, ChanseyPicBack
 
-	db POUND, DOUBLESLAP, NO_MOVE, NO_MOVE ; level 1 learnset
+	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
@@ -25,6 +25,7 @@
 		 BLIZZARD,		\
 		 HYPER_BEAM,	\
 		 SUBMISSION,	\
+		 COUNTER,		\
 		 SEISMIC_TOSS,	\
 		 THUNDERBOLT,	\
 		 THUNDER,		\
