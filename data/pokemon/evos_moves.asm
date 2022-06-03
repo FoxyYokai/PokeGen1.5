@@ -393,14 +393,19 @@ NidoqueenEvosMoves:
 
 CuboneEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 28, MAROWAK
+	db EV_LEVEL, 30, MAROWAK
 	db 0
 ; Learnset
-	db 25, LEER
-	db 31, FOCUS_ENERGY
-	db 38, THRASH
-	db 43, BONEMERANG
-	db 46, RAGE
+	db 6, LEER
+	db 12, BONE_CLUB
+	db 16, ROCK_THROW
+	db 19, FOCUS_ENERGY
+	db 25, HEADBUTT
+	db 31, FAKE_TEARS
+	db 35, BONEMERANG
+	db 39, THRASH
+	db 43, SCREECH
+	db 47, SKULL_BASH
 	db 0
 
 RhyhornEvosMoves:
@@ -1962,11 +1967,16 @@ MarowakEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 25, LEER
-	db 33, FOCUS_ENERGY
+	db 6, LEER
+	db 12, BONE_CLUB
+	db 16, ROCK_THROW
+	db 19, FOCUS_ENERGY
+	db 25, HEADBUTT
+	db 33, FAKE_TEARS
+	db 37, BONEMERANG
 	db 41, THRASH
-	db 48, BONEMERANG
-	db 55, RAGE
+	db 45, SCREECH
+	db 49, SKULL_BASH
 	db 0
 
 MissingNo92EvosMoves:
