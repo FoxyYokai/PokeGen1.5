@@ -598,11 +598,17 @@ OnixEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 11, ROCK_THROW
 	db 15, BIND
-	db 19, ROCK_THROW
-	db 25, RAGE
-	db 33, SLAM
-	db 43, HARDEN
+	db 19, HARDEN
+	db 24, BULLDOZE
+	db 29, ROCKBLAST
+	db 35, SLAM
+	db 39, LEER
+	db 43, ROCK_SLIDE
+	db 47, EARTHQUAKE
+	db 52, HYPER_BEAM
+	db 57, FISSURE
 	db 0
 
 FearowEvosMoves:
