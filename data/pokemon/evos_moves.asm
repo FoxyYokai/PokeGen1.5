@@ -1360,10 +1360,15 @@ HorseaEvosMoves:
 	db EV_LEVEL, 32, SEADRA
 	db 0
 ; Learnset
-	db 19, SMOKESCREEN
-	db 24, LEER
-	db 30, WATER_GUN
-	db 37, AGILITY
+	db 9, SMOKESCREEN
+	db 14, TWISTER
+	db 17, WATER_GUN
+	db 20, LEER
+	db 24, FOCUS_ENERGY
+	db 28, DRAGON_RAGE
+	db 33, AGILITY
+	db 37, WHIRLPOOL
+	db 41, DRAGONBREATH
 	db 45, HYDRO_PUMP
 	db 0
 
@@ -1371,11 +1376,16 @@ SeadraEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 19, SMOKESCREEN
-	db 24, LEER
-	db 30, WATER_GUN
-	db 41, AGILITY
-	db 52, HYDRO_PUMP
+	db 9, SMOKESCREEN
+	db 14, TWISTER
+	db 17, WATER_GUN
+	db 20, LEER
+	db 24, FOCUS_ENERGY
+	db 28, DRAGON_RAGE
+	db 35, AGILITY
+	db 39, WHIRLPOOL
+	db 43, DRAGONBREATH
+	db 47, HYDRO_PUMP
 	db 0
 
 MissingNo5EEvosMoves:
