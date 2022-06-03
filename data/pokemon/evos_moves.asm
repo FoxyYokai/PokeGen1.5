@@ -1146,8 +1146,9 @@ KrabbyEvosMoves:
 	db 27, HARDEN
 	db 33, CRABHAMMER
 	db 38, CRUNCH
-	db 42, GUILLOTINE
+	db 42, AGILITY
 	db 46, THRASH
+	db 49, GUILLOTINE
 	db 0
 
 MissingNo4FEvosMoves:
@@ -1844,8 +1845,9 @@ KinglerEvosMoves:
 	db 27, HARDEN
 	db 35, CRABHAMMER
 	db 40, CRUNCH
-	db 44, GUILLOTINE
+	db 44, AGILITY
 	db 48, THRASH
+	db 52, GUILLOTINE
 	db 0
 
 CloysterEvosMoves:
