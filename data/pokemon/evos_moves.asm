@@ -294,7 +294,15 @@ ExeggutorEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 28, STOMP
+	db 17, LEECH_SEED
+	db 21, CONFUSION
+	db 24, STUN_SPORE
+	db 27, REFLECT
+	db 32, EGG_BOMB
+	db 38, SLEEP_POWDER
+	db 43, SELFDESTRUCT
+	db 47, SOLARBEAM
+	db 50, PSYCHIC_M
 	db 0
 
 LickitungEvosMoves:
@@ -313,12 +321,15 @@ ExeggcuteEvosMoves:
 	db EV_ITEM, LEAF_STONE, 1, EXEGGUTOR
 	db 0
 ; Learnset
-	db 25, REFLECT
-	db 28, LEECH_SEED
-	db 32, STUN_SPORE
-	db 37, POISONPOWDER
+	db 12, LEECH_SEED
+	db 16, CONFUSION
+	db 19, STUN_SPORE
+	db 22, REFLECT
+	db 27, EGG_BOMB
+	db 33, SLEEP_POWDER
+	db 38, SELFDESTRUCT
 	db 42, SOLARBEAM
-	db 48, SLEEP_POWDER
+	db 45, PSYCHIC_M
 	db 0
 
 GrimerEvosMoves:
@@ -2471,7 +2482,8 @@ BellsproutEvosMoves:
 ; Learnset
 	db 10, WRAP
 	db 13, POISONPOWDER
-	db 18, STUN_SPORE
+	db 18, VINE_WHIP
+	db 20, STUN_SPORE
 	db 22, ACID
 	db 26, SLAM
 	db 33, RAZOR_LEAF
@@ -2486,7 +2498,8 @@ WeepinbellEvosMoves:
 ; Learnset
 	db 10, WRAP
 	db 13, POISONPOWDER
-	db 18, STUN_SPORE
+	db 18, VINE_WHIP
+	db 20, STUN_SPORE
 	db 24, ACID
 	db 28, SLAM
 	db 35, RAZOR_LEAF
@@ -2500,7 +2513,8 @@ VictreebelEvosMoves:
 ; Learnset
 	db 10, WRAP
 	db 13, POISONPOWDER
-	db 18, STUN_SPORE
+	db 18, VINE_WHIP
+	db 20, STUN_SPORE
 	db 27, ACID
 	db 31, SLAM
 	db 38, RAZOR_LEAF
