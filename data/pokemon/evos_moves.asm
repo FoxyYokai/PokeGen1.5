@@ -802,15 +802,18 @@ PsyduckEvosMoves:
 
 DrowzeeEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 26, HYPNO
+	db EV_LEVEL, 28, HYPNO
 	db 0
 ; Learnset
 	db 12, DISABLE
 	db 17, CONFUSION
-	db 24, HEADBUTT
-	db 29, POISON_GAS
-	db 32, PSYCHIC_M
-	db 37, MEDITATE
+	db 22, HEADBUTT
+	db 25, POISON_GAS
+	db 32, PSYBEAM
+	db 35, MEDITATE
+	db 39, DREAM_EATER
+	db 43, PSYCHIC_M
+	db 47, SKULL_BASH
 	db 0
 
 GolemEvosMoves:
@@ -1739,10 +1742,13 @@ HypnoEvosMoves:
 ; Learnset
 	db 12, DISABLE
 	db 17, CONFUSION
-	db 24, HEADBUTT
-	db 33, POISON_GAS
-	db 37, PSYCHIC_M
-	db 43, MEDITATE
+	db 22, HEADBUTT
+	db 25, POISON_GAS
+	db 34, PSYBEAM
+	db 37, MEDITATE
+	db 41, DREAM_EATER
+	db 45, PSYCHIC_M
+	db 49, SKULL_BASH
 	db 0
 
 GolbatEvosMoves:
