@@ -927,11 +927,15 @@ KoffingEvosMoves:
 	db EV_LEVEL, 35, WEEZING
 	db 0
 ; Learnset
-	db 32, SLUDGE
-	db 37, SMOKESCREEN
-	db 40, SELFDESTRUCT
-	db 45, HAZE
-	db 48, EXPLOSION
+	db 8, SMOG
+	db 12, SMOKESCREEN
+	db 17, LICK
+	db 22, SLUDGE
+	db 26, TAKE_DOWN
+	db 31, SELFDESTRUCT
+	db 36, HAZE
+	db 41, SLUDGEBOMB
+	db 45, EXPLOSION
 	db 0
 
 MissingNo38EvosMoves:
@@ -1958,11 +1962,15 @@ WeezingEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 32, SLUDGE
-	db 39, SMOKESCREEN
-	db 43, SELFDESTRUCT
-	db 49, HAZE
-	db 53, EXPLOSION
+	db 8, SMOG
+	db 12, SMOKESCREEN
+	db 17, LICK
+	db 22, SLUDGE
+	db 26, TAKE_DOWN
+	db 31, SELFDESTRUCT
+	db 38, HAZE
+	db 43, SLUDGEBOMB
+	db 47, EXPLOSION
 	db 0
 
 PersianEvosMoves:
