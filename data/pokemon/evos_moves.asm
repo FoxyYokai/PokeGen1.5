@@ -186,7 +186,7 @@ KangaskhanEvosMoves:
 	db 16, COMET_PUNCH
 	db 20, FOCUS_ENERGY
 	db 24, BULLDOZE
-	db 27, SUBMISSION
+	db 27, SEISMIC_TOSS
 	db 32, SLAM
 	db 36, AGILITY
 	db 41, THRASH
