@@ -205,12 +205,13 @@ ClefairyEvosMoves:
 ; Learnset
 	db 9, SING
 	db 13, COMET_PUNCH
-	db 18, MINIMIZE
+	db 18, FAKE_TEARS
 	db 22, METRONOME
 	db 26, BODY_SLAM
-	db 33, RECOVER
-	db 37, LIGHT_SCREEN
+	db 33, MINIMIZE
+	db 37, RECOVER
 	db 42, DOUBLE_EDGE
+	db 45, LIGHT_SCREEN
 	db 0
 
 SpearowEvosMoves:
@@ -342,7 +343,7 @@ GengarEvosMoves:
 	db 24, HEX
 	db 31, NIGHT_SHADE
 	db 35, HYPNOSIS
-	db 38, DISABLE
+	db 38, EERIE_NOISE
 	db 43, DREAM_EATER
 	db 46, SHADOWBALL
 	db 50, HAZE
@@ -492,7 +493,7 @@ GastlyEvosMoves:
 	db 24, HEX
 	db 28, NIGHT_SHADE
 	db 32, HYPNOSIS
-	db 35, DISABLE
+	db 35, EERIE_NOISE
 	db 40, DREAM_EATER
 	db 43, SHADOWBALL
 	db 47, HAZE
@@ -872,13 +873,13 @@ MagnetonEvosMoves:
 	db 0
 ; Learnset
 	db 7, THUNDERSHOCK
-	db 12, SCREECH
+	db 12, CHARGE
 	db 15, SUPERSONIC
 	db 20, SPARK
 	db 23, SONICBOOM
 	db 27, THUNDER_WAVE
 	db 30, TRI_ATTACK
-	db 35, SWIFT
+	db 35, EERIE_NOISE
 	db 39, THUNDERBOLT
 	db 43, REFLECT
 	db 48, THUNDER
@@ -1126,7 +1127,7 @@ MeowthEvosMoves:
 ; Learnset
 	db 10, BITE
 	db 15, PAY_DAY
-	db 21, SING
+	db 21, FAKE_TEARS
 	db 26, FURY_SWIPES
 	db 33, FOCUS_ENERGY
 	db 37, SCREECH
@@ -1219,6 +1220,16 @@ RaichuEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 12, QUICK_ATTACK
+	db 16, THUNDER_WAVE
+	db 20, SWIFT
+	db 25, SPARK
+	db 30, DOUBLE_TEAM
+	db 34, SLAM
+	db 38, THUNDERBOLT
+	db 42, LIGHT_SCREEN
+	db 46, AGILITY
+	db 51, THUNDER
 	db 0
 
 MissingNo56EvosMoves:
@@ -1376,11 +1387,12 @@ JigglypuffEvosMoves:
 	db 11, SING
 	db 15, DOUBLESLAP
 	db 19, DISABLE
-	db 24, SCREECH
+	db 24, FAKE_TEARS
 	db 27, BODY_SLAM
 	db 32, REST
 	db 37, DOUBLE_EDGE
-	db 42, SELFDESTRUCT
+	db 42, SCREECH
+	db 46, SELFDESTRUCT
 	db 0
 
 WigglytuffEvosMoves:
@@ -1391,11 +1403,12 @@ WigglytuffEvosMoves:
 	db 16, SING
 	db 20, DOUBLESLAP
 	db 24, DISABLE
-	db 29, SCREECH
+	db 29, FAKE_TEARS
 	db 32, BODY_SLAM
 	db 37, REST
 	db 42, DOUBLE_EDGE
-	db 47, SELFDESTRUCT
+	db 47, SCREECH
+	db 51, SELFDESTRUCT
 	db 0
 
 EeveeEvosMoves:
@@ -1888,6 +1901,15 @@ ClefableEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 14, SING
+	db 18, COMET_PUNCH
+	db 23, FAKE_TEARS
+	db 27, METRONOME
+	db 31, BODY_SLAM
+	db 38, MINIMIZE
+	db 42, RECOVER
+	db 47, DOUBLE_EDGE
+	db 50, LIGHT_SCREEN
 	db 0
 
 WeezingEvosMoves:
@@ -1907,7 +1929,7 @@ PersianEvosMoves:
 ; Learnset
 	db 10, BITE
 	db 15, PAY_DAY
-	db 21, SING
+	db 21, FAKE_TEARS
 	db 26, FURY_SWIPES
 	db 35, FOCUS_ENERGY
 	db 39, SCREECH
@@ -1943,7 +1965,7 @@ HaunterEvosMoves:
 	db 24, HEX
 	db 30, NIGHT_SHADE
 	db 34, HYPNOSIS
-	db 37, DISABLE
+	db 37, EERIE_NOISE
 	db 42, DREAM_EATER
 	db 45, SHADOWBALL
 	db 49, HAZE
@@ -2255,12 +2277,12 @@ MagnemiteEvosMoves:
 	db 0
 ; Learnset
 	db 7, THUNDERSHOCK
-	db 12, SCREECH
+	db 12, CHARGE
 	db 15, SUPERSONIC
 	db 20, SPARK
 	db 23, SONICBOOM
 	db 27, THUNDER_WAVE
-	db 33, SWIFT
+	db 33, EERIE_NOISE
 	db 37, THUNDERBOLT
 	db 41, REFLECT
 	db 46, THUNDER
