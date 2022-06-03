@@ -561,13 +561,16 @@ StaryuEvosMoves:
 	db EV_ITEM, WATER_STONE, 1, STARMIE
 	db 0
 ; Learnset
-	db 17, WATER_GUN
-	db 22, HARDEN
-	db 27, RECOVER
-	db 32, SWIFT
-	db 37, MINIMIZE
-	db 42, LIGHT_SCREEN
-	db 47, HYDRO_PUMP
+	db 7, WATER_GUN
+	db 12, CONFUSION
+	db 16, SWIFT
+	db 20, MINIMIZE
+	db 24, BUBBLEBEAM
+	db 28, RECOVER
+	db 31, HARDEN
+	db 35, PSYBEAM
+	db 39, CONFUSE_RAY
+	db 44, HYDRO_PUMP
 	db 0
 
 BlastoiseEvosMoves:
@@ -2119,6 +2122,16 @@ StarmieEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 12, WATER_GUN
+	db 17, CONFUSION
+	db 21, SWIFT
+	db 25, MINIMIZE
+	db 28, BUBBLEBEAM
+	db 33, RECOVER
+	db 36, HARDEN
+	db 40, PSYBEAM
+	db 44, CONFUSE_RAY
+	db 49, HYDRO_PUMP
 	db 0
 
 BulbasaurEvosMoves:
