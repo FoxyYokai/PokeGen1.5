@@ -309,11 +309,17 @@ LickitungEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 7, STOMP
-	db 15, DISABLE
-	db 23, DEFENSE_CURL
-	db 31, SLAM
-	db 39, SCREECH
+	db 7, LICK
+	db 11, DISABLE
+	db 14, DEFENSE_CURL
+	db 18, BIND
+	db 22, MIMIC
+	db 25, STOMP
+	db 29, PSYBEAM
+	db 32, SLAM
+	db 37, SCREECH
+	db 41, THRASH
+	db 45, AMNESIA
 	db 0
 
 ExeggcuteEvosMoves:
