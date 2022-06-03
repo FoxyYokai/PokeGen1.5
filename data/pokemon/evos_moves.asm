@@ -439,9 +439,9 @@ ArcanineEvosMoves:
 ; Learnset
 	db 13, EMBER
 	db 18, SMOKESCREEN
-	db 22, ROAR
+	db 22, LEER
 	db 27, TAKE_DOWN
-	db 39, LEER
+	db 39, ROAR
 	db 34, FLARE
 	db 39, AGILITY
 	db 44, FLAMETHROWER
@@ -606,9 +606,9 @@ GrowlitheEvosMoves:
 ; Learnset
 	db 8, EMBER
 	db 13, SMOKESCREEN
-	db 17, ROAR
+	db 17, LEER
 	db 22, TAKE_DOWN
-	db 25, LEER
+	db 25, ROAR
 	db 29, FLARE
 	db 34, AGILITY
 	db 39, FLAMETHROWER
@@ -622,11 +622,11 @@ OnixEvosMoves:
 ; Learnset
 	db 11, ROCK_THROW
 	db 15, BIND
-	db 19, HARDEN
+	db 19, SCREECH
 	db 24, BULLDOZE
 	db 29, ROCKBLAST
 	db 35, SLAM
-	db 39, LEER
+	db 39, HARDEN
 	db 43, ROCK_SLIDE
 	db 47, EARTHQUAKE
 	db 52, HYPER_BEAM
@@ -756,22 +756,32 @@ HitmonleeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 33, ROLLING_KICK
-	db 38, JUMP_KICK
-	db 43, FOCUS_ENERGY
-	db 48, HI_JUMP_KICK
-	db 53, MEGA_KICK
+	db 9, MEDITATE
+	db 12, DOUBLE_KICK
+	db 16, FOCUS_ENERGY
+	db 20, ROLLING_KICK
+	db 25, STOMP
+	db 29, AGILITY
+	db 33, JUMP_KICK
+	db 37, THRASH
+	db 42, HI_JUMP_KICK
+	db 45, MEGA_KICK
 	db 0
 
 HitmonchanEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 33, FIRE_PUNCH
-	db 38, ICE_PUNCH
-	db 43, THUNDERPUNCH
-	db 48, MEGA_PUNCH
-	db 53, COUNTER
+	db 9, MEDITATE
+	db 12, QUICK_ATTACK
+	db 16, FOCUS_ENERGY
+	db 20, ICE_PUNCH
+	db 25, THUNDERPUNCH
+	db 30, FIRE_PUNCH
+	db 33, AGILITY
+	db 37, COMET_PUNCH
+	db 42, COUNTER
+	db 45, MEGA_PUNCH
 	db 0
 
 ArbokEvosMoves:
@@ -2378,10 +2388,9 @@ CharmeleonEvosMoves:
 	db 26, LEER
 	db 29, DRAGONBREATH
 	db 35, FLAMETHROWER
-	db 36, WING_ATTACK
-	db 43, SLASH
-	db 47, FOCUS_ENERGY
-	db 53, FIRE_SPIN
+	db 40, SLASH
+	db 44, FOCUS_ENERGY
+	db 48, FIRE_SPIN
 	db 0
 
 WartortleEvosMoves:
@@ -2406,12 +2415,17 @@ CharizardEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 9, EMBER
-	db 15, LEER
-	db 24, RAGE
-	db 36, SLASH
-	db 46, FLAMETHROWER
-	db 55, FIRE_SPIN
+	db 6, EMBER
+	db 11, SMOKESCREEN
+	db 15, BITE
+	db 22, FLARE
+	db 26, LEER
+	db 29, DRAGONBREATH
+	db 35, FLAMETHROWER
+	db 36, WING_ATTACK
+	db 43, SLASH
+	db 47, FOCUS_ENERGY
+	db 51, FIRE_SPIN
 	db 0
 
 MissingNoB5EvosMoves:
