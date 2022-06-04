@@ -2454,7 +2454,7 @@ AerodactylEvosMoves:
 	db 19, WING_ATTACK
 	db 23, SCREECH
 	db 27, TWISTER
-	db 31, SLAM
+	db 31, CRUNCH
 	db 36, ROCKBLAST
 	db 43, AGILITY
 	db 47, DRAGONBREATH
