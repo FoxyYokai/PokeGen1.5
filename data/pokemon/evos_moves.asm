@@ -779,10 +779,16 @@ MrMimeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 15, CONFUSION
-	db 23, LIGHT_SCREEN
-	db 31, DOUBLESLAP
-	db 39, MEDITATE
+	db 8, CONFUSION
+	db 12, DOUBLESLAP
+	db 17, BARRIER
+	db 20, MEDITATE
+	db 24, PSYBEAM
+	db 28, DISABLE
+	db 32, SEISMIC_TOSS
+	db 36, REFLECT
+	db 41, LIGHT_SCREEN
+	db 45, PSYCHIC_M
 	db 47, SUBSTITUTE
 	db 0
 
