@@ -2410,10 +2410,16 @@ PorygonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 23, PSYBEAM
-	db 28, RECOVER
-	db 35, AGILITY
-	db 42, TRI_ATTACK
+	db 13, CHARGE
+	db 17, THUNDERSHOCK
+	db 22, PSYBEAM
+	db 26, RECOVER
+	db 30, SPARK
+	db 34, AGILITY
+	db 37, TRI_ATTACK
+	db 41, MINIMIZE
+	db 45, PSYCHIC_M
+	db 48, EERIE_NOISE
 	db 0
 
 AerodactylEvosMoves:
