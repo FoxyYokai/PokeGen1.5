@@ -1540,52 +1540,56 @@ EeveeEvosMoves:
 	db EV_ITEM, WATER_STONE, 1, VAPOREON
 	db 0
 ; Learnset
-	db 27, QUICK_ATTACK
-	db 31, TAIL_WHIP
-	db 37, BITE
-	db 45, TAKE_DOWN
+	db 7, QUICK_ATTACK
+	db 11, TAIL_WHIP
+	db 14, BITE
+	db 19, FAKE_TEARS
+	db 23, SWIFT
+	db 27, TAKE_DOWN
+	db 31, AGILITY
+	db 36, DOUBLE_EDGE
 	db 0
 
 FlareonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 27, QUICK_ATTACK
-	db 31, EMBER
-	db 37, TAIL_WHIP
-	db 40, BITE
-	db 42, LEER
-	db 44, FIRE_SPIN
-	db 48, RAGE
-	db 54, FLAMETHROWER
+	db 15, EMBER
+	db 19, SMOKESCREEN
+	db 23, SMOG
+	db 27, FOCUS_ENERGY
+	db 31, FIRE_SPIN
+	db 35, AGILITY
+	db 40, CRUNCH
+	db 44, FLAMETHROWER
 	db 0
 
 JolteonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 27, QUICK_ATTACK
-	db 31, THUNDERSHOCK
-	db 37, TAIL_WHIP
-	db 40, THUNDER_WAVE
-	db 42, DOUBLE_KICK
-	db 44, AGILITY
-	db 48, PIN_MISSILE
-	db 54, THUNDER
+	db 15, THUNDERSHOCK
+	db 19, CHARGE
+	db 23, PIN_MISSLE
+	db 27, THUNDER_WAVE
+	db 31, SPARK
+	db 35, AGILITY
+	db 40, DOUBLE_KICK
+	db 44, THUNDER
 	db 0
 
 VaporeonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 27, QUICK_ATTACK
-	db 31, WATER_GUN
-	db 37, TAIL_WHIP
-	db 40, BITE
-	db 42, ACID_ARMOR
-	db 44, HAZE
-	db 48, MIST
-	db 54, HYDRO_PUMP
+	db 15, WATER_GUN
+	db 19, SING
+	db 23, AURORA_BEAM
+	db 27, MIST
+	db 31, WHIRLPOOL
+	db 35, ACID_ARMOR
+	db 40, HAZE
+	db 44, HYDRO_PUMP
 	db 0
 
 MachopEvosMoves:
