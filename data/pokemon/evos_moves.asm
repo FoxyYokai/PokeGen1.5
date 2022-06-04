@@ -449,12 +449,15 @@ LaprasEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 16, SING
-	db 20, MIST
-	db 25, BODY_SLAM
-	db 31, CONFUSE_RAY
-	db 38, ICE_BEAM
-	db 46, HYDRO_PUMP
+	db 12, SING
+	db 17, TWISTER
+	db 22, BODY_SLAM
+	db 27, CONFUSE_RAY
+	db 32, WHIRLPOOL
+	db 37, ICE_BEAM
+	db 42, MIST
+	db 47, HYDRO_PUMP
+	db 52, BLIZZARD
 	db 0
 
 ArcanineEvosMoves:
@@ -487,11 +490,15 @@ GyaradosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 20, BITE
 	db 25, DRAGON_RAGE
+	db 28, TWISTER
 	db 32, LEER
-	db 41, HYDRO_PUMP
-	db 52, HYPER_BEAM
+	db 37, WHIRLPOOL
+	db 41, THRASH
+	db 45, DRAGONBREATH
+	db 49, CRUNCH
+	db 53, HYDRO_PUMP
+	db 57, HYPER_BEAM
 	db 0
 
 ShellderEvosMoves:
@@ -1922,10 +1929,11 @@ SnorlaxEvosMoves:
 
 MagikarpEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 20, GYARADOS
+	db EV_LEVEL, 25, GYARADOS
 	db 0
 ; Learnset
 	db 15, TACKLE
+	db 20, BUBBLE
 	db 0
 
 MissingNo86EvosMoves:
