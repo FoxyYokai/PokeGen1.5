@@ -789,7 +789,7 @@ MrMimeEvosMoves:
 	db 20, MEDITATE
 	db 24, PSYBEAM
 	db 28, DISABLE
-	db 32, SEISMIC_TOSS
+	db 32, MIMIC
 	db 36, REFLECT
 	db 41, LIGHT_SCREEN
 	db 45, PSYCHIC_M
@@ -1158,12 +1158,17 @@ JynxEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 18, LICK
-	db 23, DOUBLESLAP
-	db 31, ICE_PUNCH
-	db 39, BODY_SLAM
-	db 47, THRASH
-	db 58, BLIZZARD
+	db 9, POWDERSNOW
+	db 13, DOUBLESLAP
+	db 18, CONFUSION
+	db 21, SING
+	db 25, ICE_PUNCH
+	db 29, BODY_SLAM
+	db 33, PSYBEAM
+	db 37, LOVELY_KISS
+	db 41, EERIE_NOISE
+	db 45, THRASH
+	db 50, BLIZZARD
 	db 0
 
 MoltresEvosMoves:
