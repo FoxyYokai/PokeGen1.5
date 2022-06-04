@@ -1,6 +1,6 @@
 	db DEX_SNORLAX ; pokedex id
 
-	db 160, 110,  65,  30,  65
+	db 170, 120,  65,  25,  65
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/snorlax.pic", 0, 1 ; sprite dimensions
 	dw SnorlaxPicFront, SnorlaxPicBack
 
-	db HEADBUTT, AMNESIA, REST, NO_MOVE ; level 1 learnset
+	db HEADBUTT, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset

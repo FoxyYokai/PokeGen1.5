@@ -1949,10 +1949,15 @@ SnorlaxEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 35, BODY_SLAM
-	db 41, HARDEN
-	db 48, DOUBLE_EDGE
-	db 56, HYPER_BEAM
+	db 15, DEFENSE_CURL
+	db 20, LICK
+	db 25, BODY_SLAM
+	db 30, REST
+	db 35, BIDE
+	db 40, ROAR
+	db 45, DOUBLE_EDGE
+	db 50, EARTHQUAKE
+	db 55, HYPER_BEAM
 	db 0
 
 MagikarpEvosMoves:
