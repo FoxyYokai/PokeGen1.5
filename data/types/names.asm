@@ -7,9 +7,8 @@ TypeNames:
 	dw .Poison
 	dw .Ground
 	dw .Rock
-	dw .Bird
 	dw .Bug
-	dw .Ghost
+	dw .Dragon
 	dw .Unknown
 
 REPT FIRE - UNKNOWN - 1
@@ -22,7 +21,7 @@ ENDR
 	dw .Electric
 	dw .Psychic
 	dw .Ice
-	dw .Dragon
+	dw .Ghost
 
 	assert_table_length NUM_TYPES
 
@@ -38,7 +37,6 @@ ENDR
 .Ice:      db "ICE@"
 .Ground:   db "GROUND@"
 .Rock:     db "ROCK@"
-.Bird:     db "BIRD@"
 .Bug:      db "BUG@"
 .Ghost:    db "GHOST@"
 .Unknown:   db "???@"
