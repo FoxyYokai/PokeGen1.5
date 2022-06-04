@@ -936,11 +936,16 @@ ElectabuzzEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, THUNDERSHOCK
-	db 37, SCREECH
-	db 42, THUNDERPUNCH
-	db 49, LIGHT_SCREEN
-	db 54, THUNDER
+	db 9, QUICK_ATTACK
+	db 13, THUNDERSHOCK
+	db 17, CHARGE
+	db 22, KARATE_CHOP
+	db 26, THUNDERPUNCH
+	db 31, DOUBLE_TEAM
+	db 35, THRASH
+	db 39, AGILITY
+	db 42, LIGHT_SCREEN
+	db 46, THUNDER
 	db 0
 
 MagnetonEvosMoves:
