@@ -1484,9 +1484,15 @@ OmanyteEvosMoves:
 	db EV_LEVEL, 40, OMASTAR
 	db 0
 ; Learnset
-	db 34, HORN_ATTACK
-	db 39, LEER
-	db 46, SPIKE_CANNON
+	db 14, CONSTRICT
+	db 19, HORN_ATTACK
+	db 23, SMOKESCREEN
+	db 27, LEER
+	db 31, BIND
+	db 36, ROCKBLAST
+	db 41, CLAMP
+	db 45, HARDEN
+	db 49, SPIKE_CANNON
 	db 53, HYDRO_PUMP
 	db 0
 
@@ -1494,10 +1500,16 @@ OmastarEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, HORN_ATTACK
-	db 39, LEER
-	db 44, SPIKE_CANNON
-	db 49, HYDRO_PUMP
+	db 14, CONSTRICT
+	db 19, HORN_ATTACK
+	db 23, SMOKESCREEN
+	db 27, LEER
+	db 31, BIND
+	db 36, ROCKBLAST
+	db 43, CLAMP
+	db 47, HARDEN
+	db 51, SPIKE_CANNON
+	db 55, HYDRO_PUMP
 	db 0
 
 JigglypuffEvosMoves:
