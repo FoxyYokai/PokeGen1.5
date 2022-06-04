@@ -4665,6 +4665,7 @@ HighCriticalMoves:
 	db RAZOR_LEAF
 	db CRABHAMMER
 	db SLASH
+	db CUT
 	db CROSSCHOP
 	db XSCISSOR
 	db RAZOR_WIND
