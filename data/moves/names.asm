@@ -190,5 +190,6 @@ MoveNames::
 	li "CHARGE"
 	li "FAKE TEARS"
 	li "EERIE NOISE"
+	li "PSYSTRIKE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

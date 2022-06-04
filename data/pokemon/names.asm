@@ -1,157 +1,157 @@
 MonsterNames::
 	table_width NAME_LENGTH - 1, MonsterNames
-	db "BULBASAUR@" ; 1
-	db "IVYSAUR@@@" ; 2
-	db "VENUSAUR@@" ; 3
-	db "CHARMANDER" ; 4
-	db "CHARMELEON" ; 5
-	db "CHARIZARD@" ; 6
-	db "SQUIRTLE@@" ; 7
-	db "WARTORTLE@" ; 8
-	db "BLASTOISE@" ; 9
-	db "CATERPIE@@" ; 10
-	db "METAPOD@@@" ; 11
-	db "BUTTERFREE" ; 12
-	db "WEEDLE@@@@" ; 13
-	db "KAKUNA@@@@" ; 14
-	db "BEEDRILL@@" ; 15
-	db "PIDGEY@@@@" ; 16
-	db "PIDGEOTTO@" ; 17
-	db "PIDGEOT@@@" ; 18
-	db "RATTATA@@@" ; 19
-	db "RATICATE@@" ; 20
-	db "SPEAROW@@@" ; 21
-	db "FEAROW@@@@" ; 22
-	db "EKANS@@@@@" ; 23
-	db "ARBOK@@@@@" ; 24
-	db "PIKACHU@@@" ; 25
-	db "RAICHU@@@@" ; 26
-	db "SANDSHREW@" ; 27
-	db "SANDSLASH@" ; 28
-	db "NIDORAN_F@" ; 29
-	db "NIDORINA@@" ; 30
-	db "NIDOQUEEN@" ; 31
-	db "NIDORAN_M@" ; 32
-	db "NIDORINO@@" ; 33
-	db "NIDOKING@@" ; 34
-	db "CLEFAIRY@@" ; 35
-	db "CLEFABLE@@" ; 36
-	db "VULPIX@@@@" ; 37
-	db "NINETALES@" ; 38
-	db "JIGGLYPUFF" ; 39
-	db "WIGGLYTUFF" ; 40
-	db "ZUBAT@@@@@" ; 41
-	db "GOLBAT@@@@" ; 42
-	db "ODDISH@@@@" ; 43
-	db "GLOOM@@@@@" ; 44
-	db "VILEPLUME@" ; 45
-	db "PARAS@@@@@" ; 46
-	db "PARASECT@@" ; 47
-	db "VENONAT@@@" ; 48
-	db "VENOMOTH@@" ; 49
-	db "DIGLETT@@@" ; 50
-	db "DUGTRIO@@@" ; 51
-	db "MEOWTH@@@@" ; 52
-	db "PERSIAN@@@" ; 53
-	db "PSYDUCK@@@" ; 54
-	db "GOLDUCK@@@" ; 55
-	db "MANKEY@@@@" ; 56
-	db "PRIMEAPE@@" ; 57
-	db "GROWLITHE@" ; 58
-	db "ARCANINE@@" ; 59
-	db "POLIWAG@@@" ; 60
-	db "POLIWHIRL@" ; 61
-	db "POLIWRATH@" ; 62
-	db "ABRA@@@@@@" ; 63
-	db "KADABRA@@@" ; 64
-	db "ALAKAZAM@@" ; 65
-	db "MACHOP@@@@" ; 66
-	db "MACHOKE@@@" ; 67
-	db "MACHAMP@@@" ; 68
-	db "BELLSPROUT" ; 69
-	db "WEEPINBELL" ; 70
-	db "VICTREEBEL" ; 71
-	db "TENTACOOL@" ; 72
-	db "TENTACRUEL" ; 73
-	db "GEODUDE@@@" ; 74
-	db "GRAVELER@@" ; 75
-	db "GOLEM@@@@@" ; 76
-	db "PONYTA@@@@" ; 77
-	db "RAPIDASH@@" ; 78
-	db "SLOWPOKE@@" ; 79
-	db "SLOWBRO@@@" ; 80
-	db "MAGNEMITE@" ; 81
-	db "MAGNETON@@" ; 82
-	db "FARFETCHD@" ; 83
-	db "DODUO@@@@@" ; 84
-	db "DODRIO@@@@" ; 85
-	db "SEEL@@@@@@" ; 86
-	db "DEWGONG@@@" ; 87
-	db "GRIMER@@@@" ; 88
-	db "MUK@@@@@@@" ; 89
-	db "SHELLDER@@" ; 90
-	db "CLOYSTER@@" ; 91
-	db "GASTLY@@@@" ; 92
-	db "HAUNTER@@@" ; 93
-	db "GENGAR@@@@" ; 94
-	db "ONIX@@@@@@" ; 95
-	db "DROWZEE@@@" ; 96
-	db "HYPNO@@@@@" ; 97
-	db "KRABBY@@@@" ; 98
-	db "KINGLER@@@" ; 99
-	db "VOLTORB@@@" ; 100
-	db "ELECTRODE@" ; 101
-	db "EXEGGCUTE@" ; 102
-	db "EXEGGUTOR@" ; 103
-	db "CUBONE@@@@" ; 104
-	db "MAROWAK@@@" ; 105
-	db "HITMONLEE@" ; 106
-	db "HITMONCHAN" ; 107
-	db "LICKITUNG@" ; 108
-	db "KOFFING@@@" ; 109
-	db "WEEZING@@@" ; 110
-	db "RHYHORN@@@" ; 111
-	db "RHYDON@@@@" ; 112
-	db "CHANSEY@@@" ; 113
-	db "TANGELA@@@" ; 114
-	db "KANGASKHAN" ; 115
-	db "HORSEA@@@@" ; 116
-	db "SEADRA@@@@" ; 117
-	db "GOLDEEN@@@" ; 118
-	db "SEAKING@@@" ; 119
-	db "STARYU@@@@" ; 120
-	db "STARMIE@@@" ; 121
-	db "MR_MIME@@@" ; 122
-	db "SCYTHER@@@" ; 123
-	db "JYNX@@@@@@" ; 124
-	db "ELECTABUZZ" ; 125
-	db "MAGMAR@@@@" ; 126
-	db "PINSIR@@@@" ; 127
-	db "TAUROS@@@@" ; 128
-	db "MAGIKARP@@" ; 129
-	db "GYARADOS@@" ; 130
-	db "LAPRAS@@@@" ; 131
-	db "DITTO@@@@@" ; 132
-	db "EEVEE@@@@@" ; 133
-	db "VAPOREON@@" ; 134
-	db "JOLTEON@@@" ; 135
-	db "FLAREON@@@" ; 136
-	db "PORYGON@@@" ; 137
-	db "OMANYTE@@@" ; 138
-	db "OMASTAR@@@" ; 139
-	db "KABUTO@@@@" ; 140
-	db "KABUTOPS@@" ; 141
-	db "AERODACTYL" ; 142
-	db "SNORLAX@@@" ; 143
-	db "ARTICUNO@@" ; 144
-	db "ZAPDOS@@@@" ; 145
-	db "MOLTRES@@@" ; 146
-	db "DRATINI@@@" ; 147
-	db "DRAGONAIR@" ; 148
-	db "DRAGONITE@" ; 149
-	db "MEWTWO@@@@" ; 150
-	db "MEW@@@@@@@" ; 151
-	db "MISSINGNO." ; fossil kabutops
-	db "MISSINGNO." ; fossil aerodactyl
-	db "MISSINGNO." ; ghost
+	db "BULBASAUR@"
+	db "IVYSAUR@@@"
+	db "VENUSAUR@@"
+	db "CHARMANDER"
+	db "CHARMELEON"
+	db "CHARIZARD@"
+	db "SQUIRTLE@@"
+	db "WARTORTLE@"
+	db "BLASTOISE@"
+	db "CATERPIE@@"
+	db "METAPOD@@@"
+	db "BUTTERFREE"
+	db "WEEDLE@@@@"
+	db "KAKUNA@@@@"
+	db "BEEDRILL@@"
+	db "PIDGEY@@@@"
+	db "PIDGEOTTO@"
+	db "PIDGEOT@@@"
+	db "RATTATA@@@"
+	db "RATICATE@@"
+	db "SPEAROW@@@"
+	db "FEAROW@@@@"
+	db "EKANS@@@@@"
+	db "ARBOK@@@@@"
+	db "PIKACHU@@@"
+	db "RAICHU@@@@"
+	db "SANDSHREW@"
+	db "SANDSLASH@"
+	db "NIDORAN♀@@"
+	db "NIDORINA@@"
+	db "NIDOQUEEN@"
+	db "NIDORAN♂@@"
+	db "NIDORINO@@"
+	db "NIDOKING@@"
+	db "CLEFAIRY@@"
+	db "CLEFABLE@@"
+	db "VULPIX@@@@"
+	db "NINETALES@"
+	db "JIGGLYPUFF"
+	db "WIGGLYTUFF"
+	db "ZUBAT@@@@@"
+	db "GOLBAT@@@@"
+	db "ODDISH@@@@"
+	db "GLOOM@@@@@"
+	db "VILEPLUME@"
+	db "PARAS@@@@@"
+	db "PARASECT@@"
+	db "VENONAT@@@"
+	db "VENOMOTH@@"
+	db "DIGLETT@@@"
+	db "DUGTRIO@@@"
+	db "MEOWTH@@@@"
+	db "PERSIAN@@@"
+	db "PSYDUCK@@@"
+	db "GOLDUCK@@@"
+	db "MANKEY@@@@"
+	db "PRIMEAPE@@"
+	db "GROWLITHE@"
+	db "ARCANINE@@"
+	db "POLIWAG@@@"
+	db "POLIWHIRL@"
+	db "POLIWRATH@"
+	db "ABRA@@@@@@"
+	db "KADABRA@@@"
+	db "ALAKAZAM@@"
+	db "MACHOP@@@@"
+	db "MACHOKE@@@"
+	db "MACHAMP@@@"
+	db "BELLSPROUT"
+	db "WEEPINBELL"
+	db "VICTREEBEL"
+	db "TENTACOOL@"
+	db "TENTACRUEL"
+	db "GEODUDE@@@"
+	db "GRAVELER@@"
+	db "GOLEM@@@@@"
+	db "PONYTA@@@@"
+	db "RAPIDASH@@"
+	db "SLOWPOKE@@"
+	db "SLOWBRO@@@"
+	db "MAGNEMITE@"
+	db "MAGNETON@@"
+	db "FARFETCH'D"
+	db "DODUO@@@@@"
+	db "DODRIO@@@@"	
+	db "SEEL@@@@@@"
+	db "DEWGONG@@@"
+	db "GRIMER@@@@"
+	db "MUK@@@@@@@"
+	db "SHELLDER@@"
+	db "CLOYSTER@@"
+	db "GASTLY@@@@"
+	db "HAUNTER@@@"
+	db "GENGAR@@@@"
+	db "ONIX@@@@@@"
+	db "DROWZEE@@@"
+	db "HYPNO@@@@@"
+	db "VOLTORB@@@"
+	db "ELECTRODE@"
+	db "KRABBY@@@@"
+	db "KINGLER@@@"
+	db "EXEGGCUTE@"
+	db "EXEGGUTOR@"
+	db "CUBONE@@@@"
+	db "MAROWAK@@@"
+	db "HITMONLEE@"
+	db "HITMONCHAN"
+	db "LICKITUNG@"	
+	db "KOFFING@@@"
+	db "WEEZING@@@"
+	db "RHYHORN@@@"
+	db "RHYDON@@@@"
+	db "CHANSEY@@@"
+	db "TANGELA@@@"
+	db "KANGASKHAN"
+	db "HORSEA@@@@"
+	db "SEADRA@@@@"
+	db "GOLDEEN@@@"
+	db "SEAKING@@@"
+	db "STARYU@@@@"
+	db "STARMIE@@@"
+	db "MR.MIME@@@"
+	db "SCYTHER@@@"
+	db "JYNX@@@@@@"
+	db "ELECTABUZZ"
+	db "MAGMAR@@@@"
+	db "PINSIR@@@@"
+	db "TAUROS@@@@"
+	db "MAGIKARP@@"
+	db "GYARADOS@@"
+	db "LAPRAS@@@@"
+	db "DITTO@@@@@"
+	db "EEVEE@@@@@"
+	db "VAPOREON@@"
+	db "JOLTEON@@@"
+	db "FLAREON@@@"
+	db "PORYGON@@@"
+	db "OMANYTE@@@"
+	db "OMASTAR@@@"
+	db "KABUTO@@@@"
+	db "KABUTOPS@@"
+	db "AERODACTYL"
+	db "SNORLAX@@@"
+	db "ARTICUNO@@"
+	db "ZAPDOS@@@@"
+	db "MOLTRES@@@"
+	db "DRATINI@@@"
+	db "DRAGONAIR@"
+	db "DRAGONITE@"
+	db "MEWTWO@@@@"
+	db "MEW@@@@@@@"
+	db "MISSINGNO."
+	db "MISSINGNO."
+	db "MISSINGNO."
 	assert_table_length NUM_POKEMON_INDEXES

@@ -3833,7 +3833,9 @@ DetermineExclamationPointTextNum:
 	pop bc
 	ret
 
-INCLUDE "data/moves/grammar.asm"
+ExclamationPointMoveSets:
+	db 0 ; nothing
+	db -1; end
 
 PrintMoveFailureText:
 	ld de, wPlayerMoveEffect
@@ -4589,8 +4591,6 @@ JumpToOHKOMoveEffect:
 	ld a, [wMoveMissed]
 	dec a
 	ret
-
-INCLUDE "data/battle/unused_critical_hit_moves.asm"
 
 ; determines if attack is a critical hit
 ; Azure Heights claims "the fastest pokémon (who are, not coincidentally,
@@ -6389,11 +6389,6 @@ LoadPlayerBackPic:
 	ldh [hStartTileID], a
 	hlcoord 1, 5
 	predef_jump CopyUncompressedPicToTilemap
-
-; does nothing since no stats are ever selected (barring glitches)
-DoubleOrHalveSelectedStats:
-	callfar DoubleSelectedStats
-	jpfar HalveSelectedStats
 
 ScrollTrainerPicAfterBattle:
 	jpfar _ScrollTrainerPicAfterBattle

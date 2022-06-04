@@ -190,6 +190,7 @@ AttackAnimationPointers:
 	dw ChargeAnim
 	dw FakeTearsAnim
 	dw EerieNoiseAnim
+	dw PsystrikeAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1324,6 +1325,13 @@ FakeTearsAnim:
 EerieNoiseAnim:
 	battle_anim EERIE_NOISE, SUBANIM_15, 1, 6
 	battle_anim EERIE_NOISE, SUBANIM_15, 1, 6
+	db -1 ; end
+
+PsystrikeAnim:
+	battle_anim PSYBEAM, SE_DARK_SCREEN_PALETTE
+	battle_anim NO_MOVE, SUBANIM_29, 1, 1
+	battle_anim NO_MOVE, SUBANIM_29, 1, 1
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
 BallTossAnim:

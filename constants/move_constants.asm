@@ -196,7 +196,8 @@
 	const CHARGE       ; bc
 	const FAKE_TEARS   ; bd
 	const EERIE_NOISE  ; be
-	const STRUGGLE     ; bf
+	const PSYSTRIKE	   ; bf
+	const STRUGGLE     ; c0
 NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
