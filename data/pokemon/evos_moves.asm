@@ -1385,20 +1385,32 @@ KabutoEvosMoves:
 	db EV_LEVEL, 40, KABUTOPS
 	db 0
 ; Learnset
-	db 34, ABSORB
-	db 39, SLASH
-	db 44, LEER
-	db 49, HYDRO_PUMP
+	db 14, ABSORB
+	db 19, WATER_GUN
+	db 23, MUDSLAP
+	db 27, HARDEN
+	db 31, FURY_SWIPES
+	db 36, ROCKBLAST
+	db 41, SLASH
+	db 45, SWORDS_DANCE
+	db 49, RAZOR_WIND
+	db 53, HYDRO_PUMP
 	db 0
 
 KabutopsEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, ABSORB
-	db 39, SLASH
-	db 46, LEER
-	db 53, HYDRO_PUMP
+	db 14, ABSORB
+	db 19, WATER_GUN
+	db 23, MUDSLAP
+	db 27, HARDEN
+	db 31, FURY_SWIPES
+	db 36, ROCKBLAST
+	db 43, SLASH
+	db 47, SWORDS_DANCE
+	db 51, RAZOR_WIND
+	db 55, HYDRO_PUMP
 	db 0
 
 HorseaEvosMoves:
