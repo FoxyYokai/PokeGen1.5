@@ -918,12 +918,17 @@ MagmarEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 36, LEER
+	db 6, LEER
+	db 12, SMOG
+	db 15, HEADBUTT
+	db 20, SMOKESCREEN
+	db 24, FIRE_PUNCH
+	db 28, HAZE
+	db 31, BODY_SLAM
+	db 35, FLAMETHROWER
 	db 39, CONFUSE_RAY
-	db 43, FIRE_PUNCH
-	db 48, SMOKESCREEN
-	db 52, SMOG
-	db 55, FLAMETHROWER
+	db 43, DRAGONBREATH
+	db 48, FIRE_BLAST
 	db 0
 
 MissingNo34EvosMoves:
