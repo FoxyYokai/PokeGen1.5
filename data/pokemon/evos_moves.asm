@@ -1125,10 +1125,16 @@ DragoniteEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, AGILITY
-	db 35, SLAM
-	db 45, DRAGON_RAGE
-	db 60, HYPER_BEAM
+	db 20, TWISTER
+	db 25, AGILITY
+	db 30, DRAGON_RAGE
+	db 42, SLAM
+	db 47, DRAGONBREATH
+	db 52, FLAMETHROWER
+	db 55, WING_ATTACK
+	db 60, DRAGONCLAW
+	db 65, MIST
+	db 70, HYPERBEAM
 	db 0
 
 MissingNo43EvosMoves:
@@ -1383,10 +1389,14 @@ DratiniEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, AGILITY
-	db 30, SLAM
-	db 40, DRAGON_RAGE
-	db 50, HYPER_BEAM
+	db 20, TWISTER
+	db 25, AGILITY
+	db 30, DRAGON_RAGE
+	db 40, SLAM
+	db 45, DRAGONBREATH
+	db 50, FLAMETHROWER
+	db 60, MIST
+	db 65, HYPERBEAM
 	db 0
 
 DragonairEvosMoves:
@@ -1395,10 +1405,14 @@ DragonairEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
-	db 20, AGILITY
-	db 35, SLAM
-	db 45, DRAGON_RAGE
-	db 55, HYPER_BEAM
+	db 20, TWISTER
+	db 25, AGILITY
+	db 30, DRAGON_RAGE
+	db 42, SLAM
+	db 47, DRAGONBREATH
+	db 52, FLAMETHROWER
+	db 62, MIST
+	db 67, HYPERBEAM
 	db 0
 
 KabutoEvosMoves:
