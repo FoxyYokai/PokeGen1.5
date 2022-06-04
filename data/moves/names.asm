@@ -186,5 +186,10 @@ MoveNames::
 	li "MUD SLAP"
 	li "BULLDOZE"
 	li "WHIRLPOOL"
+	li "CRUNCH"
+	li "CHARGE"
+	li "FAKE TEARS"
+	li "EERIE NOISE"
+	li "PSYSTRIKE"
 	li "STRUGGLE"
 	assert_list_length NUM_ATTACKS

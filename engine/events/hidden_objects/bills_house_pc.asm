@@ -101,11 +101,11 @@ BillsHousePokemonList::
 	add EEVEE
 	cp EEVEE
 	jr z, .displayPokedex
-	cp FLAREON
+	cp VAPOREON
 	jr z, .displayPokedex
 	cp JOLTEON
 	jr z, .displayPokedex
-	cp VAPOREON
+	cp FLAREON
 	jr z, .displayPokedex
 	jr .cancel
 .displayPokedex
@@ -124,9 +124,9 @@ BillsHousePokemonListText1:
 
 BillsMonListText:
 	db   "EEVEE"
-	next "FLAREON"
-	next "JOLTEON"
 	next "VAPOREON"
+	next "JOLTEON"
+	next "FLAREON"
 	next "CANCEL@"
 
 BillsHousePokemonListText2:

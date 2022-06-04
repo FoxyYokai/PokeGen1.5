@@ -1,6 +1,6 @@
 	db DEX_AERODACTYL ; pokedex id
 
-	db  80, 105,  65, 130,  60
+	db  85, 105,  65, 130,  60
 	;   hp  atk  def  spd  spc
 
 	db ROCK, FLYING ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/aerodactyl.pic", 0, 1 ; sprite dimensions
 	dw AerodactylPicFront, AerodactylPicBack
 
-	db WING_ATTACK, AGILITY, NO_MOVE, NO_MOVE ; level 1 learnset
+	db GUST, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset

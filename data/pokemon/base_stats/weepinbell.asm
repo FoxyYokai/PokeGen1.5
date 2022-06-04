@@ -1,6 +1,6 @@
 	db DEX_WEEPINBELL ; pokedex id
 
-	db  65,  90,  50,  55,  85
+	db  65,  95,  50,  55,  85
 	;   hp  atk  def  spd  spc
 
 	db GRASS, POISON ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/weepinbell.pic", 0, 1 ; sprite dimensions
 	dw WeepinbellPicFront, WeepinbellPicBack
 
-	db VINE_WHIP, GROWTH, WRAP, NO_MOVE ; level 1 learnset
+	db CONSTRICT, GROWTH, WRAP, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

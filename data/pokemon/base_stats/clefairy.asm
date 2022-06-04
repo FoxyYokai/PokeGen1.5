@@ -1,6 +1,6 @@
 	db DEX_CLEFAIRY ; pokedex id
 
-	db  70,  45,  48,  35,  60
+	db  70,  45,  48,  35,  65
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/clefairy.pic", 0, 1 ; sprite dimensions
 	dw ClefairyPicFront, ClefairyPicBack
 
-	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
+	db POUND, GROWL, DEFENSE_CURL, NO_MOVE ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset

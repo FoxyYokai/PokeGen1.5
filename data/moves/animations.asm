@@ -186,6 +186,11 @@ AttackAnimationPointers:
 	dw MudSlapAnim
 	dw BulldozeAnim
 	dw WhirlpoolAnim
+	dw CrunchAnim
+	dw ChargeAnim
+	dw FakeTearsAnim
+	dw EerieNoiseAnim
+	dw PsystrikeAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -899,6 +904,7 @@ ReflectAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+ChargeAnim:
 FocusEnergyAnim:
 	battle_anim FOCUS_ENERGY, SE_SPIRAL_BALLS_INWARD
 	db -1 ; end
@@ -1297,6 +1303,35 @@ WhirlpoolAnim:
 	battle_anim SURF, SE_WATER_DROPLETS_EVERYWHERE
 	battle_anim HYDRO_PUMP, SUBANIM_23, 0, 4
 	battle_anim NO_MOVE, SUBANIM_23, 0, 4
+	db -1 ; end
+
+CrunchAnim:
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim BITE, SUBANIM_02, 0, 12
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim BITE, SUBANIM_02, 0, 12
+	db -1 ; end
+
+FakeTearsAnim:
+	battle_anim NO_MOVE, SE_MOVE_MON_HORIZONTALLY
+	battle_anim FAKE_TEARS, SE_DELAY_ANIMATION_10
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	battle_anim FAKE_TEARS, SE_DELAY_ANIMATION_10
+	battle_anim NO_MOVE, SE_MOVE_MON_HORIZONTALLY
+	battle_anim FAKE_TEARS, SE_DELAY_ANIMATION_10
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
+	db -1 ; end
+
+EerieNoiseAnim:
+	battle_anim EERIE_NOISE, SUBANIM_15, 1, 6
+	battle_anim EERIE_NOISE, SUBANIM_15, 1, 6
+	db -1 ; end
+
+PsystrikeAnim:
+	battle_anim PSYBEAM, SE_DARK_SCREEN_PALETTE
+	battle_anim NO_MOVE, SUBANIM_29, 1, 1
+	battle_anim NO_MOVE, SUBANIM_29, 1, 1
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
 BallTossAnim:

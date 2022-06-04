@@ -3833,7 +3833,9 @@ DetermineExclamationPointTextNum:
 	pop bc
 	ret
 
-INCLUDE "data/moves/grammar.asm"
+ExclamationPointMoveSets:
+	db 0 ; nothing
+	db -1; end
 
 PrintMoveFailureText:
 	ld de, wPlayerMoveEffect
@@ -4590,8 +4592,6 @@ JumpToOHKOMoveEffect:
 	dec a
 	ret
 
-INCLUDE "data/battle/unused_critical_hit_moves.asm"
-
 ; determines if attack is a critical hit
 ; Azure Heights claims "the fastest pokémon (who are, not coincidentally,
 ; among the most popular) tend to CH about 20 to 25% of the time."
@@ -4665,8 +4665,11 @@ HighCriticalMoves:
 	db RAZOR_LEAF
 	db CRABHAMMER
 	db SLASH
+	db CUT
 	db CROSSCHOP
 	db XSCISSOR
+	db RAZOR_WIND
+	db SKY_ATTACK
 	db -1 ; end
 
 ; function to determine if Counter hits and if so, how much damage it does
@@ -6386,11 +6389,6 @@ LoadPlayerBackPic:
 	ldh [hStartTileID], a
 	hlcoord 1, 5
 	predef_jump CopyUncompressedPicToTilemap
-
-; does nothing since no stats are ever selected (barring glitches)
-DoubleOrHalveSelectedStats:
-	callfar DoubleSelectedStats
-	jpfar HalveSelectedStats
 
 ScrollTrainerPicAfterBattle:
 	jpfar _ScrollTrainerPicAfterBattle

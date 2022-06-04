@@ -1,6 +1,6 @@
 	db DEX_DEWGONG ; pokedex id
 
-	db  90,  70,  80,  70,  95
+	db  95,  70,  80,  70,  95
 	;   hp  atk  def  spd  spc
 
 	db WATER, ICE ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/dewgong.pic", 0, 1 ; sprite dimensions
 	dw DewgongPicFront, DewgongPicBack
 
-	db HEADBUTT, GROWL, AURORA_BEAM, NO_MOVE ; level 1 learnset
+	db HEADBUTT, REST, AURORA_BEAM, BODY_SLAM ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
