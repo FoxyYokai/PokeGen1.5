@@ -2653,6 +2653,8 @@ PlayApplyingAttackSound:
 	dec b
 .doTypeTwo
 	ld a, [wTypeTwoEffectiveness]
+	cp NO_EFFECT
+	jr z, .noEffect 
 	cp SUPER_EFFECTIVE
 	jr nz, .checkTypeTwoNVE
 	inc b
@@ -2665,8 +2667,6 @@ PlayApplyingAttackSound:
 	ld a, b
 	cp 2 ; still neutral
 	jr z, .neutral
-	cp 4
-	jr nc, .superEffective
 	cp 3
 	jr nc, .superEffective
 .notVeryEffective
