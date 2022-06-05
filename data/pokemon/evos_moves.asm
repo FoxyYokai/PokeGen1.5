@@ -216,7 +216,7 @@ ClefairyEvosMoves:
 	db 0
 ; Learnset
 	db 9, SING
-	db 13, COMET_PUNCH
+	db 13, DOUBLESLAP
 	db 18, FAKE_TEARS
 	db 22, METRONOME
 	db 26, BODY_SLAM
@@ -1669,6 +1669,7 @@ KakunaEvosMoves:
 	db EV_LEVEL, 10, BEEDRILL
 	db 0
 ; Learnset
+	db 7, HARDEN
 	db 0
 
 BeedrillEvosMoves:
@@ -1774,6 +1775,7 @@ MetapodEvosMoves:
 	db EV_LEVEL, 10, BUTTERFREE
 	db 0
 ; Learnset
+	db 7, HARDEN
 	db 0
 
 ButterfreeEvosMoves:
@@ -1959,7 +1961,7 @@ ClefableEvosMoves:
 	db 0
 ; Learnset
 	db 14, SING
-	db 18, COMET_PUNCH
+	db 18, DOUBLESLAP
 	db 23, FAKE_TEARS
 	db 27, METRONOME
 	db 31, BODY_SLAM
