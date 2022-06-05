@@ -2637,25 +2637,65 @@ TossBallAnimation:
 PlayApplyingAttackSound:
 ; play a different sound depending if move is not very effective, neutral, or super-effective
 ; don't play any sound at all if move is ineffective
+; since this happens before the effectiveness text, calc that here so we don't have to recalc
 	call WaitForSoundToFinish
-	ld a, [wDamageMultipliers]
-	and $7f
-	ret z
-	cp 10
-	ld a, $20
-	ld b, $30
-	ld c, SFX_DAMAGE
-	jr z, .playSound
-	ld a, $e0
-	ld b, $ff
-	ld c, SFX_SUPER_EFFECTIVE
-	jr nc, .playSound
+	ld a, [wTypeOneEffectiveness]
+	ld b, 2 ; let's use 2 for neutral. decrement for NVE, increment for SE
+	cp NO_EFFECT
+	jr z, .noEffect 
+	cp SUPER_EFFECTIVE
+	jr nz, .checkTypeOneNVE
+	inc b
+	jr .doTypeTwo
+.checkTypeOneNVE
+	cp NOT_VERY_EFFECTIVE
+	jr nz, .doTypeTwo
+	dec b
+.doTypeTwo
+	ld a, [wTypeTwoEffectiveness]
+	cp SUPER_EFFECTIVE
+	jr nz, .checkTypeTwoNVE
+	inc b
+	jr .calculateText
+.checkTypeTwoNVE
+	cp NOT_VERY_EFFECTIVE
+	jr nz, .calculateText
+	dec b
+.calculateText
+	ld a, b
+	cp 2 ; still neutral
+	jr z, .neutral
+	cp 4
+	jr nc, .superEffective
+	cp 3
+	jr nc, .superEffective
+.notVeryEffective
+	ld a, NOT_VERY_EFFECTIVE
+	ld [wTypeEffectivenessText], a
 	ld a, $50
 	ld b, $1
 	ld c, SFX_NOT_VERY_EFFECTIVE
+	jr .playSound
+.superEffective
+	ld a, SUPER_EFFECTIVE
+	ld [wTypeEffectivenessText], a
+	ld a, $e0
+	ld b, $ff
+	ld c, SFX_SUPER_EFFECTIVE
+	jr .playSound
+.neutral
+	ld a, EFFECTIVE
+	ld [wTypeEffectivenessText], a
+	ld a, $20
+	ld b, $30
+	ld c, SFX_DAMAGE
 .playSound
 	ld [wFrequencyModifier], a
 	ld a, b
 	ld [wTempoModifier], a
 	ld a, c
 	jp PlaySound
+.noEffect
+	ld a, NO_EFFECT
+	ld [wTypeEffectivenessText], a
+	ret
