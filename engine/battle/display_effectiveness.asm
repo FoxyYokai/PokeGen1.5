@@ -1,6 +1,8 @@
 ; This has already been calc'd for us in engine\battle\animations.asm during effectiveness sfx.
 DisplayEffectiveness:
 	ld a, [wTypeEffectivenessText]
+	cp $ff
+	ret z
 	cp NO_EFFECT
 	ret z
 	cp EFFECTIVE
