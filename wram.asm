@@ -1230,9 +1230,9 @@ wCurOpponent:: db
 wBattleType:: db
 
 ; bits 0-6: Effectiveness
-   ;  $0 = immune
-   ;  $5 = not very effective
-   ;  $a = neutral
+   ; $00 = immune
+   ; $05 = not very effective
+   ; $0a = neutral
    ; $14 = super-effective
 ; bit 7: STAB
 wDamageMultipliers:: db
@@ -1317,7 +1317,10 @@ wEnemyToxicCounter:: db
 ; low nibble: disable turns left
 wEnemyDisabledMove:: db
 
-	ds 1
+; stores the effectiveness type message, taking into account dual types.
+; calc'd in engine\battle\animations.asm during sfx for effectiveness.
+; used in engine\battle\display_effectiveness.asm so we don't have to calc it twice.
+wTypeEffectivenessText:: db
 
 UNION
 ; the amount of damage accumulated by the player while biding
@@ -1331,7 +1334,11 @@ NEXTU
 wPlayerNumHits:: db
 ENDU
 
-	ds 2
+; use to correctly calculate type effectiveness message
+UNION
+wTypeOneEffectiveness:: db
+wTypeTwoEffectiveness:: db
+ENDU
 
 ; non-zero when an item or move that allows escape from battle was used
 wEscapedFromBattle:: db

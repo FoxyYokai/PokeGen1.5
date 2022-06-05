@@ -1729,6 +1729,10 @@ SendOutMon:
 .skipDrawingEnemyHUDAndHPBar
 	call DrawPlayerHUDAndHPBar
 	predef LoadMonBackPic
+	ld a, $ff
+	ld [wTypeOneEffectiveness], a
+	ld [wTypeTwoEffectiveness], a
+	ld [wTypeEffectivenessText], a
 	xor a
 	ldh [hStartTileID], a
 	ld hl, wBattleAndStartSavedMenuItem
@@ -3072,6 +3076,10 @@ ExecutePlayerMove:
 	ld [wMoveDidntMiss], a
 	ld a, $a
 	ld [wDamageMultipliers], a
+	ld a, $ff
+	ld [wTypeOneEffectiveness], a
+	ld [wTypeTwoEffectiveness], a
+	ld [wTypeEffectivenessText], a
 	ld a, [wActionResultOrTookBattleTurn]
 	and a ; has the player already used the turn (e.g. by using an item, trying to run or switching pokemon)
 	jp nz, ExecutePlayerMoveDone
@@ -5279,6 +5287,16 @@ AdjustDamageForMoveType:
 	ldh [hMultiplier], a
 	add b
 	ld [wDamageMultipliers], a
+	ld a, [wTypeOneEffectiveness] 	; store effectiveness to properly display the right dual-type text later
+	cp $ff
+	jr nz, .useTypeTwo
+	ld a, [hl]
+	ld [wTypeOneEffectiveness], a
+	jr .skipStoringTypeEffectiveness
+.useTypeTwo
+	ld a, [hl]
+	ld [wTypeTwoEffectiveness], a
+.skipStoringTypeEffectiveness
 	xor a
 	ldh [hMultiplicand], a
 	ld hl, wDamage
@@ -5610,6 +5628,10 @@ ExecuteEnemyMove:
 	ld [wMoveDidntMiss], a
 	ld a, $a
 	ld [wDamageMultipliers], a
+	ld a, $ff
+	ld [wTypeOneEffectiveness], a
+	ld [wTypeTwoEffectiveness], a
+	ld [wTypeEffectivenessText], a
 	call CheckEnemyStatusConditions
 	jr nz, .enemyHasNoSpecialConditions
 	jp hl

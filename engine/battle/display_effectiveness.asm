@@ -1,10 +1,13 @@
+; This has already been calc'd for us in engine\battle\animations.asm during effectiveness sfx.
 DisplayEffectiveness:
-	ld a, [wDamageMultipliers]
-	and $7F
-	cp $0A
+	ld a, [wTypeEffectivenessText]
+	cp NO_EFFECT
+	ret z
+	cp EFFECTIVE
 	ret z
 	ld hl, SuperEffectiveText
-	jr nc, .done
+	cp SUPER_EFFECTIVE
+	jr z, .done
 	ld hl, NotVeryEffectiveText
 .done
 	jp PrintText
