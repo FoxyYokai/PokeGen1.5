@@ -4,9 +4,6 @@ _Route12HouseText_564c0::
 
 	para "I simply Looove"
 	line "fishing!"
-
-	para "Do you like to"
-	line "fish?"
 	done
 
 _Route12HouseText_564c5::
