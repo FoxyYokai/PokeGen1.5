@@ -5,9 +5,6 @@ _FuchsiaHouse3Text_561bd::
 
 	para "I simply Looove"
 	line "fishing!"
-
-	para "Do you like to"
-	line "fish?"
 	done
 
 _FuchsiaHouse3Text_561c2::

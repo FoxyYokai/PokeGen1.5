@@ -84,31 +84,29 @@ SAFARI_ROCK EQU $16 ; overload
 	const POKE_FLUTE    ; $49
 	const LIFT_KEY      ; $4A
 	const EXP_ALL       ; $4B
-	const OLD_ROD       ; $4C
-	const GOOD_ROD      ; $4D
-	const SUPER_ROD     ; $4E
-	const PP_UP         ; $4F
-	const ETHER         ; $50
-	const MAX_ETHER     ; $51
-	const ELIXER        ; $52
-	const MAX_ELIXER    ; $53
+	const SUPER_ROD     ; $4C
+	const PP_UP         ; $4D
+	const ETHER         ; $4E
+	const MAX_ETHER     ; $4F
+	const ELIXER        ; $50
+	const MAX_ELIXER    ; $51
 NUM_ITEMS EQU const_value - 1
 
 ; elevator floors use item IDs
-	const FLOOR_B2F     ; $54
-	const FLOOR_B1F     ; $55
-	const FLOOR_1F      ; $56
-	const FLOOR_2F      ; $57
-	const FLOOR_3F      ; $58
-	const FLOOR_4F      ; $59
-	const FLOOR_5F      ; $5A
-	const FLOOR_6F      ; $5B
-	const FLOOR_7F      ; $5C
-	const FLOOR_8F      ; $5D
-	const FLOOR_9F      ; $5E
-	const FLOOR_10F     ; $5F
-	const FLOOR_11F     ; $60
-	const FLOOR_B4F     ; $61
+	const FLOOR_B2F     ; $52
+	const FLOOR_B1F     ; $53
+	const FLOOR_1F      ; $54
+	const FLOOR_2F      ; $55
+	const FLOOR_3F      ; $56
+	const FLOOR_4F      ; $57
+	const FLOOR_5F      ; $58
+	const FLOOR_6F      ; $59
+	const FLOOR_7F      ; $5A
+	const FLOOR_8F      ; $5B
+	const FLOOR_9F      ; $5C
+	const FLOOR_10F     ; $5D
+	const FLOOR_11F     ; $5E
+	const FLOOR_B4F     ; $5F
 NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 
 	const_next $C4
