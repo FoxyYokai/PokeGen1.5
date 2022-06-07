@@ -92,8 +92,6 @@ ItemUsePtrTable:
 	dw ItemUsePokeflute  ; POKE_FLUTE
 	dw UnusableItem      ; LIFT_KEY
 	dw UnusableItem      ; EXP_ALL
-	dw ItemUseOldRod     ; OLD_ROD
-	dw ItemUseGoodRod    ; GOOD_ROD
 	dw ItemUseSuperRod   ; SUPER_ROD
 	dw ItemUsePPUp       ; PP_UP (real one)
 	dw ItemUsePPRestore  ; ETHER
@@ -1815,41 +1813,6 @@ ItemUseCoinCase:
 CoinCaseNumCoinsText:
 	text_far _CoinCaseNumCoinsText
 	text_end
-
-ItemUseOldRod:
-	call FishingInit
-	jp c, ItemUseNotTime
-	lb bc, 5, MAGIKARP
-	ld a, $1 ; set bite
-	jr RodResponse
-
-ItemUseGoodRod:
-	call FishingInit
-	jp c, ItemUseNotTime
-.RandomLoop
-	call Random
-	srl a
-	jr c, .SetBite
-	and %11
-	cp 2
-	jr nc, .RandomLoop
-	; choose which monster appears
-	ld hl, GoodRodMons
-	add a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld b, [hl]
-	inc hl
-	ld c, [hl]
-	and a
-.SetBite
-	ld a, 0
-	rla
-	xor 1
-	jr RodResponse
-
-INCLUDE "data/wild/good_rod.asm"
 
 ItemUseSuperRod:
 	call FishingInit
