@@ -6,8 +6,8 @@ Route7WildMons:
 	db  20, MEOWTH     ; 9.8%
 	db  21, BELLSPROUT ; 9.8%
 	db  21, ODDISH     ; 9.8%
-	db  19, EXEGGCUTE  ; 5.1%
-	db  20, EXEGGCUTE  ; 5.1%
+	db  23, GLOOM      ; 5.1%
+	db  23, WEEPINBELL ; 5.1%
 	db  20, FARFETCHD  ; 4.3%
 	db  21, FARFETCHD  ; 1.2%
 	end_grass_wildmons
