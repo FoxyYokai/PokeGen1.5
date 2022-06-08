@@ -84,7 +84,7 @@ SAFARI_ROCK EQU $16 ; overload
 	const POKE_FLUTE    ; $49
 	const LIFT_KEY      ; $4A
 	const EXP_ALL       ; $4B
-	const SUPER_ROD     ; $4C
+	const FISHING_ROD     ; $4C
 	const PP_UP         ; $4D
 	const ETHER         ; $4E
 	const MAX_ETHER     ; $4F

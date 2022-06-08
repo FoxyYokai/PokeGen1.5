@@ -92,7 +92,7 @@ ItemUsePtrTable:
 	dw ItemUsePokeflute  ; POKE_FLUTE
 	dw UnusableItem      ; LIFT_KEY
 	dw UnusableItem      ; EXP_ALL
-	dw ItemUseSuperRod   ; SUPER_ROD
+	dw ItemUseFishingRod ; FISHING_ROD
 	dw ItemUsePPUp       ; PP_UP (real one)
 	dw ItemUsePPRestore  ; ETHER
 	dw ItemUsePPRestore  ; MAX_ETHER
@@ -1814,10 +1814,10 @@ CoinCaseNumCoinsText:
 	text_far _CoinCaseNumCoinsText
 	text_end
 
-ItemUseSuperRod:
+ItemUseFishingRod:
 	call FishingInit
 	jp c, ItemUseNotTime
-	call ReadSuperRodData
+	call ReadFishingRodData
 	ld a, e
 RodResponse:
 	ld [wRodResponse], a
@@ -1863,7 +1863,7 @@ FishingInit:
 	call PrintText
 	ld a, SFX_HEAL_AILMENT
 	call PlaySound
-	ld c, 80
+	ld c, 20
 	call DelayFrames
 	and a
 	ret
@@ -2795,13 +2795,13 @@ IsNextTileShoreOrWater:
 
 INCLUDE "data/tilesets/water_tilesets.asm"
 
-ReadSuperRodData:
+ReadFishingRodData:
 ; return e = 2 if no fish on this map
 ; return e = 1 if a bite, bc = level,species
 ; return e = 0 if no bite
 	ld a, [wCurMap]
 	ld de, 3 ; each fishing group is three bytes wide
-	ld hl, SuperRodData
+	ld hl, FishingRodData
 	call IsInArray
 	jr c, .ReadFishingGroup
 	ld e, $2 ; $2 if no fishing groups found
@@ -2822,12 +2822,9 @@ ReadSuperRodData:
 
 .RandomLoop
 	call Random
-	srl a
-	ret c ; 50% chance of no battle
-
-	and %11 ; 2-bit random number
+	and %1111 ; 4-bit random number
 	cp b
-	jr nc, .RandomLoop ; if a is greater than the number of mons, regenerate
+	ret nc ; if a is greater than the number of mons, miss
 
 	; get the mon
 	add a
@@ -2840,7 +2837,7 @@ ReadSuperRodData:
 	ld e, $1 ; $1 if there's a bite
 	ret
 
-INCLUDE "data/wild/super_rod.asm"
+INCLUDE "data/wild/fishing_rod.asm"
 
 ; reloads map view and processes sprite data
 ; for items that cause the overworld to be displayed
@@ -2869,6 +2866,9 @@ FindWildLocationsOfMon:
 	ld a, [hli]
 	and a
 	call nz, CheckMapForMon ; water
+	ld a, [hli]
+	and a
+	call nz, CheckMapForMon ; fishing
 	pop hl
 	inc hl
 	inc hl

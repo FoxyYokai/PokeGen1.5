@@ -27,3 +27,16 @@ ENDC
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
+
+	def_fishing_wildmons 1 ; encounter rate
+	db 1, KINGLER
+	db 1, STARYU
+	db 1, SHELLDER
+	db 1, SEEL
+	db 1, CLOYSTER
+	db 1, STARMIE
+	db 1, DEWGONG
+	db 1, DEWGONG
+	db 1, DEWGONG
+	db 1, DEWGONG
+	end_fishing_wildmons

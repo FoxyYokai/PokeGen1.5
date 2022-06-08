@@ -1,4 +1,4 @@
-SeaRoutesWildMons:
+Route19WildMons:
 	def_grass_wildmons 0 ; encounter rate
 	end_grass_wildmons
 
@@ -14,3 +14,16 @@ SeaRoutesWildMons:
 	db 35, TENTACOOL
 	db 40, TENTACOOL
 	end_water_wildmons
+
+	def_fishing_wildmons 1 ; encounter rate
+	db 1, KRABBY
+	db 1, SHELLDER
+	db 1, HORSEA
+	db 1, STARYU
+	db 1, KINGLER
+	db 1, KINGLER
+	db 1, KINGLER
+	db 1, KINGLER
+	db 1, KINGLER
+	db 1, KINGLER
+	end_fishing_wildmons

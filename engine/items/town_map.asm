@@ -376,7 +376,7 @@ DisplayWildLocations:
 	ld a, [de]
 	cp $ff
 	jr z, .exitLoop
-	and a
+	cp $fa ; flag value for duplicate
 	jr z, .nextEntry
 	push hl
 	call LoadTownMapEntry
@@ -531,7 +531,8 @@ WriteSymmetricMonPartySpriteOAM:
 	ret
 
 ZeroOutDuplicatesInList:
-; replace duplicate bytes in the list of wild pokemon locations with 0
+; replace duplicate bytes in the list of wild pokemon locations with $FA
+; use $FA to refer to a non-existent map instead of 0, which is Pallet Town
 	ld de, wBuffer
 .loop
 	ld a, [de]
@@ -547,7 +548,7 @@ ZeroOutDuplicatesInList:
 	jr z, .loop
 	cp c
 	jr nz, .skipZeroing
-	xor a
+	ld a, $fa
 	ld [hl], a
 .skipZeroing
 	inc hl
