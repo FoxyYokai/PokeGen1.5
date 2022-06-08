@@ -15,7 +15,7 @@ VermilionHouse2Text1:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .refused
-	lb bc, SUPER_ROD, 1
+	lb bc, FISHING_ROD, 1
 	call GiveItem
 	jr nc, .bag_full
 	ld hl, wd728
