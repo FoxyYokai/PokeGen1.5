@@ -75,7 +75,7 @@ KeyItemFlags:
 	dbit TRUE  ; POKE_FLUTE
 	dbit TRUE  ; LIFT_KEY
 	dbit FALSE ; EXP_ALL
-	dbit TRUE  ; SUPER_ROD
+	dbit TRUE  ; FISHING_ROD
 	dbit FALSE ; PP_UP
 	dbit FALSE ; ETHER
 	dbit FALSE ; MAX_ETHER

@@ -14,3 +14,16 @@ CeruleanCave2FWildMons:
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
+
+	def_fishing_wildmons 1 ; encounter rate
+	db 1, SLOWBRO
+	db 1, SEAKING
+	db 1, GOLDUCK
+	db 1, SEADRA
+	db 1, GYARADOS
+	db 1, CLOYSTER
+	db 1, STARMIE
+	db 1, DRAGONAIR
+	db 1, DRAGONAIR
+	db 1, DRAGONAIR
+	end_fishing_wildmons
