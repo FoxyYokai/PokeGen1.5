@@ -9,7 +9,7 @@ Route21WildMons:
 	db  8, SQUIRTLE    ; 5.1%
 	db  8, BULBASAUR   ; 5.1%
 	db  8, CHARMANDER  ; 4.3%
-	db  30, CHANSEY    ; 1.2%
+	db  16, CHANSEY    ; 1.2%
 	end_grass_wildmons
 
 	def_water_wildmons 5 ; encounter rate
