@@ -307,9 +307,6 @@ MainInBattleLoop:
 	ld a, [wEscapedFromBattle]
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
-	ld a, [wBattleMonStatus]
-	and (1 << FRZ) ; is mon frozen?
-	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
 	jr nz, .selectEnemyMove ; if so, jump
@@ -2937,9 +2934,6 @@ SelectEnemyMove:
 	ld a, [hl]
 	and (1 << CHARGING_UP) | (1 << THRASHING_ABOUT) ; using a charging move or thrash/petal dance
 	ret nz
-	ld a, [wEnemyMonStatus]
-	and 1 << FRZ ; frozen
-	ret nz
 	ld a, [wEnemyBattleStatus1]
 	and (1 << USING_TRAPPING_MOVE) | (1 << STORING_ENERGY) ; using a trapping move like wrap or bide
 	ret nz
@@ -3283,7 +3277,7 @@ PrintGhostText:
 	and a
 	jr nz, .Ghost
 	ld a, [wBattleMonStatus] ; player's turn
-	and (1 << FRZ)
+	and SLP | (1 << FRZ)
 	ret nz
 	ld hl, ScaredText
 	call PrintText
@@ -3352,12 +3346,29 @@ CheckPlayerStatusConditions:
 .FrozenCheck
 	bit FRZ, [hl] ; frozen?
 	jr z, .HeldInPlaceCheck
+	; check for thaw
+	call BattleRandom
+	cp 30 percent + 1
+	jr nc, .thawFrozenStatus
+.stillFrozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wPlayerUsedMove], a
 	ld hl, ExecutePlayerMoveDone ; player can't move this turn
 	jp .returnToHL
+.thawFrozenStatus
+	xor a
+	ld [wBattleMonStatus], a
+	ld hl, wPartyMon1Status
+	ld a, [wPlayerMonNumber]
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	xor a
+	ld [hl], a
+	ld hl, ThawedOutText
+	call PrintText
+	; allowed to act this turn
 
 .HeldInPlaceCheck
 	ld a, [wEnemyBattleStatus1]
@@ -3593,6 +3604,10 @@ WokeUpText:
 
 IsFrozenText:
 	text_far _IsFrozenText
+	text_end
+
+ThawedOutText:
+	text_far _ThawedOutText
 	text_end
 
 FullyParalyzedText:
@@ -5853,14 +5868,31 @@ CheckEnemyStatusConditions:
 .sleepDone
 	; allow enemy to move this turn
 .checkIfFrozen
-	bit FRZ, [hl]
+	bit FRZ, [hl] ; frozen?
 	jr z, .checkIfTrapped
+	; check for thaw
+	call BattleRandom
+	cp 30 percent + 1
+	jr nc, .thawFrozenStatus
+.stillFrozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wEnemyUsedMove], a
 	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
+.thawFrozenStatus
+	xor a
+	ld [wEnemyMonStatus], a ; set opponent status to 00 ["defrost" a frozen monster]
+	ld hl, wEnemyMon1Status
+	ld a, [wEnemyMonPartyPos]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	xor a
+	ld [hl], a ; clear status in roster
+	ld hl, ThawedOutText
+	call PrintText
+	; allowed to act this turn
 .checkIfTrapped
 	ld a, [wPlayerBattleStatus1]
 	bit USING_TRAPPING_MOVE, a ; is the player using a multi-turn attack like warp
