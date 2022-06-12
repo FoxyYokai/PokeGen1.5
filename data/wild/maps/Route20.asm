@@ -12,7 +12,7 @@ Route20WildMons:
 	db  33, TENTACRUEL  ; 5.1%
 	db  33, SEADRA      ; 5.1%
 	db  35, GYARADOS    ; 4.3%
-	db  33, LAPRAS      ; 1.2%
+	db  38, GYARADOS    ; 1.2%
 	end_water_wildmons
 
 	def_fishing_wildmons 1 ; encounter rate
