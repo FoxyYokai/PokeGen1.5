@@ -9,7 +9,7 @@ HazeEffect_:
 	ld hl, wPlayerMonUnmodifiedAttack
 	ld de, wBattleMonAttack
 	call ResetStats
-	call ApplyBadgeStatBoosts ; reapply badge boosts (bug in vanilla skips this after reset)
+	; call ApplyBadgeStatBoosts ; do not call badge boosts here, unmodified stat block already applied them
 	ld hl, wEnemyMonUnmodifiedAttack
 	ld de, wEnemyMonAttack
 	call ResetStats

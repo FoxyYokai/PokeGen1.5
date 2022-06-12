@@ -227,6 +227,9 @@ GainExperience:
 	bit 3, a ; is the mon transformed?
 	jr nz, .recalcStatChanges
 ; the mon is not transformed, so update the unmodified stats
+	push hl
+	callfar ApplyBadgeStatBoosts
+	pop hl
 	ld de, wPlayerMonUnmodifiedLevel
 	ld bc, 1 + NUM_STATS * 2
 	call CopyData
@@ -235,7 +238,6 @@ GainExperience:
 	ld [wCalculateWhoseStats], a
 	callfar CalculateModifiedStats
 	callfar ApplyBurnAndParalysisPenaltiesToPlayer
-	callfar ApplyBadgeStatBoosts
 	callfar DrawPlayerHUDAndHPBar
 	callfar PrintEmptyString
 	call SaveScreenTilesToBuffer1
