@@ -20,7 +20,6 @@ FishingRodData:
 	dbw ROUTE_20,            .Group11
 	dbw ROUTE_21,            .Group9
 	dbw ROUTE_22,            .Group2
-	dbw ROUTE_23,            .Group15
 	dbw ROUTE_24,            .Group3
 	dbw ROUTE_25,            .Group3
 	dbw CERULEAN_GYM,        .Group3
@@ -31,9 +30,9 @@ FishingRodData:
 	dbw SAFARI_ZONE_NORTH,   .Group13
 	dbw SAFARI_ZONE_WEST,    .Group13
 	dbw SAFARI_ZONE_CENTER,  .Group13
-	dbw CERULEAN_CAVE_2F,    .Group16
-	dbw CERULEAN_CAVE_B1F,   .Group16
-	dbw CERULEAN_CAVE_1F,    .Group16
+	dbw CERULEAN_CAVE_2F,    .Group15
+	dbw CERULEAN_CAVE_B1F,   .Group15
+	dbw CERULEAN_CAVE_1F,    .Group15
 	db -1 ; end
 
 ; fishing groups
@@ -276,25 +275,8 @@ FishingRodData:
 	db 38, STARMIE
 	db 39, DEWGONG
 
-; POKEMON LEAGUE
-.Group15:
-	db 13 ; 18.5% no bite
-	db 39, SLOWBRO
-	db 40, SLOWBRO
-	db 41, SLOWBRO
-	db 39, SEAKING
-	db 40, SEAKING
-	db 41, SEAKING
-	db 39, GOLDUCK
-	db 40, GOLDUCK
-	db 41, GOLDUCK
-	db 40, SEADRA
-	db 41, SEADRA
-	db 42, GYARADOS
-	db 30, DRATINI
-
 ; CERULEAN CAVE
-.Group16:
+.Group15:
 	db 15 ; 6.25% miss rate
 	db 55, SLOWBRO
 	db 56, SLOWBRO
