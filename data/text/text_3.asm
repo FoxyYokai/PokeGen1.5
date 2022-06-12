@@ -93,6 +93,11 @@ _FireDefrostedText::
 	line "<TARGET>!"
 	prompt
 
+_ThawedOutText::
+	text "<USER>"
+	line "thawed out!"
+	prompt
+
 _MonsStatsRoseText::
 	text "<USER>'s"
 	line "@"
@@ -267,7 +272,7 @@ _ConvertedTypeText::
 	prompt
 
 _StatusChangesEliminatedText::
-	text "All STATUS changes"
+	text "All STAT changes"
 	line "are eliminated!"
 	prompt
 

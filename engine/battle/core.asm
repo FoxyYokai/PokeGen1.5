@@ -307,9 +307,6 @@ MainInBattleLoop:
 	ld a, [wEscapedFromBattle]
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
-	ld a, [wBattleMonStatus]
-	and (1 << FRZ) | SLP ; is mon frozen or asleep?
-	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
 	jr nz, .selectEnemyMove ; if so, jump
@@ -1650,12 +1647,12 @@ LoadBattleMonFromParty:
 	ld de, wBattleMonNick
 	ld bc, NAME_LENGTH
 	call CopyData
+	call ApplyBadgeStatBoosts ; include badge boosts in unmodified stats
 	ld hl, wBattleMonLevel
 	ld de, wPlayerMonUnmodifiedLevel ; block of memory used for unmodified stats
 	ld bc, 1 + NUM_STATS * 2
 	call CopyData
 	call ApplyBurnAndParalysisPenaltiesToPlayer
-	call ApplyBadgeStatBoosts
 	ld a, $7 ; default stat modifier
 	ld b, NUM_STAT_MODS
 	ld hl, wPlayerMonAttackMod
@@ -2937,9 +2934,6 @@ SelectEnemyMove:
 	ld a, [hl]
 	and (1 << CHARGING_UP) | (1 << THRASHING_ABOUT) ; using a charging move or thrash/petal dance
 	ret nz
-	ld a, [wEnemyMonStatus]
-	and SLP | 1 << FRZ ; sleeping or frozen
-	ret nz
 	ld a, [wEnemyBattleStatus1]
 	and (1 << USING_TRAPPING_MOVE) | (1 << STORING_ENERGY) ; using a trapping move like wrap or bide
 	ret nz
@@ -3339,25 +3333,42 @@ CheckPlayerStatusConditions:
 	call PlayMoveAnimation
 	ld hl, FastAsleepText
 	call PrintText
-	jr .sleepDone
-.WakeUp
-	ld hl, WokeUpText
-	call PrintText
-.sleepDone
 	xor a
 	ld [wPlayerUsedMove], a
 	ld hl, ExecutePlayerMoveDone ; player can't move this turn
 	jp .returnToHL
+.WakeUp
+	ld hl, WokeUpText
+	call PrintText
+.sleepDone
+	; allow player to move this turn
 
 .FrozenCheck
 	bit FRZ, [hl] ; frozen?
 	jr z, .HeldInPlaceCheck
+	; check for thaw
+	call BattleRandom
+	cp 30 percent + 1
+	jr nc, .thawFrozenStatus
+.stillFrozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wPlayerUsedMove], a
 	ld hl, ExecutePlayerMoveDone ; player can't move this turn
 	jp .returnToHL
+.thawFrozenStatus
+	xor a
+	ld [wBattleMonStatus], a
+	ld hl, wPartyMon1Status
+	ld a, [wPlayerMonNumber]
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	xor a
+	ld [hl], a
+	ld hl, ThawedOutText
+	call PrintText
+	; allowed to act this turn
 
 .HeldInPlaceCheck
 	ld a, [wEnemyBattleStatus1]
@@ -3593,6 +3604,10 @@ WokeUpText:
 
 IsFrozenText:
 	text_far _IsFrozenText
+	text_end
+
+ThawedOutText:
+	text_far _ThawedOutText
 	text_end
 
 FullyParalyzedText:
@@ -4157,6 +4172,7 @@ IgnoredOrdersText:
 	text_end
 
 ; sets b, c, d, and e for the CalculateDamage routine in the case of an attack by the player mon
+; hl must be player's attack, bc is enemy's defense, d is move power, e is player level
 GetDamageVarsForPlayerAttack:
 	xor a
 	ld hl, wDamage ; damage to eventually inflict, initialise to zero
@@ -4181,24 +4197,28 @@ GetDamageVarsForPlayerAttack:
 ; if the enemy has used Reflect, double the enemy's defense
 	sla c
 	rl b
+	call BC999cap ; cap defense to max if reflect
 .physicalAttackCritCheck
 	ld hl, wBattleMonAttack
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's attack and the enemy's defense to their base values
-	ld c, 3 ; defense stat
-	call GetEnemyMonStat
-	ldh a, [hProduct + 2]
+; skip resetting enemy defense if it's been lowered
+	ld a, [wEnemyMonDefenseMod]
+	cp $7
+	jr c, .checkPlayerAttack 
+	ld hl, wEnemyMonUnmodifiedDefense
+	ld a, [hli]
 	ld b, a
-	ldh a, [hProduct + 3]
-	ld c, a
-	push bc
-	ld hl, wPartyMon1Attack
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
-	pop bc
+	ld c, [hl] ; bc = reset enemy defense
+	ld hl, wBattleMonAttack ; reset hl to point to player attack
+.checkPlayerAttack
+; skip resetting player attack if it was raised
+	ld a, [wPlayerMonAttackMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wPlayerMonUnmodifiedAttack
 	jr .scaleStats
 .specialAttack
 	ld hl, wEnemyMonSpecial
@@ -4211,26 +4231,28 @@ GetDamageVarsForPlayerAttack:
 ; if the enemy has used Light Screen, double the enemy's special
 	sla c
 	rl b
-; reflect and light screen boosts do not cap the stat at MAX_STAT_VALUE, so weird things will happen during stats scaling
-; if a Pokemon with 512 or more Defense has used Reflect, or if a Pokemon with 512 or more Special has used Light Screen
+	call BC999cap ; cap special to max if light screen
 .specialAttackCritCheck
 	ld hl, wBattleMonSpecial
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's and enemy's specials to their base values
-	ld c, 5 ; special stat
-	call GetEnemyMonStat
-	ldh a, [hProduct + 2]
+; skip resetting enemy special if it's been lowered
+	ld a, [wEnemyMonSpecialMod]
+	cp $7
+	jr c, .checkPlayerSpecial
+	ld hl, wEnemyMonUnmodifiedSpecial
+	ld a, [hli]
 	ld b, a
-	ldh a, [hProduct + 3]
-	ld c, a
-	push bc
-	ld hl, wPartyMon1Special
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
-	pop bc
+	ld c, [hl] ; bc = reset enemy defense
+	ld hl, wBattleMonSpecial ; reset hl to point to player attack
+.checkPlayerSpecial
+; skip resetting player special if it was raised
+	ld a, [wPlayerMonSpecialMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wPlayerMonUnmodifiedSpecial
 ; if either the offensive or defensive stat is too large to store in a byte, scale both stats by dividing them by 4
 ; this allows values with up to 10 bits (values up to 1023) to be handled
 ; anything larger will wrap around
@@ -4270,6 +4292,7 @@ GetDamageVarsForPlayerAttack:
 	ret
 
 ; sets b, c, d, and e for the CalculateDamage routine in the case of an attack by the enemy mon
+; hl must be enemy's attack, bc is player's defense, d is move power, e is enemy level
 GetDamageVarsForEnemyAttack:
 	ld hl, wDamage ; damage to eventually inflict, initialise to zero
 	xor a
@@ -4294,24 +4317,28 @@ GetDamageVarsForEnemyAttack:
 ; if the player has used Reflect, double the player's defense
 	sla c
 	rl b
+	call BC999cap ; cap defense to max if reflect
 .physicalAttackCritCheck
 	ld hl, wEnemyMonAttack
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's defense and the enemy's attack to their base values
-	ld hl, wPartyMon1Defense
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
+; skip resetting player defense if it's been lowered
+	ld a, [wPlayerMonDefenseMod]
+	cp $7
+	jr c, .checkEnemyAttack 
+	ld hl, wPlayerMonUnmodifiedDefense
 	ld a, [hli]
 	ld b, a
-	ld c, [hl]
-	push bc
-	ld c, 2 ; attack stat
-	call GetEnemyMonStat
-	ld hl, hProduct + 2
-	pop bc
+	ld c, [hl] ; bc = reset player defense
+	ld hl, wEnemyMonAttack ; reset hl to point to enemy attack
+.checkEnemyAttack
+; skip resetting enemy attack if it was raised
+	ld a, [wEnemyMonAttackMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wEnemyMonUnmodifiedAttack
 	jr .scaleStats
 .specialAttack
 	ld hl, wBattleMonSpecial
@@ -4324,26 +4351,28 @@ GetDamageVarsForEnemyAttack:
 ; if the player has used Light Screen, double the player's special
 	sla c
 	rl b
-; reflect and light screen boosts do not cap the stat at MAX_STAT_VALUE, so weird things will happen during stats scaling
-; if a Pokemon with 512 or more Defense has used Reflect, or if a Pokemon with 512 or more Special has used Light Screen
+	call BC999cap ; cap special to max if light screen
 .specialAttackCritCheck
 	ld hl, wEnemyMonSpecial
 	ld a, [wCriticalHitOrOHKO]
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's and enemy's specials to their base values
-	ld hl, wPartyMon1Special
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
+; skip resetting player special if it's been lowered
+	ld a, [wPlayerMonSpecialMod]
+	cp $7
+	jr c, .checkEnemySpecial
+	ld hl, wPlayerMonUnmodifiedSpecial
 	ld a, [hli]
 	ld b, a
-	ld c, [hl]
-	push bc
-	ld c, 5 ; special stat
-	call GetEnemyMonStat
-	ld hl, hProduct + 2
-	pop bc
+	ld c, [hl] ; bc = reset player defense
+	ld hl, wEnemyMonSpecial ; reset hl to point to enemy attack
+.checkEnemySpecial
+; skip resetting enemy special if it was raised
+	ld a, [wEnemyMonSpecialMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wEnemyMonUnmodifiedSpecial
 ; if either the offensive or defensive stat is too large to store in a byte, scale both stats by dividing them by 4
 ; this allows values with up to 10 bits (values up to 1023) to be handled
 ; anything larger will wrap around
@@ -5843,24 +5872,41 @@ CheckEnemyStatusConditions:
 	ld [wAnimationType], a
 	ld a, SLP_ANIM
 	call PlayMoveAnimation
-	jr .sleepDone
-.wokeUp
-	ld hl, WokeUpText
-	call PrintText
-.sleepDone
 	xor a
 	ld [wEnemyUsedMove], a
 	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
+.wokeUp
+	ld hl, WokeUpText
+	call PrintText
+.sleepDone
+	; allow enemy to move this turn
 .checkIfFrozen
-	bit FRZ, [hl]
+	bit FRZ, [hl] ; frozen?
 	jr z, .checkIfTrapped
+	; check for thaw
+	call BattleRandom
+	cp 30 percent + 1
+	jr nc, .thawFrozenStatus
+.stillFrozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wEnemyUsedMove], a
 	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
+.thawFrozenStatus
+	xor a
+	ld [wEnemyMonStatus], a ; set opponent status to 00 ["defrost" a frozen monster]
+	ld hl, wEnemyMon1Status
+	ld a, [wEnemyMonPartyPos]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	xor a
+	ld [hl], a ; clear status in roster
+	ld hl, ThawedOutText
+	call PrintText
+	; allowed to act this turn
 .checkIfTrapped
 	ld a, [wPlayerBattleStatus1]
 	bit USING_TRAPPING_MOVE, a ; is the player using a multi-turn attack like warp
@@ -7067,3 +7113,24 @@ LoadMonBackPic:
 	ldh a, [hLoadedROMBank]
 	ld b, a
 	jp CopyVideoData
+
+; taken from https://github.com/jojobear13/shinpokered
+BC999cap:
+	;b register contains high byte & c register contains low byte
+	ld a, c ;let's work on low byte first. Note that decimal 999 is $03E7 in hex.
+	sub 999 % $100 ;a = a - ($03E7 % $100). Gives a = a - $E7. A byte % $100 always gives the lesser nibble.
+	;Note that if a < $E7 then the carry bit 'c' in the flag register gets set due to overflowing with a negative result.
+	ld a, b ;now let's work on the high byte
+	sbc 999 / $100 ;a = a - ($03E7 / $100 + c_flag). Gives a = a - ($03 + c_flag). A byte / $100 always gives the greater nibble.
+	;Note again that if a < $03 then the carry bit remains set. 
+	;If the bit is already set from the lesser nibble, then its addition here can still make it remain set if a is low enough.
+	jr c, .donecapping ;jump to next marker if the c_flag is set. This only remains set if BC <  the cap of $03E7.
+	;else let's continue and set the 999 cap
+	ld a, 999 / $100 ; else load $03 into a
+	ld b, a ;and store it as the high byte
+	ld a, 999 % $100 ; else load $E7 into a
+	ld c, a ;and store it as the low byte
+	;now registers b & c together contain $03E7 for a capped stat value of 999
+.donecapping
+	ret
+ 

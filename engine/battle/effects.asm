@@ -41,7 +41,7 @@ SleepEffect:
 	                        ; including the event where the target already has another status
 	ld a, [de]
 	ld b, a
-	and $7
+	and SLP
 	jr z, .notAlreadySleeping ; can't affect a mon that is already asleep
 	ld hl, AlreadyAsleepText
 	jp PrintText
@@ -58,8 +58,10 @@ SleepEffect:
 .setSleepCounter
 ; set target's sleep counter to a random number between 1 and 7
 	call BattleRandom
-	and $7
-	jr z, .setSleepCounter
+	; roll number between 2 and 5
+	and %11
+	inc a
+	inc a
 	ld [de], a
 	call PlayCurrentMoveAnimation2
 	ld hl, FellAsleepText
@@ -483,7 +485,7 @@ UpdateStatDone:
 	call PlayCurrentMoveAnimation
 	ld a, [de]
 	cp MINIMIZE
-	jr nz, .applyBadgeBoostsAndStatusPenalties
+	jr nz, .printStatMessage
 	pop bc
 	ld a, $1
 	ld [bc], a
@@ -491,15 +493,11 @@ UpdateStatDone:
 	ld b, BANK(ReshowSubstituteAnim)
 	pop af
 	call nz, Bankswitch
-.applyBadgeBoostsAndStatusPenalties
-	ldh a, [hWhoseTurn]
-	and a
-	call z, ApplyBadgeStatBoosts ; whenever the player uses a stat-up move, badge boosts get reapplied again to every stat,
-	                             ; even to those not affected by the stat-up move (will be boosted further)
+.printStatMessage
 	ld hl, MonsStatsRoseText
 	call PrintText
 
-; these shouldn't be here
+	; these shouldn't be here
 	call QuarterSpeedDueToParalysis ; apply speed penalty to the player whose turn is not, if it's paralyzed
 	jp HalveAttackDueToBurn ; apply attack penalty to the player whose turn is not, if it's burned
 
@@ -547,9 +545,6 @@ StatModifierDownEffect:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .statModifierDownEffect
-	call BattleRandom
-	cp 25 percent + 1 ; chance to miss by in regular battle
-	jp c, MoveMissed
 .statModifierDownEffect
 	call CheckTargetSubstitute ; can't hit through substitute
 	jp nz, MoveMissed
@@ -679,13 +674,9 @@ UpdateLoweredStatDone:
 	pop de
 	ld a, [de]
 	cp $44
-	jr nc, .ApplyBadgeBoostsAndStatusPenalties
+	jr nc, .printStatMessage
 	call PlayCurrentMoveAnimation2
-.ApplyBadgeBoostsAndStatusPenalties
-	ldh a, [hWhoseTurn]
-	and a
-	call nz, ApplyBadgeStatBoosts ; whenever the player uses a stat-down move, badge boosts get reapplied again to every stat,
-	                              ; even to those not affected by the stat-up move (will be boosted further)
+.printStatMessage
 	ld hl, MonsStatsFellText
 	call PrintText
 
