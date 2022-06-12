@@ -1,29 +1,28 @@
 SafariZoneWestWildMons:
 	def_grass_wildmons 30 ; encounter rate
-IF DEF(_RED)
-	db 25, NIDORAN_M
-	db 26, DODUO
-	db 23, VENONAT
-	db 24, EXEGGCUTE
-	db 33, NIDORINO
-	db 26, EXEGGCUTE
-	db 25, NIDORAN_F
-ENDC
-IF DEF(_BLUE)
-	db 25, NIDORAN_F
-	db 26, DODUO
-	db 23, VENONAT
-	db 24, EXEGGCUTE
-	db 33, NIDORINA
-	db 26, EXEGGCUTE
-	db 25, NIDORAN_M
-ENDC
-	db 31, VENOMOTH
-	db 26, TAUROS
-	db 28, KANGASKHAN
+	db  27, NIDORINO    ; 19.9%
+	db  27, NIDORINA    ; 19.9%
+	db  28, DODUO       ; 15.2%
+	db  27, FARFETCHD   ; 9.8%
+	db  26, PONYTA      ; 9.8%
+	db  27, PONYTA      ; 9.8%
+	db  25, RHYHORN     ; 5.1%
+	db  26, RHYHORN     ; 5.1%
+	db  25, TAUROS      ; 4.3%
+	db  26, KANGASKHAN  ; 1.2%
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+	def_water_wildmons 20 ; encounter rate
+	db  27, SLOWPOKE    ; 19.9%
+	db  28, GOLDEEN     ; 19.9%
+	db  26, PSYDUCK     ; 15.2%
+	db  29, GOLDEEN     ; 9.8%
+	db  28, SLOWPOKE    ; 9.8%
+	db  29, MAGIKARP    ; 9.8%
+	db  33, SEAKING     ; 5.1%
+	db  33, GOLDUCK     ; 5.1%
+	db  35, GYARADOS    ; 4.3%
+	db  20, DRATINI     ; 1.2%
 	end_water_wildmons
 
 	def_fishing_wildmons 1 ; encounter rate

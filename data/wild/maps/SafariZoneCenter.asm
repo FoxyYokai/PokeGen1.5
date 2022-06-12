@@ -8,7 +8,7 @@ SafariZoneCenterWildMons:
 	db  29, PONYTA      ; 9.8%
 	db  24, RHYHORN     ; 5.1%
 	db  25, RHYHORN     ; 5.1%
-	db  31, VENOMOTH    ; 4.3%
+	db  26, RHYHORN     ; 4.3%
 	db  29, CHANSEY     ; 1.2%
 	end_grass_wildmons
 
