@@ -1647,12 +1647,12 @@ LoadBattleMonFromParty:
 	ld de, wBattleMonNick
 	ld bc, NAME_LENGTH
 	call CopyData
+	call ApplyBadgeStatBoosts ; include badge boosts in unmodified stats
 	ld hl, wBattleMonLevel
 	ld de, wPlayerMonUnmodifiedLevel ; block of memory used for unmodified stats
 	ld bc, 1 + NUM_STATS * 2
 	call CopyData
 	call ApplyBurnAndParalysisPenaltiesToPlayer
-	call ApplyBadgeStatBoosts
 	ld a, $7 ; default stat modifier
 	ld b, NUM_STAT_MODS
 	ld hl, wPlayerMonAttackMod
@@ -4172,6 +4172,7 @@ IgnoredOrdersText:
 	text_end
 
 ; sets b, c, d, and e for the CalculateDamage routine in the case of an attack by the player mon
+; hl must be player's attack, bc is enemy's defense, d is move power, e is player level
 GetDamageVarsForPlayerAttack:
 	xor a
 	ld hl, wDamage ; damage to eventually inflict, initialise to zero
@@ -4202,18 +4203,21 @@ GetDamageVarsForPlayerAttack:
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's attack and the enemy's defense to their base values
-	ld c, 3 ; defense stat
-	call GetEnemyMonStat
-	ldh a, [hProduct + 2]
+; skip resetting enemy defense if it's been lowered
+	ld a, [wEnemyMonDefenseMod]
+	cp $7
+	jr c, .checkPlayerAttack 
+	ld hl, wEnemyMonUnmodifiedDefense
+	ld a, [hli]
 	ld b, a
-	ldh a, [hProduct + 3]
-	ld c, a
-	push bc
-	ld hl, wPartyMon1Attack
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
-	pop bc
+	ld c, [hl] ; bc = reset enemy defense
+	ld hl, wBattleMonAttack ; reset hl to point to player attack
+.checkPlayerAttack
+; skip resetting player attack if it was raised
+	ld a, [wPlayerMonAttackMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wPlayerMonUnmodifiedAttack
 	jr .scaleStats
 .specialAttack
 	ld hl, wEnemyMonSpecial
@@ -4234,18 +4238,21 @@ GetDamageVarsForPlayerAttack:
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's and enemy's specials to their base values
-	ld c, 5 ; special stat
-	call GetEnemyMonStat
-	ldh a, [hProduct + 2]
+; skip resetting enemy special if it's been lowered
+	ld a, [wEnemyMonSpecialMod]
+	cp $7
+	jr c, .checkPlayerSpecial
+	ld hl, wEnemyMonUnmodifiedSpecial
+	ld a, [hli]
 	ld b, a
-	ldh a, [hProduct + 3]
-	ld c, a
-	push bc
-	ld hl, wPartyMon1Special
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
-	pop bc
+	ld c, [hl] ; bc = reset enemy defense
+	ld hl, wBattleMonSpecial ; reset hl to point to player attack
+.checkPlayerSpecial
+; skip resetting player special if it was raised
+	ld a, [wPlayerMonSpecialMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wPlayerMonUnmodifiedSpecial
 ; if either the offensive or defensive stat is too large to store in a byte, scale both stats by dividing them by 4
 ; this allows values with up to 10 bits (values up to 1023) to be handled
 ; anything larger will wrap around
@@ -4285,6 +4292,7 @@ GetDamageVarsForPlayerAttack:
 	ret
 
 ; sets b, c, d, and e for the CalculateDamage routine in the case of an attack by the enemy mon
+; hl must be enemy's attack, bc is player's defense, d is move power, e is enemy level
 GetDamageVarsForEnemyAttack:
 	ld hl, wDamage ; damage to eventually inflict, initialise to zero
 	xor a
@@ -4315,18 +4323,21 @@ GetDamageVarsForEnemyAttack:
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's defense and the enemy's attack to their base values
-	ld hl, wPartyMon1Defense
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
+; skip resetting player defense if it's been lowered
+	ld a, [wPlayerMonDefenseMod]
+	cp $7
+	jr c, .checkEnemyAttack 
+	ld hl, wPlayerMonUnmodifiedDefense
 	ld a, [hli]
 	ld b, a
-	ld c, [hl]
-	push bc
-	ld c, 2 ; attack stat
-	call GetEnemyMonStat
-	ld hl, hProduct + 2
-	pop bc
+	ld c, [hl] ; bc = reset player defense
+	ld hl, wEnemyMonAttack ; reset hl to point to enemy attack
+.checkEnemyAttack
+; skip resetting enemy attack if it was raised
+	ld a, [wEnemyMonAttackMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wEnemyMonUnmodifiedAttack
 	jr .scaleStats
 .specialAttack
 	ld hl, wBattleMonSpecial
@@ -4347,18 +4358,21 @@ GetDamageVarsForEnemyAttack:
 	and a ; check for critical hit
 	jr z, .scaleStats
 ; in the case of a critical hit, reset the player's and enemy's specials to their base values
-	ld hl, wPartyMon1Special
-	ld a, [wPlayerMonNumber]
-	ld bc, wPartyMon2 - wPartyMon1
-	call AddNTimes
+; skip resetting player special if it's been lowered
+	ld a, [wPlayerMonSpecialMod]
+	cp $7
+	jr c, .checkEnemySpecial
+	ld hl, wPlayerMonUnmodifiedSpecial
 	ld a, [hli]
 	ld b, a
-	ld c, [hl]
-	push bc
-	ld c, 5 ; special stat
-	call GetEnemyMonStat
-	ld hl, hProduct + 2
-	pop bc
+	ld c, [hl] ; bc = reset player defense
+	ld hl, wEnemyMonSpecial ; reset hl to point to enemy attack
+.checkEnemySpecial
+; skip resetting enemy special if it was raised
+	ld a, [wEnemyMonSpecialMod]
+	cp $7
+	jr nc, .scaleStats 
+	ld hl, wEnemyMonUnmodifiedSpecial
 ; if either the offensive or defensive stat is too large to store in a byte, scale both stats by dividing them by 4
 ; this allows values with up to 10 bits (values up to 1023) to be handled
 ; anything larger will wrap around
@@ -7099,3 +7113,4 @@ LoadMonBackPic:
 	ldh a, [hLoadedROMBank]
 	ld b, a
 	jp CopyVideoData
+ 
