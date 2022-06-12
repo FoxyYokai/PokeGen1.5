@@ -31,3 +31,4 @@ LoadWildData::
 	jp CopyData
 
 INCLUDE "data/wild/grass_water.asm"
+INCLUDE "data/wild/find_wild_locations.asm"
