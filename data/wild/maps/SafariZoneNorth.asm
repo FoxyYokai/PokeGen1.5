@@ -3,7 +3,7 @@ SafariZoneNorthWildMons:
 	db  27, SANDSLASH   ; 19.9%
 	db  27, ARBOK       ; 19.9%
 	db  28, PARASECT    ; 15.2%
-	db  29, VENONAT     ; 9.8%
+	db  29, PERSIAN     ; 9.8%
 	db  28, NIDORINA    ; 9.8%
 	db  28, NIDORINO    ; 9.8%
 	db  24, BUTTERFREE  ; 5.1%
