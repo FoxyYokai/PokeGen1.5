@@ -15,7 +15,7 @@ ENDM
 ; Each map also has associated data in maps.asm.
 ; Order: towns/cities, then routes, then indoor/dungeon maps
 	const_def
-	mapconst PALLET_TOWN,                    9, 10 ; $00
+	mapconst PALLET_TOWN,                    9, 15 ; $00
 	mapconst VIRIDIAN_CITY,                 18, 20 ; $01
 	mapconst PEWTER_CITY,                   18, 20 ; $02
 	mapconst CERULEAN_CITY,                 18, 20 ; $03

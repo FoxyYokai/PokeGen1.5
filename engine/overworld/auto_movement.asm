@@ -128,20 +128,16 @@ PalletMovementScript_WalkToLab:
 	ret
 
 RLEList_ProfOakWalkToLab:
-	db NPC_MOVEMENT_DOWN, 5
-	db NPC_MOVEMENT_LEFT, 1
-	db NPC_MOVEMENT_DOWN, 5
-	db NPC_MOVEMENT_RIGHT, 3
+	db NPC_MOVEMENT_DOWN, 10
+	db NPC_MOVEMENT_RIGHT, 4
 	db NPC_MOVEMENT_UP, 1
 	db NPC_CHANGE_FACING, 1
 	db -1 ; end
 
 RLEList_PlayerWalkToLab:
 	db D_UP, 2
-	db D_RIGHT, 3
-	db D_DOWN, 5
-	db D_LEFT, 1
-	db D_DOWN, 6
+	db D_RIGHT, 4
+	db D_DOWN, 11
 	db -1 ; end
 
 PalletMovementScript_Done:
