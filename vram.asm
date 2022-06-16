@@ -20,6 +20,7 @@ NEXTU
 vNPCSprites::  ds $80 tiles
 vNPCSprites2:: ds $80 tiles
 vTileset::     ds $80 tiles
+vRedSprites::  ds $80 tiles
 
 NEXTU
 ; title

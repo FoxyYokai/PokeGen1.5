@@ -31,8 +31,6 @@ GamblerAsleepSprite::    INCBIN "gfx/sprites/gambler_asleep.2bpp"
 
 SECTION "NPC Sprites 2", ROMX
 
-RedBikeSprite::          INCBIN "gfx/sprites/red_bike.2bpp"
-RedSprite::              INCBIN "gfx/sprites/red.2bpp"
 BlueSprite::             INCBIN "gfx/sprites/blue.2bpp"
 OakSprite::              INCBIN "gfx/sprites/oak.2bpp"
 YoungsterSprite::        INCBIN "gfx/sprites/youngster.2bpp"
@@ -70,4 +68,9 @@ FairySprite::            INCBIN "gfx/sprites/fairy.2bpp"
 AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
-SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
+SeelSprite::             INCBIN "gfx/sprites/seel.2bpp" 
+
+SECTION "Red Sprites", ROMX
+RedBikeSprite::          INCBIN "gfx/sprites/red_bike.2bpp"
+RedSprite::              INCBIN "gfx/sprites/red.2bpp"
+SurfSprite::             INCBIN "gfx/sprites/surf.2bpp"
