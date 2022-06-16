@@ -497,10 +497,6 @@ UpdateStatDone:
 	ld hl, MonsStatsRoseText
 	call PrintText
 
-	; these shouldn't be here
-	call QuarterSpeedDueToParalysis ; apply speed penalty to the player whose turn is not, if it's paralyzed
-	jp HalveAttackDueToBurn ; apply attack penalty to the player whose turn is not, if it's burned
-
 RestoreOriginalStatModifier:
 	pop hl
 	dec [hl]
@@ -683,8 +679,36 @@ UpdateLoweredStatDone:
 ; These where probably added given that a stat-down move affecting speed or attack will override
 ; the stat penalties from paralysis and burn respectively.
 ; But they are always called regardless of the stat affected by the stat-down move.
+; FIX: only call these if the affected stat matches speed or attack
+	ld a, [wPlayerMoveEffect]
+	ld b, a
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .checkReapplyingBurnParalysis
+	ld a, [wEnemyMoveEffect]
+	ld b, a
+.checkReapplyingBurnParalysis
+	ld a, b
+	cp SPEED_DOWN1_EFFECT
+	jr z, .reapplyParalysisStatPenalty
+	cp SPEED_DOWN2_EFFECT
+	jr z, .reapplyParalysisStatPenalty
+	cp SPEED_DOWN_SIDE_EFFECT
+	jr z, .reapplyParalysisStatPenalty
+	cp ATTACK_DOWN1_EFFECT
+	jr z, .reapplyBurnStatPenalty
+	cp ATTACK_DOWN2_EFFECT
+	jr z, .reapplyBurnStatPenalty
+	cp ATTACK_DOWN_SIDE_EFFECT
+	jr z, .reapplyBurnStatPenalty
+	jr .doneCheckReapplyParalysisBurnPenalties
+.reapplyParalysisStatPenalty
 	call QuarterSpeedDueToParalysis
+	jr .doneCheckReapplyParalysisBurnPenalties ; cant be burned and paralyzed at same time
+.reapplyBurnStatPenalty
 	jp HalveAttackDueToBurn
+.doneCheckReapplyParalysisBurnPenalties
+	ret
 
 CantLowerAnymore_Pop:
 	pop de
