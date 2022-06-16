@@ -1,32 +1,28 @@
 Route25WildMons:
-	def_grass_wildmons 15 ; encounter rate
-IF DEF(_RED)
-	db  8, WEEDLE
-	db  9, KAKUNA
-	db 13, PIDGEY
-	db 12, ODDISH
-	db 13, ODDISH
-	db 12, ABRA
-	db 14, ODDISH
-	db 10, ABRA
-	db  7, METAPOD
-	db  8, CATERPIE
-ENDC
-IF DEF(_BLUE)
-	db  8, CATERPIE
-	db  9, METAPOD
-	db 13, PIDGEY
-	db 12, BELLSPROUT
-	db 13, BELLSPROUT
-	db 12, ABRA
-	db 14, BELLSPROUT
-	db 10, ABRA
-	db  7, KAKUNA
-	db  8, WEEDLE
-ENDC
+	def_grass_wildmons 20 ; encounter rate
+	db  12, RATTATA    ; 19.9%
+	db  13, JIGGLYPUFF ; 19.9%
+	db  13, MANKEY     ; 15.2%
+	db  14, MANKEY     ; 9.8%
+	db  12, MEOWTH     ; 9.8%
+	db  13, MEOWTH     ; 9.8%
+	db  14, BUTTERFREE ; 5.1%
+	db  14, BEEDRILL   ; 5.1%
+	db  12, ABRA       ; 4.3%
+	db  14, ABRA       ; 1.2%
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+	def_water_wildmons 5 ; encounter rate
+	db  22, MAGIKARP  ; 19.9%
+	db  22, GOLDEEN   ; 19.9%
+	db  20, SLOWPOKE  ; 15.2%
+	db  23, MAGIKARP  ; 9.8%
+	db  23, GOLDEEN   ; 9.8%
+	db  21, SLOWPOKE  ; 9.8%
+	db  20, POLIWAG   ; 5.1%
+	db  21, POLIWAG   ; 5.1%
+	db  22, POLIWAG   ; 4.3%
+	db  25, POLIWHIRL ; 1.2%
 	end_water_wildmons
 
 	def_fishing_wildmons 1 ; encounter rate

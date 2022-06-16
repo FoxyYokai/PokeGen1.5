@@ -1,28 +1,15 @@
 SeafoamIslandsB2FWildMons:
 	def_grass_wildmons 10 ; encounter rate
-	db 30, SEEL
-IF DEF(_RED)
-	db 30, SLOWPOKE
-	db 32, SEEL
-	db 32, SLOWPOKE
-	db 28, HORSEA
-	db 30, STARYU
-	db 30, HORSEA
-	db 28, SHELLDER
-	db 30, GOLBAT
-	db 37, SLOWBRO
-ENDC
-IF DEF(_BLUE)
-	db 30, PSYDUCK
-	db 32, SEEL
-	db 32, PSYDUCK
-	db 28, KRABBY
-	db 30, SHELLDER
-	db 30, KRABBY
-	db 28, STARYU
-	db 30, GOLBAT
-	db 37, GOLDUCK
-ENDC
+	db  31, SLOWPOKE    ; 19.9%
+	db  33, GOLBAT      ; 19.9%
+	db  32, SLOWPOKE    ; 15.2%
+	db  34, GOLBAT      ; 9.8%
+	db  34, GRAVELER    ; 9.8%
+	db  35, GRAVELER    ; 9.8%
+	db  37, KINGLER     ; 5.1%
+	db  38, GOLDUCK     ; 5.1%
+	db  37, SLOWBRO     ; 4.3%
+	db  31, JYNX        ; 1.2%
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

@@ -1,32 +1,28 @@
 Route6WildMons:
-	def_grass_wildmons 15 ; encounter rate
-IF DEF(_RED)
-	db 13, ODDISH
-	db 13, PIDGEY
-	db 15, PIDGEY
-	db 10, MANKEY
-	db 12, MANKEY
-	db 15, ODDISH
-	db 16, ODDISH
-	db 16, PIDGEY
-	db 14, MANKEY
-	db 16, MANKEY
-ENDC
-IF DEF(_BLUE)
-	db 13, BELLSPROUT
-	db 13, PIDGEY
-	db 15, PIDGEY
-	db 10, MEOWTH
-	db 12, MEOWTH
-	db 15, BELLSPROUT
-	db 16, BELLSPROUT
-	db 16, PIDGEY
-	db 14, MEOWTH
-	db 16, MEOWTH
-ENDC
+	def_grass_wildmons 20 ; encounter rate
+	db  15, SPEAROW    ; 19.9%
+	db  15, VULPIX     ; 19.9%
+	db  14, GROWLITHE  ; 15.2%
+	db  16, VULPIX     ; 9.8%
+	db  15, BELLSPROUT ; 9.8%
+	db  15, ODDISH	   ; 9.8%
+	db  16, BELLSPROUT ; 5.1%
+	db  16, ODDISH     ; 5.1%
+	db  18, PIDGEOTTO  ; 4.3%
+	db  19, PIDGEOTTO  ; 1.2%
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+	def_water_wildmons 5 ; encounter rate
+	db  22, MAGIKARP  ; 19.9%
+	db  22, GOLDEEN   ; 19.9%
+	db  20, SLOWPOKE  ; 15.2%
+	db  23, MAGIKARP  ; 9.8%
+	db  23, GOLDEEN   ; 9.8%
+	db  21, SLOWPOKE  ; 9.8%
+	db  20, POLIWAG   ; 5.1%
+	db  21, POLIWAG   ; 5.1%
+	db  22, POLIWAG   ; 4.3%
+	db  25, POLIWHIRL ; 1.2%
 	end_water_wildmons
 
 	def_fishing_wildmons 1 ; encounter rate

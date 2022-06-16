@@ -179,6 +179,10 @@ ROMX $2C
 	"Move Names"
 ROMX $2D
 	"Pics 7"
+ROMX $2E
+	"Wild"
+ROMX $2F
+	"Red Sprites"
 WRAM0
 	"Audio RAM"
 	org $c100
