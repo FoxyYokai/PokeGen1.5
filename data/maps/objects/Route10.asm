@@ -14,7 +14,7 @@ Route10_Object:
 	bg_event  5, 41, 10 ; Route10Text10
 
 	def_object_events
-	object_event 10, 44, SPRITE_SUPER_NERD, STAY, LEFT, 1, OPP_POKEMANIAC, 1
+	object_event  9, 43, SPRITE_SUPER_NERD, STAY, DOWN, 2, OPP_POKEMANIAC, 1
 	object_event  3, 57, SPRITE_HIKER, STAY, UP, 2, OPP_HIKER, 7
 	object_event 14, 64, SPRITE_SUPER_NERD, STAY, LEFT, 3, OPP_POKEMANIAC, 2
 	object_event  7, 25, SPRITE_COOLTRAINER_F, STAY, LEFT, 4, OPP_JR_TRAINER_F, 7

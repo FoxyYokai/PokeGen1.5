@@ -183,6 +183,7 @@ ROMX $2E
 	"Wild"
 ROMX $2F
 	"Red Sprites"
+	"Tilesets 4"
 WRAM0
 	"Audio RAM"
 	org $c100

@@ -23,7 +23,7 @@ ENDM
 	mapconst VERMILION_CITY,                18, 20 ; $05
 	mapconst CELADON_CITY,                  18, 25 ; $06
 	mapconst FUCHSIA_CITY,                  18, 20 ; $07
-	mapconst CINNABAR_ISLAND,                9, 10 ; $08
+	mapconst CINNABAR_ISLAND,               14, 14 ; $08
 	mapconst INDIGO_PLATEAU,                 9, 10 ; $09
 	mapconst SAFFRON_CITY,                  18, 20 ; $0A
 NUM_CITY_MAPS EQU const_value
@@ -35,7 +35,7 @@ FIRST_ROUTE_MAP EQU const_value
 	mapconst ROUTE_4,                        9, 45 ; $0F
 	mapconst ROUTE_5,                       18, 10 ; $10
 	mapconst ROUTE_6,                       18, 10 ; $11
-	mapconst ROUTE_7,                        9, 10 ; $12
+	mapconst ROUTE_7,                       15, 10 ; $12
 	mapconst ROUTE_8,                        9, 30 ; $13
 	mapconst ROUTE_9,                        9, 30 ; $14
 	mapconst ROUTE_10,                      36, 10 ; $15

@@ -11,6 +11,3 @@ Route1_Object:
 	object_event 15, 13, SPRITE_YOUNGSTER, WALK, LEFT_RIGHT, 2 ; person
 
 	def_warps_to ROUTE_1
-
-	; unused
-	warp_to 2, 7, 4

@@ -14,20 +14,22 @@ LoadFontTilePatterns::
 	lb bc, BANK(FontGraphics), (FontGraphicsEnd - FontGraphics) / $8
 	jp CopyVideoDataDouble ; if LCD is on, transfer during V-blank
 
+; todo - switch to using tile macro
+; making more space by skipping loading unused font_extra.2bpp tiles
 LoadTextBoxTilePatterns::
 	ldh a, [rLCDC]
 	bit 7, a ; is the LCD enabled?
 	jr nz, .on
 .off
-	ld hl, TextBoxGraphics
-	ld de, vChars2 tile $60
-	ld bc, TextBoxGraphicsEnd - TextBoxGraphics
+	ld hl, TextBoxGraphics + $190
+	ld de, vChars2 + $790
+	ld bc, TextBoxGraphicsEnd - TextBoxGraphics - $190
 	ld a, BANK(TextBoxGraphics)
 	jp FarCopyData2 ; if LCD is off, transfer all at once
 .on
-	ld de, TextBoxGraphics
-	ld hl, vChars2 tile $60
-	lb bc, BANK(TextBoxGraphics), (TextBoxGraphicsEnd - TextBoxGraphics) / $10
+	ld de, TextBoxGraphics + $190
+	ld hl, vChars2 + $790
+	lb bc, BANK(TextBoxGraphics), (TextBoxGraphicsEnd - TextBoxGraphics) / $10 - $19
 	jp CopyVideoData ; if LCD is on, transfer during V-blank
 
 LoadHpBarAndStatusTilePatterns::
