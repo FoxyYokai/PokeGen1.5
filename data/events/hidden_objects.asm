@@ -85,6 +85,7 @@ HiddenObjectMaps:
 	db CERULEAN_CITY
 	db ROUTE_4
 	db PALLET_TOWN
+	db BLUES_HOUSE2F
 	db -1 ; end
 
 HiddenObjectPointers:
@@ -175,6 +176,7 @@ HiddenObjectPointers:
 	dw CeruleanCityHiddenObjects
 	dw Route4HiddenObjects
 	dw PalletTownHiddenObjects
+	dw BluesHouse2FHiddenObjects
 
 hidden_object: MACRO
 	db \2 ; y coord
@@ -214,6 +216,11 @@ BluesHouseHiddenObjects:
 	hidden_object  0,  1, SPRITE_FACING_UP, PrintBookcaseText
 	hidden_object  1,  1, SPRITE_FACING_UP, PrintBookcaseText
 	hidden_object  7,  1, SPRITE_FACING_UP, PrintBookcaseText
+	db -1 ; end
+
+BluesHouse2FHiddenObjects:
+	hidden_object  2,  1, SPRITE_FACING_UP, OpenBluesPC
+	hidden_object  3,  5, ANY_FACING, PrintBlueSNESText
 	db -1 ; end
 
 OaksLabHiddenObjects:

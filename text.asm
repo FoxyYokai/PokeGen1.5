@@ -145,6 +145,7 @@ INCLUDE "data/text/text_3.asm"
 
 INCLUDE "text/RedsHouse1F.asm"
 INCLUDE "text/BluesHouse.asm"
+INCLUDE "text/BluesHouse2F.asm"
 INCLUDE "text/OaksLab.asm"
 INCLUDE "text/ViridianPokecenter.asm"
 INCLUDE "text/ViridianMart.asm"

@@ -581,6 +581,20 @@ _RedBedroomSNESText::
 	cont "It's time to go!"
 	done
 
+_BlueBedroomSNESText::
+	text "<RIVAL>'s SNES!"
+	line "Wow, what a big"
+	cont "collection!"
+	done
+
+_BlueBedroomPCText::
+	text "<RIVAL>'s PC!"
+	line "It's an e-mail"
+	cont "invitation to"
+	cont "a party on a"
+	cont "cruise ship!"
+	done
+
 _Route15UpstairsBinocularsText::
 	text "Looked into the"
 	line "binoculars..."
