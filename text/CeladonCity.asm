@@ -132,9 +132,8 @@ _CeladonCityText16::
 
 	para "GUARD SPEC."
 	line "protects #MON"
-	cont "against SPECIAL"
-	cont "attacks such as"
-	cont "fire and water!"
+	cont "against stat"
+	cont "reducing moves!"
 
 	para "Get your items at"
 	line "CELADON DEPT."

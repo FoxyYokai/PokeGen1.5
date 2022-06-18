@@ -522,8 +522,14 @@ _ViridianSchoolNotebookText2::
 	cont "it first!"
 
 	para "Poison, burns and"
-	line "other damage are"
+	line "other status are"
 	cont "effective!"
+
+	para "Sleeping or"
+	line "frozen #MON"
+	cont "are easiest to"
+	cont "catch!"
+
 	prompt
 
 _ViridianSchoolNotebookText3::
@@ -690,7 +696,9 @@ _ViridianBlackboardPoisonText::
 _ViridianBlackboardPrlzText::
 	text "Paralysis could"
 	line "make #MON"
-	cont "moves misfire!"
+	cont "unable to move!"
+	cont "Their speed also"
+	cont "greatly drops!"
 
 	para "Paralysis remains"
 	line "after battles."
@@ -700,8 +708,8 @@ _ViridianBlackboardPrlzText::
 	prompt
 
 _ViridianBlackboardBurnText::
-	text "A burn reduces"
-	line "power and speed."
+	text "A burn heavily"
+	line "drops Attack!"
 	cont "It also causes"
 	cont "ongoing damage."
 
