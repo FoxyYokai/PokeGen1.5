@@ -1,7 +1,7 @@
 ; special effects that are part of move animations
 ; SpecialEffectPointers associates them with effect routines (see data/battle_anims/special_effect_pointers.asm)
 	const_def $C0
-FIRST_SE_ID EQU const_value
+DEF FIRST_SE_ID EQU const_value
 	const_skip $18
 	const SE_WAVY_SCREEN               ; $D8 used in Psywave/Night Shade/Psychic etc.
 	const SE_SUBSTITUTE_MON            ; $D9 used in Substitute (turns the pokemon into a mini sprite)
@@ -459,7 +459,7 @@ NUM_FRAMEBLOCKS EQU const_value
 	const BASECOORD_AE
 	const BASECOORD_AF
 	const BASECOORD_B0
-NUM_BASECOORDS EQU const_value
+DEF NUM_BASECOORDS EQU const_value
 
 ; frame block modes that are part of subanimations
 	const_def
