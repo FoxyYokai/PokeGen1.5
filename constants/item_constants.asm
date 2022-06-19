@@ -154,7 +154,7 @@ MACRO add_tm
 	add_tmnum \1
 ENDM
 
-TM01 EQU const_value
+DEF TM01 EQU const_value
 	add_tm FIRE_PUNCH   ; $C9
 	add_tm THUNDERPUNCH ; $CA
 	add_tm ICE_PUNCH    ; $CB

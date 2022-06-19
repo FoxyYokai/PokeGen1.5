@@ -41,7 +41,7 @@ SleepEffect:
 	                        ; including the event where the target already has another status
 	ld a, [de]
 	ld b, a
-	and SLP
+	and SLP_MASK
 	jr z, .notAlreadySleeping ; can't affect a mon that is already asleep
 	ld hl, AlreadyAsleepText
 	jp PrintText
