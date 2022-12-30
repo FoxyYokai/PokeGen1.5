@@ -12,6 +12,7 @@ DEF PHYSICAL EQU const_value
 	const DRAGON       ; $08
 	const UNKNOWN      ; $09
 	const_next 19
+DEF UNUSED_TYPES_END EQU const_value
 
 DEF SPECIAL EQU const_value
 	const FIRE         ; $14

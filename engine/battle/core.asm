@@ -105,7 +105,7 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 ; instead, the enemy pic is part of the background and uses the scroll register, while the player's head is a sprite and is slid by changing its X coordinates in a loop
 SlidePlayerHeadLeft:
 	push bc
-	ld hl, wOAMBuffer + $01
+	ld hl, wShadowOAMSprite00XCoord
 	ld c, $15 ; number of OAM entries
 	ld de, $4 ; size of OAM entry
 .loop
@@ -779,7 +779,7 @@ FaintEnemyPokemon:
 	ld a, SFX_FAINT_FALL
 	call PlaySoundWaitForCurrent
 .sfxwait
-	ld a, [wChannelSoundIDs + Ch5]
+	ld a, [wChannelSoundIDs + CHAN5]
 	cp SFX_FAINT_FALL
 	jr z, .sfxwait
 	ld a, SFX_FAINT_THUD
@@ -863,7 +863,7 @@ EndLowHealthAlarm:
 ; the low health alarm and prevents it from reactivating until the next battle.
 	xor a
 	ld [wLowHealthAlarm], a ; turn off low health alarm
-	ld [wChannelSoundIDs + Ch5], a
+	ld [wChannelSoundIDs + CHAN5], a
 	inc a
 	ld [wLowHealthAlarmDisabled], a ; prevent it from reactivating
 	ret
@@ -1865,7 +1865,7 @@ DrawPlayerHUDAndHPBar:
 	ld [hl], $0
 	ret z
 	xor a
-	ld [wChannelSoundIDs + Ch5], a
+	ld [wChannelSoundIDs + CHAN5], a
 	ret
 .setLowHealthAlarm
 	ld hl, wLowHealthAlarm
@@ -5193,12 +5193,13 @@ MetronomePickMove:
 ; values for enemy turn
 	ld de, wEnemyMoveNum
 	ld hl, wEnemySelectedMove
-; loop to pick a random number in the range [1, $a5) to be the move used by Metronome
+; loop to pick a random number in the range of valid moves used by Metronome
 .pickMoveLoop
 	call BattleRandom
 	and a
 	jr z, .pickMoveLoop
-	cp NUM_ATTACKS ; max move number (including Struggle)
+	cp STRUGGLE
+	assert NUM_ATTACKS == STRUGGLE ; random numbers greater than STRUGGLE are not moves
 	jr nc, .pickMoveLoop
 	cp METRONOME
 	jr z, .pickMoveLoop
@@ -5426,10 +5427,10 @@ MoveHitTest:
 .swiftCheck
 	ld a, [de]
 	cp SWIFT_EFFECT
-	ret z ; Swift never misses (interestingly, Azure Heights lists this is a myth, but it appears to be true)
+	ret z ; Swift never misses (this was fixed from the Japanese versions)
 	call CheckTargetSubstitute ; substitute check (note that this overwrites a)
 	jr z, .checkForDigOrFlyStatus
-; This code is buggy. It's supposed to prevent HP draining moves from working on substitutes.
+; The fix for Swift broke this code. It's supposed to prevent HP draining moves from working on Substitutes.
 ; Since CheckTargetSubstitute overwrites a with either $00 or $01, it never works.
 	cp DRAIN_HP_EFFECT
 	jp z, .moveMissed
@@ -6411,7 +6412,7 @@ LoadPlayerBackPic:
 	ASSERT BANK(RedPicBack) == BANK(OldManPicBack)
 	call UncompressSpriteFromDE
 	predef ScaleSpriteByTwo
-	ld hl, wOAMBuffer
+	ld hl, wShadowOAM
 	xor a
 	ldh [hOAMTile], a ; initial tile number
 	ld b, $7 ; 7 columns
@@ -6847,11 +6848,11 @@ InitOpponent:
 DetermineWildOpponent:
 	ld a, [wd732]
 	bit 1, a
-	jr z, .asm_3ef2f
+	jr z, .notDebug
 	ldh a, [hJoyHeld]
 	bit BIT_B_BUTTON, a
 	ret nz
-.asm_3ef2f
+.notDebug
 	ld a, [wNumberOfNoRandomBattleStepsLeft]
 	and a
 	ret nz
