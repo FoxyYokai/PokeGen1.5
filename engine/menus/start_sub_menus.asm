@@ -797,7 +797,7 @@ SwitchPartyMon_ClearGfx:
 	dec c
 	jr nz, .clearMonBGLoop
 	pop af
-	ld hl, wOAMBuffer
+	ld hl, wShadowOAM
 	ld bc, $10
 	call AddNTimes
 	ld de, $4
