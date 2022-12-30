@@ -144,15 +144,15 @@ MACRO end_water_wildmons
 	ENDC
 ENDM
 
-def_fishing_wildmons: MACRO
+MACRO def_fishing_wildmons
 ;\1: encounter rate
-CURRENT_FISHING_WILDMONS_RATE = \1
-REDEF CURRENT_FISHING_WILDMONS_LABEL EQUS "._def_fishing_wildmons_\1"
+	DEF CURRENT_FISHING_WILDMONS_RATE = \1
+	REDEF CURRENT_FISHING_WILDMONS_LABEL EQUS "._def_fishing_wildmons_\1"
 {CURRENT_FISHING_WILDMONS_LABEL}:
 	db \1
 ENDM
 
-end_fishing_wildmons: MACRO
+MACRO end_fishing_wildmons
 	IF CURRENT_FISHING_WILDMONS_RATE == 0
 		ASSERT 1 == @ - {CURRENT_FISHING_WILDMONS_LABEL}, \
 			"def_fishing_wildmons {d:CURRENT_FISHING_WILDMONS_RATE}: expected 1 byte"
